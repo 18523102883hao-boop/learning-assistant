@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "家庭书目知识卡",
+  "description": "与 library/bookshelf.json 的 147 个 book_id 一一对应的内容与使用说明。只描述可公开转述的大意，不包含孩子阅读状态。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "catalog",
+    "source_catalog",
+    "generated_by",
+    "source_grade_legend",
+    "records"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "catalog": { "type": "string", "minLength": 1 },
+    "source_catalog": { "type": "string", "minLength": 1 },
+    "generated_by": { "type": "string", "minLength": 1 },
+    "source_grade_legend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C"],
+      "properties": {
+        "A": { "type": "string", "minLength": 1 },
+        "B": { "type": "string", "minLength": 1 },
+        "C": { "type": "string", "minLength": 1 }
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 147,
+      "maxItems": 147,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "book_id",
+          "group",
+          "group_label",
+          "entry_type",
+          "audience",
+          "age_hint",
+          "use_modes",
+          "topics",
+          "title",
+          "author",
+          "catalog_category",
+          "catalog_source",
+          "catalog_note",
+          "gist",
+          "child_bridge",
+          "use_when",
+          "talk_angles",
+          "guardrail",
+          "source_grade",
+          "source_note",
+          "related_ids"
+        ],
+        "properties": {
+          "book_id": { "type": "string", "pattern": "^bk-[0-9]{4}$" },
+          "group": {
+            "type": "string",
+            "enum": [
+              "child-picture-bridge",
+              "child-text",
+              "history-society",
+              "science-tech",
+              "business-investment",
+              "education-psychology",
+              "literature-culture"
+            ]
+          },
+          "group_label": { "type": "string", "minLength": 1 },
+          "entry_type": {
+            "type": "string",
+            "enum": ["single", "series", "collection", "magazine", "workbook", "unknown"]
+          },
+          "audience": {
+            "type": "string",
+            "enum": ["child", "teen", "adult", "parent", "family"]
+          },
+          "age_hint": { "type": "string", "minLength": 1 },
+          "use_modes": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": ["child_read", "co_read", "discuss", "background", "parent_only", "lookup"]
+            }
+          },
+          "topics": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "title": { "type": "string", "minLength": 1 },
+          "author": { "type": "string", "minLength": 1 },
+          "catalog_category": { "type": "string", "minLength": 1 },
+          "catalog_source": { "type": "string", "minLength": 1 },
+          "catalog_note": { "type": "string" },
+          "gist": { "type": "string", "minLength": 1 },
+          "child_bridge": {
+            "type": ["string", "null"],
+            "minLength": 1
+          },
+          "use_when": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "talk_angles": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "guardrail": { "type": "string", "minLength": 1 },
+          "source_grade": { "type": "string", "enum": ["B", "C"] },
+          "source_note": { "type": "string", "minLength": 1 },
+          "related_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^bk-[0-9]{4}$" }
+          }
+        }
+      }
+    }
+  }
+}

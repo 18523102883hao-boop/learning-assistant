@@ -32,9 +32,15 @@
 - [tier2-later.md](../reading-cards/tier2-later.md) — 初中以上远期灯塔
 - 用法说明见 [../reading-cards/README.md](../reading-cards/README.md)
 
+### 3. 书目知识库 `../book-knowledge/`（目录级内容卡）
+
+- [index.md](../book-knowledge/index.md) — 按书名、主题、场景先定位 1–2 条
+- [catalog.jsonl](../book-knowledge/catalog.jsonl) — 一行一条，适合程序或 Agent 检索
+- [README.md](../book-knowledge/README.md) — 字段、B/C 来源等级与调用协议
+
 ## 联动用法
 
-思想卡片是"世界观的骨头"，引读卡片是"肉"：聊某本书时用思想卡片垫高对话（例：聊《明朝那些事儿》垫 lq41"冲突中汇聚"；聊《神奇校车》垫 lq03 祛魅；孩子集卡/抽盲盒时垫 lq27 虚假的需求）。
+书目知识库是"这本书是什么"的事实底座，引读卡片是"怎么开口"的话术，思想卡片是"把对话垫高"的骨头。聊某本书时先用 `book-knowledge` 核对大意和边界，再取一句引读话术，必要时用思想卡片加深（例：聊《明朝那些事儿》垫 lq41"冲突中汇聚"；聊《神奇校车》垫 lq03 祛魅；孩子集卡/抽盲盒时垫 lq27 虚假的需求）。B/C 级卡不等于逐页精读，不编页码、原句或"我读过"的经历。
 
 ## 年龄适配原则
 
