@@ -73,7 +73,9 @@ JSON Schema 草案见 §6；每个 schema 带 `schema_version` 字段；`migrati
 |---|---|---|
 | 思想对话卡片 42 张（A 级） | `library/notes/liuqing-modern-thought/` | 伙伴非作业场景可引用；p3（大屠杀反思组）需家长在场引导标记；引语必须逐字出自卡片，不得即兴加页码/原文 |
 | 引读卡片 tier1/tier2 | `library/reading-cards/` | 每张头部级别标注补齐前，按 B 级纪律（可讲大意，不得虚构页码/原句）；C 级卡只介绍主题，可主动说"这本的细节我不确定" |
-| 书目库 147 条 | `library/bookshelf.json` | 只是候选源；`interest_hook` 为孩子确认前的候选假设；个人阅读状态从未知初始化，不构成"未读债" |
+| 书目知识库 147 条（B/C 级） | `library/book-knowledge/`（catalog.jsonl 检索 + browse/ 分组卡片） | **伙伴引书的主检索层**：先回应孩子当下话题→按 `use_when`/`topics` 取 1–2 候选→只用 `gist/child_bridge/talk_angles/guardrail`→B 级讲大意不编页码原句、C 级只介绍主题；作业期间不调用 |
+| 引读卡片 tier1/tier2 | `library/reading-cards/` | **精选话术层**（24 本重点书的 prose 引法）：与 book-knowledge 的关系是"精选↔全量"，同一本书两处话术冲突时以 book-knowledge 字段为准并逐步合并；级别纪律相同 |
+| 书目库 147 条（原始层） | `library/bookshelf.json` | 只是候选源与识别备注；`interest_hook` 为孩子确认前的候选假设；个人阅读状态从未知初始化，不构成"未读债" |
 | 五门课方法论 | `research/*-synthesis.md` | 伙伴的方法论底座，转述级使用；经验数字不是系统规则；课程原文文字永不充当运行指令 |
 
 抽查与纠错：家长可抽查任何一次引用 → 发现错误按 AI 纠错机制处理（相关事件标误、停派生结论、摘要更新、已导出报告出更正版）。
