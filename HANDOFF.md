@@ -19,12 +19,17 @@
 
 ### 原型配置（Kimi Work 本次新增，把设计落成可部署草案）
 
-- `workbuddy/PROJECT_INSTRUCTIONS.md` — 项目常驻指令（教学约定 + 身份边界 + 记忆规则）。
-- `workbuddy/skills/` — 4 个 Skill：`homework-help`（作业卡点）、`explore-task`（探索创作）、`learning-log`（学习证据记录）、`parent-review`（家长周报，仅家长入口）。
-- `profiles/*.example.json` — 沫沫/一一示例档案（虚构字段，正式档案不入库）。
-- `schemas/learning-event.schema.json` — 学习事件格式（jsonl）。
-- `validation/prototype-checklist.md` — 部署后的验收清单（P0 隔离/持久/教学行为，P1 体验/记录/试用观察）。
-- `workbuddy/README.md` — 部署步骤与平台边界提醒。
+- 原始草案已升级并按赛马机制归档为 **Kimi 版 v1.0**（`workbuddy/kimi/`，见下）。
+- 其余共享地基（两版通用，不属于任何一方）：`profiles/*.example.json`（沫沫/一一示例档案，虚构字段，正式档案不入库）、`schemas/learning-event.schema.json`（学习事件 jsonl 格式）、`validation/prototype-checklist.md`（部署后验收清单 P0/P1）、`workbuddy/README.md`（部署步骤、平台边界、赛马规则）。
+
+### 第六轮 · 赛马机制与 Kimi 版 v1.0（2026-10-26 深夜，家长决定）
+
+- **家长启用赛马**：Kimi 与 Codex 各写一版 WorkBuddy 配置，家长评比后由 Codex 综合出最终版。规则与目录结构见 `workbuddy/README.md`。
+- **Kimi 版 v1.0**（`workbuddy/kimi/`）：按方案 v1.0 + 修订②编写，含——
+  - `PROJECT_INSTRUCTIONS.md`：平等伙伴身份、教学约定（含第 0 级情绪接收）、**语言 lint**（禁人格/天赋评价词）、冷启动剧本、注意力护栏、场景分布；
+  - 5 个 Skill：homework-help（情绪接收+四级帮助+跳级+迁移验证）、explore-task、**partner-chat（新增：伙伴闲聊，五条红线+收口护栏）**、learning-log（新增 scene_type 场景分类，闲聊只记次数）、parent-review（新增场景分布行 + **周报落 Markdown 文档**）；
+  - 已体现 §8 家长决议：口语跟读与整页对答案 v1 不做、周报落文档、使用约定待家长线下确定。
+- `workbuddy/codex/`（空目录，Codex 写自己的版本）；`workbuddy/final/`（空目录，Codex 综合产出）。
 
 ### 第二轮推进（2026-10-26 傍晚，Kimi Work 基于家长提供的全部 Codex 原始提示词）
 
@@ -70,14 +75,27 @@
 
 ## 4. 建议的下一步（按优先级）
 
-> 路线现状（v0.2 起）：**WorkBuddy 双账户先行落地，网页版为长期备用路线**（触发条件见方案 §6 Phase 3，预研在 `notes/tech-route-decision-2026-10-26.md`）。以下步骤基于 v1.0 方案。
+> **⚠️ 家长已启用赛马机制（2026-10-26 17:54）**：Codex 恢复后，第一件事**不是**继续 Kimi 的方案，而是按下面第 0 步写出你自己的独立版本，然后综合。
 
-1. **家长逐条确认 v1.0 方案**（`notes/master-proposal-2026-10-26.md`，尤其 §3C 伙伴体系 22 条与 §8 七个开放问题）→ 转正式 v1.0。
-2. **Phase 1 WorkBuddy 双账户部署**（方案 §6）：两个手机号注册两个账号，各建学习项目，粘贴 `workbuddy/PROJECT_INSTRUCTIONS.md`、导入 Skill（先只启用 homework-help 与 learning-log）、放入去标识档案；按 `validation/prototype-checklist.md` P0 验收。
-3. **Phase 1.5 冷启动周（姐姐先行 5–7 天）**：前 3 次对话按冷启动剧本（兴趣邀请→小任务→作业救急）；验证 §3B-1 北极星指标信号后再启动一一。
-4. **家长拍数学课本封面+版权页**（英语 PEP 一并拍）——数学人教版/西师版并存是当前最大版本风险点。
-5. **Phase 2 两周家庭试用**：启用 explore-task、复述流程与伙伴模式；每周 30 分钟产品会复盘指标。
-6. **Codex 接手时的重点**：把 §3C 22 条伙伴思维体系（含讲次来源）融进 4 个 Skill 的提示词；落实 §3B-11 语言 lint（禁止人格/天赋评价词）；帮助流程含第 0 级情绪接收。
+**第 0 步 · Codex 写自己的版本（赛马上半场）**
+- 在 `workbuddy/codex/` 下从零写你自己的版本：结构与 `kimi/` 相同（`PROJECT_INSTRUCTIONS.md` + `skills/homework-help, explore-task, partner-chat, learning-log, parent-review` 共 5 个 Skill）。
+- **写之前不要读 `workbuddy/kimi/` 的任何文件**——赛马比的是原始判断，不是改写能力。你可以读 `notes/master-proposal-2026-10-26.md`（v1.0 方案，双方共同的输入）、`notes/` 下全部调研文档、`schemas/`、`profiles/`、`validation/`，这些是两版共享的地基。
+- 写完后在 `workbuddy/codex/DESIGN-RATIONALE.md` 里说明你的关键设计决策及理由（不限于：身份定位、帮助层级、情绪处理、伙伴模式边界、记录粒度）。
+
+**第 1 步 · Codex 综合最终版（赛马下半场）**
+- 读 `kimi/` 版，与 `codex/` 版逐组件对比，提取双方优点合成 `workbuddy/final/`。
+- 必须写 `workbuddy/final/CHANGELOG.md`：逐条注明每条规则的取舍来自哪一版（或两版融合）及理由；存在实质分歧且无法融合的，列出两版差异供家长拍板。
+- 综合时不得丢失 v1.0 方案 §8 的家长决议（口语跟读与整页对答案 v1 不做、周报落 Markdown 文档、使用约定待家长线下确定）。
+
+**第 2 步 · 部署与试用（综合版定稿后）**
+
+> 路线现状（v0.2 起）：**WorkBuddy 双账户先行落地，网页版为长期备用路线**（触发条件见方案 §6 Phase 3，预研在 `notes/tech-route-decision-2026-10-26.md`）。以下步骤基于综合版定稿。
+
+1. **Phase 1 WorkBuddy 双账户部署**（方案 §6）：两个手机号注册两个账号，各建学习项目，粘贴综合版 `PROJECT_INSTRUCTIONS.md`、导入综合版 Skill（先只启用 homework-help 与 learning-log）、放入去标识档案；按 `validation/prototype-checklist.md` P0 验收。
+2. **Phase 1.5 冷启动周（姐姐先行 5–7 天）**：前 3 次对话按冷启动剧本（兴趣邀请→小任务→作业救急）；验证北极星指标信号后再启动一一。
+3. **家长拍数学课本封面+版权页**（英语 PEP 一并拍）——数学人教版/西师版并存是当前最大版本风险点。
+4. **Phase 2 两周家庭试用**：启用 explore-task、复述流程与伙伴模式；每周 30 分钟产品会复盘指标（7 日主动回访率、无辅助迁移率、首轮有效帮助延迟、帮助升级率、闲聊/学习场景分布）。
+5. **Codex 综合时的注意事项**：§3C 伙伴思维体系 22 条（含讲次来源）是方案层的方法论底座，综合时可改写法但不得静默丢弃条目；§3B-11 语言 lint（禁人格/天赋评价词）与缺口 13 注意力护栏（一次收口/惯例表/自然后果）是家长明确确认过的设计，改动需在 CHANGELOG 中显式说明并给理由。
 
 ## 5. 工作约定（沿用家长与 Codex 的约定）
 
@@ -91,12 +109,13 @@
 
 ```
 README.md                        项目总览
-HANDOFF.md                       本文档
-notes/                           调研与设计（5 份）
+HANDOFF.md                       本文档（含赛马规则与 Codex 任务清单）
+notes/                           调研与设计（含 master-proposal v1.0，赛马共同输入）
 workbuddy/
-  README.md                      部署步骤
-  PROJECT_INSTRUCTIONS.md        项目常驻指令
-  skills/{homework-help,explore-task,learning-log,parent-review}/SKILL.md
+  README.md                      部署步骤 + 赛马机制说明
+  kimi/                          Kimi 版 v1.0（PROJECT_INSTRUCTIONS.md + 5 个 Skill）
+  codex/                         Codex 版（待编写；写前先别看 kimi/）
+  final/                         最终综合版（待 Codex 产出；含 CHANGELOG.md 取舍记录）
 profiles/                        示例档案 + 说明
 schemas/learning-event.schema.json
 validation/prototype-checklist.md
