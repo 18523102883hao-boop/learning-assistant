@@ -223,14 +223,15 @@
     },
     {
       "book_id": "bk-0021",
-      "title": "要是你给老鼠吃饼干 / 要是你带老鼠去上学",
+      "title": "要是你带老鼠去上学 / 要是你给小狗吃甜甜圈",
       "author": "劳拉·努梅罗夫",
       "category": "绘本",
       "owner": "yiyi",
       "status": "unread",
       "transition_level": "picture",
-      "source": "书架实拍 IMG_5687",
-      "interest_hook": "连锁式幽默绘本，低龄段；读图说话的好素材"
+      "source": "书架实拍 IMG_5687（2026-10-26 经原图复核修正）",
+      "interest_hook": "连锁式幽默绘本，低龄段；读图说话的好素材",
+      "notes": "初版误记为《要是你给老鼠吃饼干》，经原图复核更正"
     },
     {
       "book_id": "bk-0022",

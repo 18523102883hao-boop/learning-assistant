@@ -80,7 +80,7 @@ flowchart LR
 
 旧 `schemas/` 尚不满足这些概念，具体不一致列于 Kimi 审视。后续实现时先版本化 schema 和迁移规则，再写入新数据。本轮不修改旧 schema 来冒充已落地。
 
-新增 `library/bookshelf.json` 的39条候选目录按[书架复核](research/bookshelf-review.md)迁移：历史 `unread` 不代表每人未读，个人状态从未知开始；`owner` 保留来源，不能据此限制另一孩子；套装/系列与单册版本分层；`transition_level` 不作为能力等级，`interest_hook` 不作为运行指令。先选少量核对项即可陪读。
+`library/bookshelf.json` 现有147条候选目录，按[书架复核](research/bookshelf-review.md)迁移：首批39条已对照8张原图，新增108条家长藏书尚未逐图复核；历史 `unread` 不代表每人未读，个人状态从未知开始；`owner` 保留来源，不能据此限制另一孩子；套装/系列与单册版本分层；`transition_level` 不作为能力等级，`interest_hook` 不作为运行指令。家长素材与儿童可推荐候选分开标记，不能仅凭标题/成人标签自动转述或判断适合。先选少量核对项即可陪读。
 
 普通交流可不产生学习事件。对“孩子说读完”只能记自报；对“自己做对”需要知道当时是否得到提示。没有独立尝试，不能自动写“掌握/延迟迁移”。
 

@@ -86,6 +86,6 @@ Khan Academy [2026年10月的设计说明](https://blog.khanacademy.org/student-
 ## 4. 其他未定信息
 
 - 重庆主城区不足以确定这两个孩子全部教材系列；市级教材/价格目录也不等于具体学校选用。部署前看实际封面、册次和必要版权信息，尤其数学、人教英语的具体系列；当前不填“已确认人教PEP”。
-- 本地已找到8张书架原图，本轮逐张查看并复核了仓库新增的39条候选目录，见[书架增量复核](bookshelf-review.md)。具体版本/期号、书内内容和每人阅读状态仍不能仅从书脊推定。刘擎材料仍未收到；不制造页码、评分或剧情。
+- 首批8张书架原图已逐张查看并复核39条候选目录；结稿又新增108条家长藏书，目前合计147条，新增部分只查看目录元数据、未逐图或全文核验。见[书架增量复核](bookshelf-review.md)。具体版本/期号、书内内容和每人阅读状态不能仅从书脊推定。刘擎材料仍未收到；不制造页码、评分或剧情。
 - 模型套餐未确定。ChatGPT与API见[官方计费说明](https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform)，Kimi的会员/Code/API见[官方常见问题](https://www.kimi.com/help/kimi-api/api-troubleshooting)。不能把聊天或编程会员自动转为自建产品的通用API权益。
 - 网页备用的身份与授权架构见[技术路线](../TECH-ROUTE.md)。成熟框架是可用工具，不是家庭应用已经成熟稳定的证明。
