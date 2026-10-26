@@ -12,9 +12,10 @@ from pathlib import Path
 from . import RULE_VERSION, SCHEMA_VERSION, __version__
 from .contracts import identifier
 from .errors import CompanionError
+from .stdio import configure_utf8_stdio
 
 CHILD_SKILLS = ("homework-help", "reading-companion", "explore-task", "partner-chat", "learning-log")
-MODULES = ("__init__", "__main__", "errors", "contracts", "store", "archive", "reports", "cli", "mcp_server", "materials", "bundle")
+MODULES = ("__init__", "__main__", "errors", "contracts", "store", "archive", "reports", "cli", "mcp_server", "materials", "bundle", "stdio")
 CARDS = ("visible-page", "evidence-and-choice", "make-it-work")
 TEST_MODULES = ("store", "lifecycle", "reports", "cli", "mcp", "regressions", "materials", "retention_requests", "bundle")
 
@@ -91,6 +92,7 @@ def build_release(source, output, child_id="test-a"):
 
 
 def main():
+    configure_utf8_stdio()
     parser = argparse.ArgumentParser(description="生成分角色成人验证包，不安装/部署")
     parser.add_argument("--source", required=True)
     parser.add_argument("--output", required=True)

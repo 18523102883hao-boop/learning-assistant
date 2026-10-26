@@ -3,6 +3,7 @@ import sqlite3
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from contextlib import closing
 
 from companion.errors import CompanionError
 from companion.store import Store
@@ -79,7 +80,7 @@ class RegressionTests(unittest.TestCase):
 
     def test_legacy_storage_is_rejected_until_explicit_non_destructive_migration(self):
         database = self.root / "a" / "state.sqlite3"
-        with sqlite3.connect(database) as connection:
+        with closing(sqlite3.connect(database)) as connection, connection:
             connection.execute("PRAGMA user_version=3")
             connection.execute("DROP TABLE closed_tasks")
             if "sequence" in {row[1] for row in connection.execute("PRAGMA table_info(records)")}:
@@ -95,7 +96,7 @@ class RegressionTests(unittest.TestCase):
 
     def test_legacy_completed_state_is_included_in_current_recovery_registry(self):
         self.store.put("session", "current", session(homework_status="reported_complete"), "done", 1, True)
-        with sqlite3.connect(self.root / "a" / "state.sqlite3") as connection:
+        with closing(sqlite3.connect(self.root / "a" / "state.sqlite3")) as connection, connection:
             connection.execute("PRAGMA user_version=3")
             connection.execute("DROP TABLE closed_tasks")
             connection.execute("ALTER TABLE records DROP COLUMN sequence")

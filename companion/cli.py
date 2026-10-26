@@ -15,6 +15,7 @@ from . import __version__
 from .errors import CompanionError
 from .reports import parent_export, render_report, report_is_current
 from .store import Store
+from .stdio import configure_utf8_stdio
 
 
 def outside_repository(path):
@@ -165,6 +166,7 @@ def execute(args):
 
 
 def main():
+    configure_utf8_stdio()
     args = parser().parse_args()
     try:
         result = execute(args)

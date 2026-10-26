@@ -1,5 +1,6 @@
 import hashlib
 import json
+import os
 import tempfile
 import subprocess
 import sys
@@ -42,10 +43,18 @@ class BundleTests(unittest.TestCase):
         first, second = Path(self.temp.name) / "first", Path(self.temp.name) / "second"
         build_release(ROOT, first, "test-a")
         build_release(ROOT, second, "test-a")
-        manifest = json.loads((first / "release.json").read_text())
+        manifest = json.loads((first / "release.json").read_text(encoding="utf-8"))
         for name, checksum in manifest["sha256"].items():
             self.assertEqual(hashlib.sha256((first / name).read_bytes()).hexdigest(), checksum)
             self.assertEqual((first / name).read_bytes(), (second / name).read_bytes())
+
+    def test_bundle_cli_reports_utf8_error_with_inherited_ascii_stdio(self):
+        output = Path(self.temp.name) / "already-present"
+        output.mkdir()
+        result = subprocess.run([sys.executable, "-m", "companion.bundle", "--source", str(ROOT), "--output", str(output)], cwd=ROOT, capture_output=True, text=True, encoding="utf-8", env=os.environ | {"PYTHONIOENCODING": "ascii"}, timeout=20)
+        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+        self.assertEqual(json.loads(result.stdout)["error"], "output_exists")
+        self.assertNotIn("Traceback", result.stderr)
 
     def test_extracted_runtime_can_run_cli_checks_without_original_checkout(self):
         output = Path(self.temp.name) / "release"
@@ -54,7 +63,7 @@ class BundleTests(unittest.TestCase):
         with zipfile.ZipFile(output / "runtime-source.zip") as archive:
             self.assertIn("tests/test_cli.py", archive.namelist())
             archive.extractall(extracted)
-        result = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_cli.py", "-q"], cwd=extracted, capture_output=True, text=True, timeout=30)
+        result = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_cli.py", "-q"], cwd=extracted, capture_output=True, text=True, encoding="utf-8", timeout=30)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
 
