@@ -42,7 +42,7 @@ def unseal(package, package_type, child_id):
         for row in payload["tombstones"]:
             keys(row, {"kind", "id", "mode", "deleted_at"})
             identifier(row["id"])
-            if row["kind"] not in {"session", "task", "learning_event", "memory", "book", "followup"} or row["mode"] not in {"forget", "retract", "expired"}:
+            if row["kind"] not in {"session", "task", "learning_event", "memory", "book", "followup", "book_request"} or row["mode"] not in {"forget", "retract", "expired"}:
                 raise ValueError("tombstone")
             key = (row["kind"], row["id"])
             if key in seen or datetime.fromisoformat(row["deleted_at"]).tzinfo is None:

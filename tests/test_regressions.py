@@ -93,6 +93,16 @@ class RegressionTests(unittest.TestCase):
         self.assertEqual(reopened.context(True)["session"]["data"]["pause_point"], session()["pause_point"])
         self.assertEqual(reopened.backup()["payload"]["schema_version"], 3)
 
+    def test_legacy_completed_state_is_included_in_current_recovery_registry(self):
+        self.store.put("session", "current", session(homework_status="reported_complete"), "done", 1, True)
+        with sqlite3.connect(self.root / "a" / "state.sqlite3") as connection:
+            connection.execute("PRAGMA user_version=3")
+            connection.execute("DROP TABLE closed_tasks")
+            connection.execute("ALTER TABLE records DROP COLUMN sequence")
+        Store.migrate(self.root / "a", "test-a")
+        reopened = Store(self.root / "a", "test-a")
+        self.assertIn("task-1", reopened.deletion_registry()["payload"]["closed_tasks"])
+
 
 if __name__ == "__main__":
     unittest.main()

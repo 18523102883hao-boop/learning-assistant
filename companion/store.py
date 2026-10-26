@@ -87,9 +87,18 @@ class Store:
                 return {"ok": True, "migrated": False, "storage_version": STORAGE_VERSION}
             if version != 3:
                 raise CompanionError("schema_mismatch", "不支持的旧存储格式；需单独明确迁移")
-            for kind, data in connection.execute("SELECT kind,data FROM records"):
-                validate("session" if kind == "task" else kind, json.loads(data))
+            legacy_states = {}
+            current_state = None
+            for kind, data in connection.execute("SELECT kind,data FROM records ORDER BY updated_at,rowid"):
+                parsed = validate("session" if kind == "task" else kind, json.loads(data))
+                if kind in {"task", "session"}:
+                    legacy_states[parsed["task_id"]] = parsed["homework_status"]
+                    if kind == "session":
+                        current_state = parsed
+            if current_state:
+                legacy_states[current_state["task_id"]] = current_state["homework_status"]
             connection.execute("CREATE TABLE IF NOT EXISTS closed_tasks (id TEXT PRIMARY KEY)")
+            connection.executemany("INSERT OR IGNORE INTO closed_tasks VALUES (?)", [(task_id,) for task_id, status in legacy_states.items() if status == "reported_complete"])
             columns = {row[1] for row in connection.execute("PRAGMA table_info(records)")}
             if "sequence" not in columns:
                 # Old same-second ordering was not saved; zero explicitly means unknown.
@@ -266,6 +275,7 @@ class Store:
                     "pending_tasks": [self._envelope(r) for r in all_rows if r["kind"] == "task" and json.loads(r["data"])["homework_status"] in {"paused", "in_progress"} and (not row or json.loads(r["data"])["task_id"] != json.loads(row["data"])["task_id"])][-10:],
                     "books": [self._envelope(r) for r in all_rows if r["kind"] == "book"],
                     "followups": [self._envelope(r) for r in all_rows if r["kind"] == "followup"],
+                    "requests": [self._envelope(r) for r in all_rows if r["kind"] == "book_request"],
                     "memories": [self._envelope(r) for r in all_rows if r["kind"] == "memory" and r["updated_at"] >= cutoff],
                     "sequence": self._meta(connection, "sequence")}
 
@@ -290,7 +300,7 @@ class Store:
     def remove(self, kind, record_id, operation_id, expected_revision, speaker_confirmed=False, *, mode="forget"):
         if speaker_confirmed is not True:
             raise CompanionError("attribution_unconfirmed", "当前说话者不确定，暂停个人资料修改")
-        if kind not in {"session", "task", "learning_event", "memory", "book", "followup"} or mode not in {"forget", "retract"}:
+        if kind not in {"session", "task", "learning_event", "memory", "book", "followup", "book_request"} or mode not in {"forget", "retract"}:
             raise CompanionError("invalid_input", "不允许的删除范围或方式")
         identifier(record_id)
         identifier(operation_id, "operation_id")
@@ -371,6 +381,31 @@ class Store:
                 raise CompanionError("revision_conflict", "任务资料已变化，先重新核对再忘记")
             self._forget_task_rows(connection, task_id)
             return self._receipt(connection, operation_id, digest, task_id, 0)
+
+    def prune(self, operation_id, *, reference_time=None):
+        """Self-managed event/preference retention only. No platform/media/backup claims."""
+        identifier(operation_id)
+        reference_time = reference_time or datetime.now(timezone.utc)
+        if not isinstance(reference_time, datetime) or reference_time.tzinfo is None:
+            raise CompanionError("clock_unavailable", "未获可靠时钟，不清理到期记录")
+        cutoff = reference_time - timedelta(days=90)
+        with self._connection(write=True) as connection:
+            digest, replay = self._replay(connection, operation_id, {"action": "prune", "cutoff_date": str(cutoff.date())})
+            if replay:
+                return replay
+            rows = connection.execute("SELECT * FROM records WHERE kind IN ('memory','learning_event')").fetchall()
+            expired = [row for row in rows if datetime.fromisoformat(row["updated_at"]) < cutoff]
+            if not expired:
+                return {"ok": True, "removed": 0, "sequence": self._meta(connection, "sequence"), "replayed": False}
+            for row in expired:
+                self._erase(connection, row["kind"], row["id"], "expired")
+            return self._receipt(connection, operation_id, digest, "retention", 0, {"removed": len(expired)})
+
+    def wishlist(self):
+        with self._connection() as connection:
+            connection.execute("BEGIN")
+            rows = connection.execute("SELECT * FROM records WHERE kind='book_request' ORDER BY updated_at,id").fetchall()
+            return {"child_id": self.child_id, "requests": [{"request_id": row["id"], **{key: data[key] for key in ("title", "edition_details", "status", "source_kind")}} for row in rows if (data := json.loads(row["data"]))["share_with_parent"] is True], "limits": "仅孩子选择分享的候选，不代表已购买、在读或同意跟进"}
 
     def family_notice(self, boundary_type, operation_id, speaker_confirmed=False):
         if speaker_confirmed is not True:

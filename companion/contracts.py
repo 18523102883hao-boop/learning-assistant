@@ -15,7 +15,7 @@ PERFORMANCE = {"not_observed", "partial", "correct", "incorrect", "ambiguous"}
 INDEPENDENCE = {"not_assessed", "assisted", "child_reported_unaided", "visible_new_attempt_without_session_hint"}
 VERIFICATION = {"child_reported", "model_checked", "adult_checked", "not_checked"}
 BOOK_STATES = {"unknown", "want_to_try", "reading", "paused", "rereading", "child_reported_finished"}
-RECORD_KINDS = {"session", "learning_event", "memory", "book", "followup"}
+RECORD_KINDS = {"session", "learning_event", "memory", "book", "followup", "book_request"}
 
 
 def fail(message):
@@ -124,6 +124,15 @@ def validate(kind, data):
             fail("跟进状态须保留孩子本次意愿")
         if data["state"] == "once_pending" and data["child_opt_in"] is not True:
             fail("未获得单本明确同意，不安排跟进")
+    elif kind == "book_request":
+        keys(data, {"title", "edition_details", "status", "source_kind", "child_opt_in", "share_with_parent"}, {"book_ref"})
+        text(data["title"], "title", 200)
+        text(data["edition_details"], "edition_details", 160, empty=True)
+        choice(data["status"], {"considering", "would_like", "paused", "reported_received"}, "status")
+        if data["source_kind"] != "child_reported" or data["child_opt_in"] is not True or type(data["share_with_parent"]) is not bool:
+            fail("愿望单仅保留孩子明确愿意保存的候选，分享另由孩子选择")
+        if "book_ref" in data:
+            identifier(data["book_ref"])
     else:
         fail("不支持的记录类型")
     choice(data["source_kind"], SOURCE_KINDS, "source_kind")

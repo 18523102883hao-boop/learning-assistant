@@ -4,6 +4,7 @@ import argparse
 import importlib.metadata
 import json
 import sys
+import uuid
 from typing import Literal
 
 from .cli import outside_repository
@@ -49,13 +50,13 @@ def create_server(store, materials=None):
         return guarded(lambda: store.context(speaker_confirmed))
 
     @server.tool()
-    def save_learning_record(kind: Literal["session", "learning_event", "memory", "book", "followup"], record_id: str, data: dict,
+    def save_learning_record(kind: Literal["session", "learning_event", "memory", "book", "followup", "book_request"], record_id: str, data: dict,
                              operation_id: str, expected_revision: StrictInt, speaker_confirmed: StrictBool = False) -> dict:
         """仅保存必要短事实。新建版本0；更新先读版本；重试原操作ID。事件更正使用专门工具。只有ok=true才说自管已保存。"""
         return guarded(lambda: store.put(kind, record_id, child_data(data), operation_id, expected_revision, speaker_confirmed))
 
     @server.tool()
-    def forget_learning_record(kind: Literal["memory", "learning_event", "book", "followup"], record_id: str,
+    def forget_learning_record(kind: Literal["memory", "learning_event", "book", "followup", "book_request"], record_id: str,
                                operation_id: str, expected_revision: StrictInt, speaker_confirmed: StrictBool = False) -> dict:
         """实际清除所选自管记录，保留无正文撤回ID。不等于删除WorkBuddy历史/自动记忆/人工副本。"""
         return guarded(lambda: store.remove(kind, record_id, operation_id, expected_revision, speaker_confirmed))
@@ -92,6 +93,7 @@ def main():
     args = parser.parse_args()
     try:
         store = Store(outside_repository(args.root), args.child)
+        store.prune("startup-" + uuid.uuid4().hex)
         server = create_server(store, args.materials)
     except (CompanionError, ImportError) as error:
         message = str(error) if isinstance(error, CompanionError) else "缺少固定MCP依赖；请安装 .[mcp]"

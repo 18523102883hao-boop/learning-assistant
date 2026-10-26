@@ -1,0 +1,477 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 3
+    },
+    "rule_version": {
+      "type": "string"
+    },
+    "child_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "book",
+        "book_request",
+        "followup",
+        "learning_event",
+        "memory",
+        "session",
+        "task"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "rule_version",
+    "child_id",
+    "kind",
+    "id",
+    "revision",
+    "created_at",
+    "updated_at",
+    "data"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/learning-companion/v3/record.schema.json",
+  "$defs": {
+    "session": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+        },
+        "interaction_intent": {
+          "type": "string",
+          "enum": [
+            "chat",
+            "creation",
+            "homework",
+            "reading",
+            "unknown"
+          ]
+        },
+        "homework_status": {
+          "type": "string",
+          "enum": [
+            "in_progress",
+            "paused",
+            "reported_complete",
+            "unknown"
+          ]
+        },
+        "pause_point": {
+          "type": "string",
+          "maxLength": 400
+        },
+        "source_kind": {
+          "type": "string",
+          "enum": [
+            "adult_verified",
+            "child_reported",
+            "externally_verified",
+            "model_hypothesis",
+            "observed_in_session",
+            "parent_reported"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "interaction_intent",
+        "homework_status",
+        "pause_point",
+        "source_kind"
+      ],
+      "additionalProperties": false
+    },
+    "learning_event": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+        },
+        "concept_tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+          },
+          "maxItems": 4,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "attempt_kind": {
+          "type": "string",
+          "enum": [
+            "created_draft",
+            "drew_model",
+            "explained_reason",
+            "identified_condition",
+            "read_passage",
+            "revised_work",
+            "self_report",
+            "wrote_step"
+          ]
+        },
+        "attempt_summary": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "assistance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "concept_explanation",
+              "direct_correction",
+              "hint",
+              "original_step_demo",
+              "representation",
+              "worked_example"
+            ]
+          },
+          "maxItems": 8,
+          "uniqueItems": true
+        },
+        "performance": {
+          "type": "string",
+          "enum": [
+            "ambiguous",
+            "correct",
+            "incorrect",
+            "not_observed",
+            "partial"
+          ]
+        },
+        "independence_evidence": {
+          "type": "string",
+          "enum": [
+            "assisted",
+            "child_reported_unaided",
+            "not_assessed",
+            "visible_new_attempt_without_session_hint"
+          ]
+        },
+        "source_kind": {
+          "type": "string",
+          "enum": [
+            "child_reported",
+            "observed_in_session"
+          ]
+        },
+        "verification": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "adult_checked",
+              "child_reported",
+              "model_checked",
+              "not_checked"
+            ]
+          },
+          "maxItems": 8,
+          "uniqueItems": true
+        },
+        "supersedes": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+        }
+      },
+      "required": [
+        "task_id",
+        "concept_tags",
+        "attempt_kind",
+        "attempt_summary",
+        "assistance",
+        "performance",
+        "independence_evidence",
+        "source_kind",
+        "verification"
+      ],
+      "additionalProperties": false
+    },
+    "memory": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "preference",
+            "project_note"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "source_kind": {
+          "const": "child_reported"
+        },
+        "child_opt_in": {
+          "const": true
+        }
+      },
+      "required": [
+        "category",
+        "content",
+        "source_kind",
+        "child_opt_in"
+      ],
+      "additionalProperties": false
+    },
+    "book": {
+      "type": "object",
+      "properties": {
+        "book_ref": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+        },
+        "reading_state": {
+          "type": "string",
+          "enum": [
+            "child_reported_finished",
+            "paused",
+            "reading",
+            "rereading",
+            "unknown",
+            "want_to_try"
+          ]
+        },
+        "position": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "source_kind": {
+          "const": "child_reported"
+        }
+      },
+      "required": [
+        "book_ref",
+        "reading_state",
+        "source_kind"
+      ],
+      "additionalProperties": false
+    },
+    "followup": {
+      "type": "object",
+      "properties": {
+        "book_ref": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "off",
+            "once_pending",
+            "stopped",
+            "used"
+          ]
+        },
+        "child_opt_in": {
+          "type": "boolean"
+        },
+        "source_kind": {
+          "const": "child_reported"
+        }
+      },
+      "required": [
+        "book_ref",
+        "state",
+        "child_opt_in",
+        "source_kind"
+      ],
+      "additionalProperties": false
+    },
+    "book_request": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "edition_details": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "considering",
+            "paused",
+            "reported_received",
+            "would_like"
+          ]
+        },
+        "source_kind": {
+          "const": "child_reported"
+        },
+        "child_opt_in": {
+          "const": true
+        },
+        "share_with_parent": {
+          "type": "boolean"
+        },
+        "book_ref": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9._-]{0,79}$"
+        }
+      },
+      "required": [
+        "title",
+        "edition_details",
+        "status",
+        "source_kind",
+        "child_opt_in",
+        "share_with_parent"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "book"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/book"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "book_request"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/book_request"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "followup"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/followup"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "learning_event"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/learning_event"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "memory"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/memory"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "session"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/session"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "task"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "$ref": "#/$defs/session"
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Shape contract only. Contextual/provenance/permission/idempotency/transition constraints are enforced by companion.contracts and Store; tool actor constraints are stricter."
+}

@@ -22,7 +22,8 @@ def outside_repository(path):
     if path.is_symlink():
         raise CompanionError("unsafe_path", "入口不能是软链接")
     path = path.resolve()
-    if any((parent / ".git").exists() for parent in (path, *path.parents)):
+    code_root = Path(__file__).resolve().parents[1]
+    if path.is_relative_to(code_root) or any((parent / ".git").exists() for parent in (path, *path.parents)):
         raise CompanionError("repository_data_forbidden", "运行资料、报告和备份必须放在 Git 仓库外")
     return path
 
@@ -63,7 +64,7 @@ def private_output(path, text, child_root):
 def parser():
     root = argparse.ArgumentParser(description="学习伙伴 v3：成人部署/维护 CLI，非任意模型命令工具")
     commands = root.add_subparsers(dest="command", required=True)
-    for command in ("init", "migrate", "context", "put", "remove", "backup", "deletion-registry", "restore", "parent-export", "report", "report-status", "doctor"):
+    for command in ("init", "migrate", "prune", "wishlist", "context", "put", "remove", "backup", "deletion-registry", "restore", "parent-export", "report", "report-status", "doctor"):
         child = commands.add_parser(command)
         child.add_argument("--root", required=True)
         child.add_argument("--child", required=True)
@@ -91,6 +92,8 @@ def parser():
             child.add_argument("--registry", required=True)
             child.add_argument("--op", required=True)
             child.add_argument("--confirm-current-registry", action="store_true")
+        if command == "prune":
+            child.add_argument("--op", required=True)
     return root
 
 
@@ -105,6 +108,10 @@ def execute(args):
     if args.command == "migrate":
         return Store.migrate(data_root, args.child)
     store = Store(data_root, args.child)
+    if args.command == "prune":
+        return store.prune(args.op)
+    if args.command == "wishlist":
+        return store.wishlist()
     if args.command == "context":
         return store.context(args.speaker_confirmed)
     if args.command == "put":
