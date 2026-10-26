@@ -1,0 +1,561 @@
+{
+  "schema_version": 1,
+  "source_root": "/Users/Zhuanz/Documents/Obsidian Vault/knowledge/parenting-agent-kb/transcripts_raw",
+  "character_indexing": "Python Unicode code points, zero-based, half-open [start,end); chars uses decoded UTF-8 with Python universal newline handling",
+  "method": "Each raw source is emitted in untruncated character chunks and actually read before its ranges are recorded. Hash is SHA-256 of original file bytes. This is not a source-fact validation or child study.",
+  "files": [
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__00.带孩子阅读_就是带孩子创造自己.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "421164a4a4c2be1282a9c80cc8a250cf5749e13ac1902b885b120a5b4c41be0c",
+      "chars": 919,
+      "read_ranges": [
+        [
+          0,
+          919
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__01.改变_从阅读开始.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "379850d40d9f95380f104664fd425d7de59d15a4d3c20eb7e683c64321d3f411",
+      "chars": 8036,
+      "read_ranges": [
+        [
+          0,
+          4500
+        ],
+        [
+          4500,
+          8036
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__02.首先要解决读什么.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "8c0c16b7efdcdfd92e75f16db6d2f3016aa13b2f8f3135fa4255576217baf5d7",
+      "chars": 12188,
+      "read_ranges": [
+        [
+          0,
+          4500
+        ],
+        [
+          4500,
+          9000
+        ],
+        [
+          9000,
+          12188
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__03.从图画书开始爱上阅读.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "b5dd86f77f8753a181cdf3b868b10275bd4e73b9aefd76e4b6b946e6271d9c0e",
+      "chars": 10222,
+      "read_ranges": [
+        [
+          0,
+          4500
+        ],
+        [
+          4500,
+          10222
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__04.故事知道怎么办.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "6400f7e1e1112295fbaed7647bba55d202e29c6afe1f1c8652d20ab696749c4e",
+      "chars": 8499,
+      "read_ranges": [
+        [
+          0,
+          8499
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__05.点燃孩子的好奇心.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "daa137d760818abb1591e3f97e0af5bb1420d549525102a6ab527fe14500b9a1",
+      "chars": 10562,
+      "read_ranges": [
+        [
+          0,
+          5500
+        ],
+        [
+          5500,
+          10562
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__06.与谁同行_你就会成为谁.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "13604e84a3292b0d2718fad5ae6ffea986f9db8a4484619beb056c83d3c47730",
+      "chars": 8477,
+      "read_ranges": [
+        [
+          0,
+          8477
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__07.见自己_见天地_见众生_上_.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "9f3a97250f42fbdb26be62be535b169e725365883fe90dc26f6c01ee796acad7",
+      "chars": 10284,
+      "read_ranges": [
+        [
+          0,
+          5500
+        ],
+        [
+          5500,
+          10284
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__08.见自己_见天地_见众生_下_.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "ede486ba2b253f6d2ee1dc4f4a53d83f00b0f1349edb322438f80707f951dc84",
+      "chars": 6526,
+      "read_ranges": [
+        [
+          0,
+          6526
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__09.孩子是天生的诗人___如何让儿童走进诗歌世界_上_.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "7b4cfa50585f02de41fa9114eb0a0a1e05bbf15a1c3bb6d7f7aac01eb8ccbdfd",
+      "chars": 8361,
+      "read_ranges": [
+        [
+          0,
+          8361
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__10.孩子是天生的诗人___如何让儿童走进诗歌世界_下_.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "e849011012bb254fa40e224b5fb97927720da8381fbfddca84f8fba40650b9cc",
+      "chars": 9285,
+      "read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          9285
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__11.如何让孩子放下手机_捧起书籍_.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "a283188743941931903de0670542b81ff1fcb2c98277e52fdcf5ef50e9b2cdaf",
+      "chars": 7169,
+      "read_ranges": [
+        [
+          0,
+          7169
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__12.教育奠基_从深度阅读开始.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "4acbea12c5e33d010b5108294ea89ab1e4abc462d5771dd19205a36695ca85cf",
+      "chars": 9235,
+      "read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          9235
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__13._真正的阅读从写作开始__想让孩子爱上写作_从带他写日记开始.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "036247f3bcf2c2fcb4c53a110322fe82cb04d6eebe41cc6939a18cfc54e00f98",
+      "chars": 10545,
+      "read_ranges": [
+        [
+          0,
+          5500
+        ],
+        [
+          5500,
+          10545
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__14._一个民族的精神境界取决于这个民族的阅读水平.md",
+      "course": "带孩子阅读，就是带孩子创造自己",
+      "sha256": "347c78536be4c4e734a2468570572f8971c77a903ac4538c9b8566343dc8e98f",
+      "chars": 11289,
+      "read_ranges": [
+        [
+          0,
+          6000
+        ],
+        [
+          6000,
+          11289
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__00.发刊词_家庭教育最重要的是三根支柱.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "dba1176cf0bae54a6722fdd571466ff65064cac3b102add098e1b0441eb11784",
+      "chars": 886,
+      "read_ranges": [
+        [
+          0,
+          886
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__00.欢迎来到_新父母_大学_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "f06d910e852361e43e20bf74b278d414d520575cfb7a55692dd1aa5f3f40a575",
+      "chars": 1293,
+      "read_ranges": [
+        [
+          0,
+          1293
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__01.先理解生命_再思考教育.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "43066356f9d2c62d500a1c9ca2ccf5c575fa753550c9ac699a16cdda4b46537e",
+      "chars": 8164,
+      "read_ranges": [
+        [
+          0,
+          4500
+        ],
+        [
+          4500,
+          8164
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__02.建立良好亲子关系的前提_自我疗愈.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "3c338abfb54253752a3b06c6d19390884674828533629d2b4f46c7f198691945",
+      "chars": 8675,
+      "read_ranges": [
+        [
+          0,
+          4500
+        ],
+        [
+          4500,
+          8675
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__03.无条件的爱--停止威胁与交换.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "fe58b4b3c118dca72c853a473a5fdd70e6625dab520c8c4ac26c6597545eba7d",
+      "chars": 9073,
+      "read_ranges": [
+        [
+          0,
+          4500
+        ],
+        [
+          4500,
+          9073
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__04.无条件的爱--温柔_但是有边界.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "069fea6fb316d24995790991b12addbf18acfe39145fc8c9bf0e565e19ec1e8a",
+      "chars": 8644,
+      "read_ranges": [
+        [
+          0,
+          8644
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__05.无条件的爱--不吼不叫的沟通.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "bb6acf17063e0afa7db5fe929b94961961a396be0bc306e9b26d60dae7c590ea",
+      "chars": 9011,
+      "read_ranges": [
+        [
+          0,
+          9011
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__06.价值感--独立完整的自尊体系.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "eaf4084ae63fe9f16dc2dfee24f70135e3227c9607c5e9344863028aa0204388",
+      "chars": 8609,
+      "read_ranges": [
+        [
+          0,
+          8609
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__07.价值感--用情感引导塑造行为.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "17e57b69b669eb7147d50910253b8cefc996d4d12ff2b84382c74a8117bce297",
+      "chars": 8419,
+      "read_ranges": [
+        [
+          0,
+          8419
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__08.价值感--提高孩子的社会能力.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "8c1399d8751e20a95bd044241f581f0bd803a2419cdbae8d5ce742a2aa884bc2",
+      "chars": 8043,
+      "read_ranges": [
+        [
+          0,
+          8043
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__09.终身成长--两种完全不同的生活态度.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "d3f218b452606d568b3f355fd9624fa68705b2cfe4ef0a00948369d01574d602",
+      "chars": 9710,
+      "read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          9710
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__10.终身成长--培养成长型人格.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "0c7e87738ef0025f67196fffe7ebce13b78aeb2ed6550c051088999e7c2a2ca4",
+      "chars": 8670,
+      "read_ranges": [
+        [
+          0,
+          8670
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__11.终身成长--塑造逆商.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "008196d826e761f5d313be09b10f10a34b98a354aad20fe04e9c4e34ab618ea8",
+      "chars": 8962,
+      "read_ranges": [
+        [
+          0,
+          8962
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__12.如何应对孩子的叛逆.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "c5f604445e0fff9fe081d1cc839ac65b078d6793f4176a91449d3006b89ef5cc",
+      "chars": 9953,
+      "read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          9953
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__13.加餐课1_孩子熬夜不听劝怎么办_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "e53af4f6af2d1539e865823112e8e0ec4b4140f0ae34475889a091545981572c",
+      "chars": 1044,
+      "read_ranges": [
+        [
+          0,
+          1044
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__14.加餐课2_如何帮助孩子度过暴力期_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "8818592b16c152282e3a9cf886979c21ae49d6f88e89dfc231f9bed8cdb8097a",
+      "chars": 1215,
+      "read_ranges": [
+        [
+          0,
+          1215
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__15.加餐课3_孩子内向不说话怎么办_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "54be5add3d5cb7daa3cc0af3259752baf9fa5f6308eb5a18034895dcfd31e660",
+      "chars": 938,
+      "read_ranges": [
+        [
+          0,
+          938
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__16.加餐课4_二胎家庭如何平衡两个孩子_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "c169bfba76cb413d9d2246a05c515341b3bc7cf4307144d81b31e309fc8189cc",
+      "chars": 690,
+      "read_ranges": [
+        [
+          0,
+          690
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__17.加餐课5_孩子写作业拖延怎么办_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "c89be869c0d0e9e500952d3ca486399fcc4a58939b3ddaf193969696ebd386a9",
+      "chars": 922,
+      "read_ranges": [
+        [
+          0,
+          922
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__18.加餐课6_如何呼吁爸爸参与育儿_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "9d75091c0ce68adeca9efa73649dae8ea4af6baedc6766b7868f4407038371a8",
+      "chars": 929,
+      "read_ranges": [
+        [
+          0,
+          929
+        ]
+      ],
+      "status": "full_read"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__19.加餐课7_什么是真正的无条件的爱_.md",
+      "course": "成就孩子：12堂优秀父母养成大课",
+      "sha256": "0fd005cd4813e93941abb9f588ecba494a49a763d1e7522edb526aae566356d7",
+      "chars": 1203,
+      "read_ranges": [
+        [
+          0,
+          1203
+        ]
+      ],
+      "status": "full_read"
+    }
+  ],
+  "coverage_audit": {
+    "checked_at": "2026-10-26T19:40:19+08:00",
+    "files": 36,
+    "chars": 246650,
+    "ranges": 51,
+    "full_read_files": 36,
+    "file_set_matches": true,
+    "sha256_matches": true,
+    "char_lengths_match": true,
+    "all_ranges_contiguous_from_zero_to_end": true,
+    "source_fact_verification": "not performed; curriculum claims are attributed, not treated as verified science",
+    "child_testing": "none",
+    "courses": [
+      {
+        "course": "带孩子阅读，就是带孩子创造自己",
+        "files": 15,
+        "chars": 131597
+      },
+      {
+        "course": "成就孩子：12堂优秀父母养成大课",
+        "files": 21,
+        "chars": 115053
+      }
+    ]
+  }
+}

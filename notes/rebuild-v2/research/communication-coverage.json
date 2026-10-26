@@ -1,0 +1,313 @@
+{
+  "range_convention": "Unicode codepoints; 0-based; [start,end)",
+  "source_directory": "/Users/Zhuanz/Documents/Obsidian Vault/knowledge/parenting-agent-kb/transcripts_raw",
+  "files": [
+    {
+      "basename": "高情商亲子沟通课-MP3__00.开启高情商沟通之门.md",
+      "sha256": "45382f3a5a2a33f15b53c66a30390ab1966477eafa346a62f355ab0d68f07a68",
+      "chars": 1342,
+      "read_ranges": [
+        [
+          0,
+          1342
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__01.你希望成为孩子眼中的谁.md",
+      "sha256": "612f18dfa78f71677317466adf0b3eb8b12371f9618925663064d1782b7cf98f",
+      "chars": 7101,
+      "read_ranges": [
+        [
+          0,
+          4000
+        ],
+        [
+          4000,
+          7101
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__02.理解孩子的人格特质.md",
+      "sha256": "18c6d89585086a7554e5b30075eaeec7ac943f579aaaff5e8079baf871f6df26",
+      "chars": 7212,
+      "read_ranges": [
+        [
+          0,
+          4000
+        ],
+        [
+          4000,
+          7212
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__03.表达爱意.md",
+      "sha256": "f07ee211d3c8acdd231f91e3de19f6a3179947b8b24749406d36b122a35a79e2",
+      "chars": 5745,
+      "read_ranges": [
+        [
+          0,
+          5745
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__04.亲密聊天.md",
+      "sha256": "09280ee9461768019ebad026872fc62c50c9ab89e3b0d45dd04cd4d00379c594",
+      "chars": 6526,
+      "read_ranges": [
+        [
+          0,
+          6526
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__05.科学赞美.md",
+      "sha256": "0178f69c3821fa848314aca9709ea8e59ffef6971bc58a44af7e2d2844598512",
+      "chars": 7078,
+      "read_ranges": [
+        [
+          0,
+          7078
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__06.高效管教.md",
+      "sha256": "8448de77dd8d40ff2ced3aa3c1401a13622c9d168f169644e168216b6a22e10e",
+      "chars": 6062,
+      "read_ranges": [
+        [
+          0,
+          6062
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__07.塑造优秀人格特质.md",
+      "sha256": "12bf70c87213703ef2d5451edfbb5c9e540495ff33c5ee5fde227418a20fa8cf",
+      "chars": 10513,
+      "read_ranges": [
+        [
+          0,
+          10513
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__08.与青春期孩子沟通.md",
+      "sha256": "67abe9304420284ff1b14844847f611b9e4cab48635045771b5131440d798b39",
+      "chars": 7679,
+      "read_ranges": [
+        [
+          0,
+          7679
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__09.对霸凌说不.md",
+      "sha256": "2c688a03f753abf8b93faaf1a1ed30106084559c184e2bd0b209da24d5639dc7",
+      "chars": 7202,
+      "read_ranges": [
+        [
+          0,
+          7202
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__10.学习不好怎么办.md",
+      "sha256": "075e2f8af42f8a60c3d087cda095f0050c4e2bce2cb3dd0e9201324f143bd8b4",
+      "chars": 4799,
+      "read_ranges": [
+        [
+          0,
+          4799
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__11.预防和解决网络沉迷.md",
+      "sha256": "75248c0999b63bc20e572597ff3846d7becdef9219ea7d01b1ca07138df3d4ef",
+      "chars": 5323,
+      "read_ranges": [
+        [
+          0,
+          5323
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__12.智慧面对孩子早恋.md",
+      "sha256": "b48276d0b2708d53030cce32d6934525c7b8e1dede419ed12795c77962dacd4d",
+      "chars": 4759,
+      "read_ranges": [
+        [
+          0,
+          4759
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课1_用沟通呵护孩子的心理健康_上集_.md",
+      "sha256": "d21f5eccf673d367ad4a1b746b9a8f93981bd82e4a5e5441541c51058e9ff7bc",
+      "chars": 6725,
+      "read_ranges": [
+        [
+          0,
+          6725
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课1_用沟通呵护孩子的心理健康_下集_.md",
+      "sha256": "1f3ba5456e842e0023b432df97df0712130cbc40d66a2a2ba42d1a10dbcbab00",
+      "chars": 4919,
+      "read_ranges": [
+        [
+          0,
+          4919
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课2_12岁女儿不跟我讲心里话.md",
+      "sha256": "a212c25c4995f9ec6078ea851bf5a8bc7f5d10c3dd26456696fea6cb2e85fecf",
+      "chars": 9572,
+      "read_ranges": [
+        [
+          0,
+          4000
+        ],
+        [
+          4000,
+          9572
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课3_家庭不和影响到16岁儿子.md",
+      "sha256": "fc8b7ea84d35dc8bb8f35063e25d8d6a13a3844b191e1f1e4511b86a1c5b4005",
+      "chars": 10091,
+      "read_ranges": [
+        [
+          0,
+          3000
+        ],
+        [
+          3000,
+          10091
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课4_经常对孩子发脾气怎么办_.md",
+      "sha256": "b60809aeaa44e2428ea9f9e1943132e94d4dc8794006d2d5010fb5998cc536f7",
+      "chars": 13579,
+      "read_ranges": [
+        [
+          0,
+          7000
+        ],
+        [
+          7000,
+          13579
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课5_家长强势易怒_孩子不愿交流.md",
+      "sha256": "c37a32cbf9ab8b8679caed25deec0ed34f2166f30ad07c398eeaccd6944f340e",
+      "chars": 12115,
+      "read_ranges": [
+        [
+          0,
+          6000
+        ],
+        [
+          6000,
+          12115
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课6__二胎矛盾_10岁姐姐经常和弟弟争吵.md",
+      "sha256": "f43bf556b7f98ec9e80f6d8869674bd6971d86b356d4f05957d0b88e7c1029af",
+      "chars": 9183,
+      "read_ranges": [
+        [
+          0,
+          9183
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__欢迎来到_新父母_大学_.md",
+      "sha256": "a6157b1799ff4d341904fce7f7ceb7a2647542f292f4a97aae71f3f52c974124",
+      "chars": 1652,
+      "read_ranges": [
+        [
+          0,
+          1652
+        ]
+      ],
+      "course": "高情商亲子沟通课-MP3",
+      "full_read": true
+    }
+  ],
+  "reading_method": "Read raw transcript text in full through untruncated tool outputs; notes saved incrementally. Combined 08/09 output was truncated externally, so both were re-read separately in full.",
+  "source_audio_checked": false,
+  "validation": {
+    "file_count": 21,
+    "total_chars": 149177,
+    "full_read_count": 21,
+    "coverage_contiguous": true,
+    "source_hashes_verified": true,
+    "errors": []
+  }
+}

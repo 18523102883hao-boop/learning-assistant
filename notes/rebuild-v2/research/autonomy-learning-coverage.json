@@ -1,0 +1,312 @@
+{
+  "range_convention": "Unicode字符，0-based、左闭右开；按transcripts_raw原文读取，SHA256对文件字节计算",
+  "source_root": "/Users/Zhuanz/Documents/Obsidian Vault/knowledge/parenting-agent-kb/transcripts_raw",
+  "course": "培养孩子的自主学习力-MP3",
+  "files": [
+    {
+      "basename": "培养孩子的自主学习力-MP3__00.发刊词_培养孩子的自主学习力.md",
+      "sha256": "1fc8b08ae407d993ecbefe701e06442762ed3317627c34056e521b0fc9cd77e4",
+      "chars": 1583,
+      "read_ranges": [
+        [
+          0,
+          1583
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__01.成长型思维_打开孩子未来的可能性.md",
+      "sha256": "0dc48ab40e885b8a47ee936f32ee8c2b480e8d85fd56479fda573001c830c10b",
+      "chars": 6571,
+      "read_ranges": [
+        [
+          0,
+          6571
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__02.激发内驱力_从_要我学_到_我要学_.md",
+      "sha256": "51763bfcbd8b8a7474d6bf33ce5bfdb27ba68bd5c389d9843550001d37b4aef0",
+      "chars": 4850,
+      "read_ranges": [
+        [
+          0,
+          4850
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__03.迷失的目标_孩子缺乏学习主动性的底层原因.md",
+      "sha256": "5bd35eddb9d2fa2aaf13e24f7cd1d153caaf868073b5459c17a2ba660edb514b",
+      "chars": 4001,
+      "read_ranges": [
+        [
+          0,
+          4001
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__04.学习价值感_优等生持续学习的热情源泉.md",
+      "sha256": "6c2b324e13a6ed6f6ef1d6bb91b0ee4396ad24f4a92d327c478111094f86d314",
+      "chars": 4711,
+      "read_ranges": [
+        [
+          0,
+          4711
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__05.情绪暂停__避免成绩和关系的双输.md",
+      "sha256": "5c2d0450b41d55c6f1da90cae3adba3437bcda5d6b1ab71d334ed407e84c5678",
+      "chars": 5966,
+      "read_ranges": [
+        [
+          0,
+          5966
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__06.错误目的__看见孩子不当行为背后的信念.md",
+      "sha256": "bc9aab8e27400a5854180304b42326fd173a6a2ddd8f5af5a8bf4feb73a4054c",
+      "chars": 4559,
+      "read_ranges": [
+        [
+          0,
+          4559
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__07.停止唠叨__爱说教的父母会让孩子_没出息_.md",
+      "sha256": "1bb4ad0ad64115aafe882a9ccccd417f164b459a7e9e01de3c24ae33df762412",
+      "chars": 5386,
+      "read_ranges": [
+        [
+          0,
+          5386
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__08.有效犯错__错误是学习的机会.md",
+      "sha256": "129bf669a8c42a81e4bf478180b0a260721385b577900d3b6830819314ce0269",
+      "chars": 6076,
+      "read_ranges": [
+        [
+          0,
+          6076
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__09.孩子管不住自己怎么办_.md",
+      "sha256": "f3a7002ed52f67ec395bc3c0160e4e99e20f577efd99b2fcbd39daf5b74a8aaa",
+      "chars": 5887,
+      "read_ranges": [
+        [
+          0,
+          5887
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__10.孩子不愿写作业怎么办_.md",
+      "sha256": "4a7d39c5ba7b66f0d9eeb84d153e8a0bf37f66c8760d6566b5beb46edf551363",
+      "chars": 6283,
+      "read_ranges": [
+        [
+          0,
+          6283
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__11.孩子注意力分散怎么办_.md",
+      "sha256": "4f6fd887036cabb112da8f0f7f263d0d7b184d1a852c76f6afe3c1fca6fdf274",
+      "chars": 5428,
+      "read_ranges": [
+        [
+          0,
+          5428
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__12.陪写作业为何越陪越差_.md",
+      "sha256": "751997d9ec8042e3e2362e782cdd65a55d8cf0087e48cbe59a701125162c2959",
+      "chars": 5373,
+      "read_ranges": [
+        [
+          0,
+          5373
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__13.高效记忆力_让孩子不再学了就忘.md",
+      "sha256": "0c3d295cc31251d956adf5098d69b1679fa6e0c126a4af280c79693cf0bcfc74",
+      "chars": 4341,
+      "read_ranges": [
+        [
+          0,
+          4341
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__14.问题驱动_让孩子拥有高阶学习能力.md",
+      "sha256": "b9df9142246ff4d60cbb0bb37ef0127a8961138d0cc59d25caf13691f330e5cb",
+      "chars": 4212,
+      "read_ranges": [
+        [
+          0,
+          4212
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__15.掌握课堂要点_学习事半功倍.md",
+      "sha256": "6e0dff597473793497bd9727548d0ea2dad8772d9a688e88673cc51b2e011ecc",
+      "chars": 5005,
+      "read_ranges": [
+        [
+          0,
+          5005
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__16.深度阅读力_夯实学科学习基础.md",
+      "sha256": "b78127984db040b47eed6d0ae36893d884b9a15a189a506efdd47538d856b6d7",
+      "chars": 4927,
+      "read_ranges": [
+        [
+          0,
+          4927
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__17._逆商___遇到学习困难时怎么办_.md",
+      "sha256": "a0f4ff283e68d153fff48774a496c6c0d9f8e8be7991cca27dee1ae1f85561b3",
+      "chars": 5170,
+      "read_ranges": [
+        [
+          0,
+          5170
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__18._放手___沉迷电子产品的孩子如何爱上学习.md",
+      "sha256": "76fc63f350d68ec1950e3ea6bc067e7bcd49952d12039919ff40a3769a254c7f",
+      "chars": 5012,
+      "read_ranges": [
+        [
+          0,
+          5012
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__19.__低效勤奋___为什么孩子学习很认真_成绩却不好.md",
+      "sha256": "e250f5e7b855f6fc47fdfeb1b40bb1d6b857e1b75290ad125bb0d4cce992c9f5",
+      "chars": 5304,
+      "read_ranges": [
+        [
+          0,
+          5304
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__20.__无条件的接纳___给孩子成长的_安全基地_.md",
+      "sha256": "192094ef66e9665ed9af5eb773aa251461ce3ca525eb82f68c592cd3bcb4d332",
+      "chars": 5174,
+      "read_ranges": [
+        [
+          0,
+          5174
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__加餐课1_孩子学习不主动怎么办_.md",
+      "sha256": "65444a3bb49d0d98aaff3685eb9973b98f28d9154382b673a16a55e603ee76e3",
+      "chars": 1382,
+      "read_ranges": [
+        [
+          0,
+          1382
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__欢迎来到_新父母_大学_.md",
+      "sha256": "fda724a0209fff0fdd65d7ce4eb51f46c8e5d8038871543c95719b1f9a5084eb",
+      "chars": 1636,
+      "read_ranges": [
+        [
+          0,
+          1636
+        ]
+      ],
+      "course": "培养孩子的自主学习力-MP3",
+      "full_read": true
+    }
+  ],
+  "full_read": true,
+  "total_files": 23,
+  "total_chars": 108837,
+  "completed_on": "2026-10-26",
+  "reader": "course_positive_psychology",
+  "read_method": "逐文件输出transcripts_raw全文，控制输出不截断；所有输出均实际阅读全文；read_ranges为实际已读区间的合并覆盖。未依靠卡片或脚本摘要替代阅读。"
+}

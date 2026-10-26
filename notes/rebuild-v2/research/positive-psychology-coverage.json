@@ -1,0 +1,442 @@
+{
+  "range_convention": "Unicode字符，0-based、左闭右开；按transcripts_raw原文读取，SHA256对文件字节计算",
+  "source_root": "/Users/Zhuanz/Documents/Obsidian Vault/knowledge/parenting-agent-kb/transcripts_raw",
+  "files": [
+    {
+      "basename": "给父母的积极心理学-MP3__00.为什么家长要学积极心理学_.md",
+      "sha256": "42e4e74ca157665f20feb1b199e24a5eea80a98bc5ef15b48a654737d3fb328e",
+      "chars": 2303,
+      "read_ranges": [
+        [
+          0,
+          2303
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__01.积极教育的优势_上_.md",
+      "sha256": "60b93a657ce1eda6d37e38c1fda1f42aa908070c5c41e41a827f6b41961754d7",
+      "chars": 8833,
+      "read_ranges": [
+        [
+          0,
+          8833
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__02.积极教育的优势_下_.md",
+      "sha256": "60eed00ba029db2e50f173c65cc85efed110cfee669e51f3d3eaca2788c6c69e",
+      "chars": 7132,
+      "read_ranges": [
+        [
+          0,
+          7132
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__03.藏在大脑中的快乐密码_上_.md",
+      "sha256": "5d76d0b64fe21775323d5c4b286a958468d58678d86959d11cd908ca84b1fb51",
+      "chars": 6451,
+      "read_ranges": [
+        [
+          0,
+          6451
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__04.藏在大脑中的快乐密码_下_.md",
+      "sha256": "a83980d312b89f242ed1b154cfc6e8679a237c64501ac2327c102ab60527b5c4",
+      "chars": 4634,
+      "read_ranges": [
+        [
+          0,
+          4634
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__05.正确应对消极情绪_上_.md",
+      "sha256": "a7005f4b171243df670c9f128daf36dddf1e9622c851710ed0b9626c3a2df0f4",
+      "chars": 6627,
+      "read_ranges": [
+        [
+          0,
+          6627
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__06.正确应对消极情绪_下_.md",
+      "sha256": "130dc06cb6efa928a8499c354ce52bb9bc4ef3924b177f0be6f91655be81728c",
+      "chars": 4527,
+      "read_ranges": [
+        [
+          0,
+          4527
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__07.抗逆力_培养不轻易言败的孩子_上_.md",
+      "sha256": "08f37771c0d2721232157545328091847e3839d28bff7f8e8e1e356da9d76a17",
+      "chars": 3467,
+      "read_ranges": [
+        [
+          0,
+          3467
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__08.抗逆力_培养不轻易言败的孩子_下_.md",
+      "sha256": "77760a80ce640404ad5d8e9c70e74a8e726186b5d1c6f370cf8ee61c53503785",
+      "chars": 5103,
+      "read_ranges": [
+        [
+          0,
+          5103
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__09.自我效能_让孩子觉得_我能行__上_.md",
+      "sha256": "0eea4a9dd873cea8a9f6e2b6d53a7eec920abc035d5316e433b18e5f7b076349",
+      "chars": 6230,
+      "read_ranges": [
+        [
+          0,
+          6230
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__10.自我效能_让孩子觉得_我能行__下_.md",
+      "sha256": "bec343219e56c559db8a8bc0d85bb60e5bc0052a5784f166488e0dca37061f05",
+      "chars": 3686,
+      "read_ranges": [
+        [
+          0,
+          3686
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__11.自控力_让孩子管的住自己_上_.md",
+      "sha256": "67603e64b70c1faed1d7c7ef09d41831850051d85891c8a61a3d3ce0644194b8",
+      "chars": 4012,
+      "read_ranges": [
+        [
+          0,
+          4012
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__12.自控力_让孩子管的住自己_下_.md",
+      "sha256": "1382d67916ebac8c2691aaab5ab4c72b37285cf079d612b0e4fb3853d66000d7",
+      "chars": 5779,
+      "read_ranges": [
+        [
+          0,
+          5779
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__13.如何发现孩子的天赋优势__上_.md",
+      "sha256": "caa43147befad3f5fae35a89b362db1cb3572218f278213c6ac20fdcfea1aa62",
+      "chars": 5582,
+      "read_ranges": [
+        [
+          0,
+          5582
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__14.如何发现孩子的天赋优势__下_.md",
+      "sha256": "8b85a642e14608b2cf0bdf3797bf748396b84afbe80ed7c0905bb7bfe017439b",
+      "chars": 5101,
+      "read_ranges": [
+        [
+          0,
+          5101
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__15.善良_真正的竞争优势_上_.md",
+      "sha256": "97942564cbff6f13d7dfbb53e8d96465f92fe69cff9c5117b249e07295983cc4",
+      "chars": 4653,
+      "read_ranges": [
+        [
+          0,
+          4653
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__16.善良_真正的竞争优势_下_.md",
+      "sha256": "41d9893964082899d2c859d89d97c752dbabe2bcbd5a16bf7064aa4b5f973b7e",
+      "chars": 6146,
+      "read_ranges": [
+        [
+          0,
+          6146
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__17.婚姻中的沟通心理学_上_.md",
+      "sha256": "30f5253fc316dcf4798868d488c9bbc581b1d649a078153debf343278a2d763f",
+      "chars": 4020,
+      "read_ranges": [
+        [
+          0,
+          4020
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__18.婚姻中的沟通心理学_下_.md",
+      "sha256": "88321c332e5ae04728cdea72e11517fc2e826a6b77fb76676f45355f162bb2a5",
+      "chars": 2494,
+      "read_ranges": [
+        [
+          0,
+          2494
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__19.经营一个有爱的家_上_.md",
+      "sha256": "00ba6ffeee727bf401c39b162c9f79cad3fc0b29f120ae80f823db2868e6b16d",
+      "chars": 5663,
+      "read_ranges": [
+        [
+          0,
+          5663
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__20.经营一个有爱的家_下_.md",
+      "sha256": "129b7b0fa2faffe95ff4a584a91b6277f70882fe084b5e8e4f15b67dd0cb0d9b",
+      "chars": 3418,
+      "read_ranges": [
+        [
+          0,
+          3418
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__21.如果原生家庭有错_我们如何改过__上_.md",
+      "sha256": "757713cd97ba49e21e1f7141db7756bf3babf85ad861b990cbecfd086404b358",
+      "chars": 2962,
+      "read_ranges": [
+        [
+          0,
+          2962
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__22.如果原生家庭有错_我们如何改过__下_.md",
+      "sha256": "5a929a820e309458e8817d4ca857c7ed84d437165ddc7c8890b3cb21be26033e",
+      "chars": 4234,
+      "read_ranges": [
+        [
+          0,
+          4234
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__23.同理心_让孩子和家人更幸福_上_.md",
+      "sha256": "754f3cb5101503f133b0fcd09963dde8788b33f8bc5bdee749061ce7458ef666",
+      "chars": 3702,
+      "read_ranges": [
+        [
+          0,
+          3702
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__24.同理心_让孩子和家人更幸福_下_.md",
+      "sha256": "2253bc4e8e54a47b1c72d26ec40e8e174120d881f7d9b689e96b1dab51fc9134",
+      "chars": 3080,
+      "read_ranges": [
+        [
+          0,
+          3080
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__25.如何培养孩子的创造力__上_.md",
+      "sha256": "835cba9bf87447a0faa743ae6725650ae2a6ad9b51efde28eab496c61cba9fcc",
+      "chars": 3500,
+      "read_ranges": [
+        [
+          0,
+          3500
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__26.如何培养孩子的创造力__下_.md",
+      "sha256": "0799c477a203e3db06ce4712ff5fa2bc439e27acad43851f44bcb2efd165c394",
+      "chars": 5421,
+      "read_ranges": [
+        [
+          0,
+          5421
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__27.能专注_才能幸福_上_.md",
+      "sha256": "4aa2df2750f2801224101b12f738af376826daf5e487d7bb4c1b9da3c9db6a63",
+      "chars": 2702,
+      "read_ranges": [
+        [
+          0,
+          2702
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__28.能专注_才能幸福_下_.md",
+      "sha256": "64faf6262d384befe89c45e04d6c56c48f2ef2eb6c2e9b2d43f0b303ff248633",
+      "chars": 5221,
+      "read_ranges": [
+        [
+          0,
+          5221
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__29.如何让孩子获得沉浸的福流体验__上_.md",
+      "sha256": "b3c5d5d1439f266c7a05aabcc840b8caefefeb41028ca4ce95114b85a908dd49",
+      "chars": 4371,
+      "read_ranges": [
+        [
+          0,
+          4371
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__30.如何让孩子获得沉浸的福流体验__下_.md",
+      "sha256": "26befe7af0ad30593130d46d19072f9ed60c73f9d251f2df79a4bfed62077b60",
+      "chars": 3028,
+      "read_ranges": [
+        [
+          0,
+          3028
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3___樊登亲荐_积极心理学帮助更多家庭过阳光积极的生活.md",
+      "sha256": "9cc64be3f7e4514a87b1153580d0c7c30e6cc732a0e66fd51e2c039742e1cbeb",
+      "chars": 616,
+      "read_ranges": [
+        [
+          0,
+          616
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__欢迎来到_新父母_大学_.md",
+      "sha256": "9844c424c78a5727e1ea2906426c0c724d8e70cfc123466a9e5dc7d7e9405bc0",
+      "chars": 1777,
+      "read_ranges": [
+        [
+          0,
+          1777
+        ]
+      ],
+      "course": "给父母的积极心理学-MP3",
+      "full_read": true
+    }
+  ],
+  "full_read": true,
+  "course": "给父母的积极心理学-MP3",
+  "total_files": 33,
+  "total_chars": 146475,
+  "completed_on": "2026-10-26",
+  "reader": "course_positive_psychology",
+  "read_method": "逐文件输出transcripts_raw全文，控制输出不截断；积极心理学02曾有工具中间截断，已额外完整读取[6000,7132)补足；范围为实际已读区间的合并覆盖。未依靠卡片或脚本摘要替代阅读。"
+}

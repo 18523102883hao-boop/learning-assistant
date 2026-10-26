@@ -1,5 +1,9 @@
 # 交接文档（HANDOFF）· 给 Codex 的续作指南
 
+> **当前交接已更新（2026-10-26）：请先读 [v2交接](notes/rebuild-v2/DEVELOPMENT-HANDOFF.md) 与 [v2方案](notes/rebuild-v2/PROPOSAL.md)。** 用户当前要求先讨论功能，再推进实现；本轮完成研究、两轮方案审视及Kimi比较，没有制作可部署的Codex/final配置。以下历史“第一件事/定稿/赛马”要求不得覆盖当前范围。已新增的39条书架候选目录另见 [复核与迁移要求](notes/rebuild-v2/research/bookshelf-review.md)。
+
+## 以下为历史交接记录
+
 > 更新日期：2026-10-26（Kimi Work 整理并推进）
 > 背景：家长原用 Codex 开发本项目，2026-10-26 15:11 左右 Codex 额度耗尽中断。本仓库由 Kimi Work 在中断点基础上建立，Codex 额度恢复后请从本文档继续。
 

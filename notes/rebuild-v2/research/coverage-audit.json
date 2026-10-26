@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-10-26",
+  "source": "transcripts_raw",
+  "raw_files": 113,
+  "covered_files": 113,
+  "characters": 651139,
+  "read_ranges": 134,
+  "course_counts": {
+    "培养孩子的自主学习力-MP3": 23,
+    "高情商亲子沟通课-MP3": 21,
+    "给父母的积极心理学-MP3": 33,
+    "带孩子阅读_就是带孩子创造自己-MP3": 15,
+    "_完结_成就孩子_12堂优秀父母养成大课": 21
+  },
+  "issues": [],
+  "method": "Verify reported complete-reading manifests against local files: sets, SHA256, character lengths, contiguous half-open ranges, full-read status. This validates coverage records, not original audio accuracy."
+}

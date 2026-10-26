@@ -1,4 +1,8 @@
-# 两个孩子的引导式学习助手
+# 两个孩子的学习伙伴：当前方案入口
+
+> **2026-10-26 当前状态：两轮审视后的功能讨论稿。** 先读 [v2整体提案](notes/rebuild-v2/PROPOSAL.md)、[Kimi对照评价](notes/rebuild-v2/KIMI-REVIEW.md)和[新交接](notes/rebuild-v2/DEVELOPMENT-HANDOFF.md)。本轮尚未授权正式配置、注册或部署；下文与旧HANDOFF、`workbuddy/kimi/`为历史材料，其中“定稿/立即赛马/部署步骤”不构成当前开工指令。资料与结论见 [v2索引](notes/rebuild-v2/README.md)。
+
+## 以下为历史方案说明
 
 为姐姐沫沫（五年级）和妹妹一一（三年级）打造的 AI 学习助手项目：不直接给答案，引导孩子搞懂知识点；让家长看到有据可查的学习证据；让孩子体验学科的意义与乐趣。
 
