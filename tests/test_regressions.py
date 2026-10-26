@@ -1,4 +1,5 @@
 import tempfile
+import sqlite3
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -75,6 +76,22 @@ class RegressionTests(unittest.TestCase):
         self.store.forget_task("task-1", "forget", 2, True)
         self.assertIsNone(self.store.context(True)["session"])
         self.assertIsNone(self.store.read("learning_event", "event-1"))
+
+    def test_legacy_storage_is_rejected_until_explicit_non_destructive_migration(self):
+        database = self.root / "a" / "state.sqlite3"
+        with sqlite3.connect(database) as connection:
+            connection.execute("PRAGMA user_version=3")
+            connection.execute("DROP TABLE closed_tasks")
+            if "sequence" in {row[1] for row in connection.execute("PRAGMA table_info(records)")}:
+                connection.execute("ALTER TABLE records DROP COLUMN sequence")
+        with self.assertRaises(CompanionError) as caught:
+            Store(self.root / "a", "test-a")
+        self.assertEqual(caught.exception.code, "schema_mismatch")
+        self.assertTrue(hasattr(Store, "migrate"), "缺少旧物理格式迁移")
+        Store.migrate(self.root / "a", "test-a")
+        reopened = Store(self.root / "a", "test-a")
+        self.assertEqual(reopened.context(True)["session"]["data"]["pause_point"], session()["pause_point"])
+        self.assertEqual(reopened.backup()["payload"]["schema_version"], 3)
 
 
 if __name__ == "__main__":

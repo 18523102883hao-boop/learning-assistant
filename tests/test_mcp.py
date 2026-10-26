@@ -9,14 +9,15 @@ from companion.store import Store
 from test_store import session
 
 ROOT = Path(__file__).resolve().parents[1]
+if importlib.util.find_spec("mcp"):
+    from mcp import ClientSession, StdioServerParameters
+    from mcp.client.stdio import stdio_client
 
 
 @unittest.skipUnless(importlib.util.find_spec("mcp"), "需安装 .[mcp] 才能验证真实 stdio 协议")
 class MCPTests(unittest.IsolatedAsyncioTestCase):
     async def test_stdio_fixed_binding_tool_inventory_and_safe_failures(self):
         self.assertTrue((ROOT / "companion" / "mcp_server.py").exists(), "尚未实现有限 MCP 工具")
-        from mcp import ClientSession, StdioServerParameters
-        from mcp.client.stdio import stdio_client
 
         with tempfile.TemporaryDirectory() as temp:
             data_root = Path(temp) / "student"
@@ -27,7 +28,7 @@ class MCPTests(unittest.IsolatedAsyncioTestCase):
                     await client.initialize()
                     tools = (await client.list_tools()).tools
                     names = {tool.name for tool in tools}
-                    self.assertEqual(names, {"companion_context", "save_learning_record", "forget_learning_record", "correct_learning_event", "consume_reading_followup", "forget_learning_task", "family_time_notice"})
+                    self.assertEqual(names, {"companion_context", "save_learning_record", "forget_learning_record", "correct_learning_event", "consume_reading_followup", "forget_learning_task", "family_time_notice", "reading_materials"})
                     for tool in tools:
                         self.assertNotIn("root", tool.inputSchema["properties"])
                         self.assertNotIn("child_id", tool.inputSchema["properties"])
@@ -48,6 +49,10 @@ class MCPTests(unittest.IsolatedAsyncioTestCase):
                     self.assertFalse(provenance["ok"])
                     refused = await call("forget_learning_record", {"kind": "memory", "record_id": "missing", "operation_id": "uncertain-forget", "expected_revision": 0})
                     self.assertFalse(refused["ok"])
+                    malformed = await call("save_learning_record", args | {"operation_id": "mcp-malformed", "data": session() | {"verification": None}})
+                    self.assertFalse(malformed["ok"])
+                    missing_library = await call("reading_materials", {"query": "纸飞机"})
+                    self.assertFalse(missing_library["available"])
 
 
 if __name__ == "__main__":

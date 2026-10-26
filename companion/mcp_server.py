@@ -9,15 +9,17 @@ from typing import Literal
 from .cli import outside_repository
 from .errors import CompanionError
 from .store import Store
+from .materials import MaterialLibrary
 
 
-def create_server(store):
+def create_server(store, materials=None):
     from mcp.server.fastmcp import FastMCP
     from pydantic import StrictBool, StrictInt
 
     if importlib.metadata.version("mcp") != "1.26.0":
         raise CompanionError("sdk_version_mismatch", "MCP SDK 与验证版本不符，请按项目固定依赖安装后复验")
     server = FastMCP("family-learning-companion", log_level="WARNING")
+    library = MaterialLibrary(materials)
 
     def guarded(action):
         try:
@@ -30,9 +32,16 @@ def create_server(store):
     def child_data(data):
         if len(json.dumps(data, ensure_ascii=False)) > 16000:
             raise CompanionError("invalid_input", "只接收小型事实候选")
+        if "verification" in data and not isinstance(data["verification"], list):
+            raise CompanionError("invalid_input", "verification 须为校验方式列表")
         if data.get("source_kind") not in ("observed_in_session", "child_reported") or "adult_checked" in data.get("verification", []):
             raise CompanionError("provenance_not_allowed", "儿童工具不可自行声明成人/外部已核验")
         return data
+
+    @server.tool()
+    def reading_materials(query: str, limit: StrictInt = 2) -> dict:
+        """只检索已准入的书目候选，最多3条；不代表具体剧情/版本已核验。作业期间不主动调用。当前页可直接陪读。"""
+        return guarded(lambda: library.search(query, limit))
 
     @server.tool()
     def companion_context(speaker_confirmed: StrictBool = False) -> dict:
@@ -79,10 +88,11 @@ def main():
     parser = argparse.ArgumentParser(description="固定孩子身份的本地 stdio MCP；无HTTP监听")
     parser.add_argument("--root", required=True)
     parser.add_argument("--child", required=True)
+    parser.add_argument("--materials", help="成人绑定的只读 catalog.v3.json；不是模型参数")
     args = parser.parse_args()
     try:
         store = Store(outside_repository(args.root), args.child)
-        server = create_server(store)
+        server = create_server(store, args.materials)
     except (CompanionError, ImportError) as error:
         message = str(error) if isinstance(error, CompanionError) else "缺少固定MCP依赖；请安装 .[mcp]"
         print(message, file=sys.stderr)

@@ -54,7 +54,9 @@ def unseal(package, package_type, child_id):
                 raise ValueError("records")
             seen = set()
             for row in payload["records"]:
-                keys(row, {"schema_version", "rule_version", "child_id", "kind", "id", "revision", "data", "created_at", "updated_at"})
+                keys(row, {"schema_version", "rule_version", "child_id", "kind", "id", "revision", "data", "created_at", "updated_at"}, {"sequence"})
+                if type(row.get("sequence", 0)) is not int or row.get("sequence", 0) < 0:
+                    raise ValueError("event order")
                 identifier(row["id"])
                 validate("session" if row["kind"] == "task" else row["kind"], row["data"])
                 if row["child_id"] != child_id or row["schema_version"] != SCHEMA_VERSION or type(row["revision"]) is not int or row["revision"] < 1:

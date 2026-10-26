@@ -53,8 +53,10 @@ def parent_export(backup, start, end):
         data = row["data"]
         # Deliberately exclude attempt_summary, memories, pause points and reading notes.
         events.append({"event_id": row["id"], "task_id": data["task_id"],
+                       "observed_at": row["created_at"], "write_sequence": row.get("sequence", 0),
                        "concept_labels": list(dict.fromkeys(CONCEPT_LABELS[tag] for tag in data["concept_tags"] if tag in CONCEPT_LABELS)) or ["未核实知识点"],
                        **{k: data[k] for k in ("attempt_kind", "assistance", "performance", "independence_evidence", "source_kind", "verification")}})
+    events.sort(key=lambda item: (datetime.fromisoformat(item["observed_at"]), item["write_sequence"]))
     return {"schema_version": SCHEMA_VERSION, "rule_version": RULE_VERSION,
             "child_id": child_id, "source_store_id": payload["store_id"], "source_sequence": payload["sequence"],
             "period": {"start": start, "end": end, "timezone": "Asia/Shanghai"}, "events": events}
@@ -70,7 +72,12 @@ def validate_export(export):
     if not isinstance(export["events"], list):
         raise CompanionError("invalid_input", "摘要事件必须是列表")
     for data in export["events"]:
-        keys(data, {"event_id", "task_id", "concept_labels", "attempt_kind", "assistance", "performance", "independence_evidence", "source_kind", "verification"})
+        keys(data, {"event_id", "task_id", "concept_labels", "attempt_kind", "assistance", "performance", "independence_evidence", "source_kind", "verification", "observed_at", "write_sequence"})
+        try:
+            if datetime.fromisoformat(data["observed_at"]).tzinfo is None or type(data["write_sequence"]) is not int or data["write_sequence"] < 0:
+                raise ValueError("order")
+        except (TypeError, ValueError) as error:
+            raise CompanionError("invalid_input", "事件时间或次序格式不符") from error
         identifier(data["event_id"])
         identifier(data["task_id"])
         choices(data["concept_labels"], set(CONCEPT_LABELS.values()) | {"未核实知识点"}, "concept_labels", 4)
@@ -93,13 +100,16 @@ def render_report(export, supersedes=None):
     if supersedes:
         lines.extend([f"本版替代 `{supersedes}`。请替换已保存的旧副本；工具无法远程删除人工复制件。", ""])
     tasks = {}
-    for event in export["events"]:
+    for event in sorted(export["events"], key=lambda item: (datetime.fromisoformat(item["observed_at"]), item["write_sequence"])):
         tasks.setdefault(event["task_id"], []).append(event)
     if not tasks:
         lines.extend(["本期证据不足，不推断掌握情况或使用动机。", "", "家长可以做：按孩子需要提供一本书、一张纸或安静时间，不额外安排测验。"])
     for task_id, events in tasks.items():
         labels = list(dict.fromkeys(label for event in events for label in event["concept_labels"]))
         last = events[-1]
+        tied = [e for e in events if e["observed_at"] == last["observed_at"]]
+        if len(tied) > 1 and any(e["write_sequence"] == 0 for e in tied):
+            last = last | {"performance": "ambiguous", "independence_evidence": "not_assessed"}
         helps = list(dict.fromkeys(h for event in events for h in event["assistance"]))
         attempts = list(dict.fromkeys(ATTEMPT_LABELS[event["attempt_kind"]] for event in events))
         checks = "、".join(CHECK_LABELS[v] for v in last["verification"]) or "未核对"

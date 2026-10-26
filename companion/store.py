@@ -13,7 +13,7 @@ from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import RULE_VERSION, SCHEMA_VERSION
+from . import RULE_VERSION, SCHEMA_VERSION, STORAGE_VERSION
 from .archive import seal, unseal
 from .contracts import identifier, validate, validate_profile
 from .errors import CompanionError
@@ -40,14 +40,14 @@ class Store:
         try:
             connection = sqlite3.connect(database, isolation_level=None)
             connection.executescript("""
-                PRAGMA user_version=3;
+                PRAGMA user_version=4;
                 PRAGMA journal_mode=DELETE;
                 PRAGMA secure_delete=ON;
                 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
                 CREATE TABLE records (
                     kind TEXT NOT NULL, id TEXT NOT NULL, data TEXT NOT NULL,
                     revision INTEGER NOT NULL, created_at TEXT NOT NULL,
-                    updated_at TEXT NOT NULL, PRIMARY KEY (kind, id));
+                    updated_at TEXT NOT NULL, sequence INTEGER NOT NULL, PRIMARY KEY (kind, id));
                 CREATE TABLE operations (
                     id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);
                 CREATE TABLE tombstones (
@@ -57,6 +57,7 @@ class Store:
             """)
             connection.execute("BEGIN IMMEDIATE")
             metadata = {"schema_version": SCHEMA_VERSION, "rule_version": RULE_VERSION,
+                        "storage_version": STORAGE_VERSION,
                         "child_id": child_id, "profile": profile, "sequence": 0,
                         "store_id": str(uuid.uuid4()), "created_at": now_utc()}
             connection.executemany("INSERT INTO meta VALUES (?,?)", [(k, canonical(v)) for k, v in metadata.items()])
@@ -67,6 +68,42 @@ class Store:
         except sqlite3.Error as error:
             raise CompanionError("storage_error", "初始化失败；未声明资料保存成功") from error
         return cls(root, child_id)
+
+    @classmethod
+    def migrate(cls, root, expected_child):
+        """Explicit adult migration of early v3 physical storage; never silently upgrades."""
+        identifier(expected_child)
+        original = Path(root).expanduser()
+        database = original / "state.sqlite3"
+        if original.is_symlink() or database.is_symlink() or not database.is_file() or database.stat().st_nlink != 1:
+            raise CompanionError("unsafe_path", "迁移只针对有效独立资料文件")
+        connection = sqlite3.connect(database.resolve().as_uri() + "?mode=rw", uri=True, isolation_level=None, timeout=5)
+        try:
+            connection.execute("BEGIN IMMEDIATE")
+            version = connection.execute("PRAGMA user_version").fetchone()[0]
+            if cls._meta(connection, "child_id") != expected_child:
+                raise CompanionError("identity_mismatch", "绑定身份不符，不迁移另一孩子的资料")
+            if version == STORAGE_VERSION:
+                return {"ok": True, "migrated": False, "storage_version": STORAGE_VERSION}
+            if version != 3:
+                raise CompanionError("schema_mismatch", "不支持的旧存储格式；需单独明确迁移")
+            for kind, data in connection.execute("SELECT kind,data FROM records"):
+                validate("session" if kind == "task" else kind, json.loads(data))
+            connection.execute("CREATE TABLE IF NOT EXISTS closed_tasks (id TEXT PRIMARY KEY)")
+            columns = {row[1] for row in connection.execute("PRAGMA table_info(records)")}
+            if "sequence" not in columns:
+                # Old same-second ordering was not saved; zero explicitly means unknown.
+                connection.execute("ALTER TABLE records ADD COLUMN sequence INTEGER NOT NULL DEFAULT 0")
+            connection.execute("INSERT INTO meta VALUES ('storage_version',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value", (canonical(STORAGE_VERSION),))
+            connection.execute("PRAGMA user_version=4")
+            connection.commit()
+            return {"ok": True, "migrated": True, "storage_version": STORAGE_VERSION, "legacy_event_order": "same_second_unknown"}
+        except (sqlite3.Error, ValueError) as error:
+            raise CompanionError("migration_failed", "迁移失败，原事务已回滚；请成人核查有效副本") from error
+        finally:
+            if connection.in_transaction:
+                connection.rollback()
+            connection.close()
 
     def __init__(self, root, expected_child):
         identifier(expected_child, "child_id")
@@ -97,7 +134,7 @@ class Store:
             connection.execute("PRAGMA trusted_schema=OFF")
             connection.execute("PRAGMA secure_delete=ON")
             connection.execute("PRAGMA synchronous=FULL")
-            if connection.execute("PRAGMA user_version").fetchone()[0] != SCHEMA_VERSION:
+            if connection.execute("PRAGMA user_version").fetchone()[0] != STORAGE_VERSION:
                 raise CompanionError("schema_mismatch", "资料版本不兼容；请成人运行明确迁移")
             if self._meta(connection, "child_id") != self.child_id:
                 raise CompanionError("identity_mismatch", "账号绑定不符，不打开另一孩子的资料")
@@ -121,6 +158,7 @@ class Store:
         return {"schema_version": SCHEMA_VERSION, "rule_version": RULE_VERSION,
                 "child_id": self.child_id, "kind": row["kind"], "id": row["id"],
                 "revision": row["revision"], "data": json.loads(row["data"]),
+                "sequence": row["sequence"],
                 "created_at": row["created_at"], "updated_at": row["updated_at"]}
 
     @staticmethod
@@ -151,10 +189,11 @@ class Store:
             if any((item := json.loads(row["data"]))["task_id"] == data["task_id"] and item["assistance"] for row in rows):
                 raise CompanionError("evidence_conflict", "同一任务已获帮助，不能改称本会话无提示独立尝试")
 
-    @staticmethod
-    def _save_row(connection, kind, record_id, data, revision, created_at, updated_at):
-        connection.execute("INSERT INTO records VALUES (?,?,?,?,?,?) ON CONFLICT(kind,id) DO UPDATE SET data=excluded.data, revision=excluded.revision, updated_at=excluded.updated_at",
-                           (kind, record_id, canonical(data), revision, created_at, updated_at))
+    def _save_row(self, connection, kind, record_id, data, revision, created_at, updated_at, sequence=None):
+        if sequence is None:
+            sequence = self._meta(connection, "sequence") + 1
+        connection.execute("INSERT INTO records VALUES (?,?,?,?,?,?,?) ON CONFLICT(kind,id) DO UPDATE SET data=excluded.data, revision=excluded.revision, updated_at=excluded.updated_at, sequence=excluded.sequence",
+                           (kind, record_id, canonical(data), revision, created_at, updated_at, sequence))
 
     def put(self, kind, record_id, data, operation_id, expected_revision, speaker_confirmed=False):
         if speaker_confirmed is not True:
@@ -416,10 +455,12 @@ class Store:
                 if row["kind"] in {"session", "task"} and row["data"]["task_id"] in closed:
                     row = row | {"data": row["data"] | {"homework_status": "reported_complete", "pause_point": ""}}
                 if not connection.execute("SELECT 1 FROM records WHERE kind=? AND id=?", (row["kind"], row["id"])).fetchone():
-                    self._save_row(connection, row["kind"], row["id"], row["data"], row["revision"], row["created_at"], row["updated_at"])
+                    self._save_row(connection, row["kind"], row["id"], row["data"], row["revision"], row["created_at"], row["updated_at"], row.get("sequence", 0))
             for row in connection.execute("SELECT * FROM records WHERE kind IN ('session','task')").fetchall():
                 data = json.loads(row["data"])
                 if data["task_id"] in closed and (data["homework_status"] != "reported_complete" or data["pause_point"]):
                     self._save_row(connection, row["kind"], row["id"], data | {"homework_status": "reported_complete", "pause_point": ""}, row["revision"] + 1, row["created_at"], now_utc())
             connection.execute("INSERT INTO meta VALUES (?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value", (key, canonical(registry["sequence"])))
+            floor = max(self._meta(connection, "sequence"), registry["sequence"], max((row.get("sequence", 0) for row in payload["records"]), default=0))
+            connection.execute("UPDATE meta SET value=? WHERE key='sequence'", (canonical(floor),))
             return self._receipt(connection, operation_id, digest, "restore", 1)

@@ -55,6 +55,14 @@ class ReportTests(unittest.TestCase):
         report = render_report(exported)
         self.assertIn("证据不足", report["markdown"])
 
+    def test_latest_outcome_uses_real_record_order_even_with_reversed_ids_same_second(self):
+        with patch("companion.store.now_utc", return_value="2026-10-27T08:05:00+00:00"):
+            self.store.put("learning_event", "event-z", event(performance="partial"), "earlier", 0, True)
+            self.store.put("learning_event", "event-a", event(performance="correct"), "later", 0, True)
+        exported = parent_export(self.store.backup(), "2026-10-26", "2026-11-01")
+        self.assertEqual(exported["events"][-1]["event_id"], "event-a")
+        self.assertIn("本次尝试经所列方式核对为正确", render_report(exported)["markdown"])
+
 
 if __name__ == "__main__":
     unittest.main()
