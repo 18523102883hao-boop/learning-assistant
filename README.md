@@ -1,6 +1,6 @@
 # 两个孩子的学习伙伴：当前方案入口
 
-> **2026-10-26 当前状态：两轮审视后的功能讨论稿。** 先读 [v2整体提案](notes/rebuild-v2/PROPOSAL.md)、[Kimi对照评价](notes/rebuild-v2/KIMI-REVIEW.md)和[新交接](notes/rebuild-v2/DEVELOPMENT-HANDOFF.md)。本轮尚未授权正式配置、注册或部署；下文与旧HANDOFF、`workbuddy/kimi/`为历史材料，其中“定稿/立即赛马/部署步骤”不构成当前开工指令。资料与结论见 [v2索引](notes/rebuild-v2/README.md)。
+> **2026-10-27 当前入口：v3完整方案，等待家长整体确认。** 先读 [完整产品与开发方案](notes/final-plan-2026-10-27.md)、[工程规格与验收](notes/engineering-plan-2026-10-27.md)和[给Kimi/下一位AI的交接](notes/development-handoff-2026-10-27.md)。已整合最新Kimi资产与家庭决定；当前只做方案，不注册、不部署、不实现产品。文档上传不等于开工授权。下文及v2为历史过程；[材料审阅](notes/materials-audit-2026-10-27.md)与[平台官方复核](notes/rebuild-v2/research/platform-refresh-2026-10-27.md)记录本轮证据边界。
 
 ## 以下为历史方案说明
 

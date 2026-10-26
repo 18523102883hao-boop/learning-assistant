@@ -1,6 +1,6 @@
 # 交接文档（HANDOFF）· 给 Codex 的续作指南
 
-> **当前交接已更新（2026-10-26）：请先读 [v2交接](notes/rebuild-v2/DEVELOPMENT-HANDOFF.md) 与 [v2方案](notes/rebuild-v2/PROPOSAL.md)。** 用户当前要求先讨论功能，再推进实现；本轮完成研究、两轮方案审视及Kimi比较，没有制作可部署的Codex/final配置。以下历史“第一件事/定稿/赛马”要求不得覆盖当前范围。新增书架候选目录的实际核验范围另见 [复核与迁移要求](notes/rebuild-v2/research/bookshelf-review.md)。
+> **当前交接已更新（2026-10-27）：请先读 [v3交接](notes/development-handoff-2026-10-27.md)、[完整方案](notes/final-plan-2026-10-27.md)与[工程附录](notes/engineering-plan-2026-10-27.md)。** 用户要求先审阅详细综合方案，确认后再开发。最新Kimi与家庭决定已纳入，仍未制作正式运行配置或实测产品。以下历史“定稿/第一件事独立赛马/立即部署”不能覆盖当前范围；文档在GitHub可读不等于实现已获授权。
 
 ## 以下为历史交接记录
 
