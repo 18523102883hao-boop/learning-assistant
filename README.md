@@ -1,6 +1,6 @@
 # 两个孩子的学习伙伴：当前方案入口
 
-> **2026-10-27 当前入口：v3完整方案，等待家长整体确认。** 先读 [完整产品与开发方案](notes/final-plan-2026-10-27.md)、[工程规格与验收](notes/engineering-plan-2026-10-27.md)和[给Kimi/下一位AI的交接](notes/development-handoff-2026-10-27.md)。已整合最新Kimi资产与家庭决定；当前只做方案，不注册、不部署、不实现产品。文档上传不等于开工授权。下文及v2为历史过程；[材料审阅](notes/materials-audit-2026-10-27.md)与[平台官方复核](notes/rebuild-v2/research/platform-refresh-2026-10-27.md)记录本轮证据边界。
+> **2026-10-27 已获授权，进入开发。** 家长最新指示：“方案设计好了，你就开始开发，只要有额度你就不要停”。以[v3完整方案](notes/final-plan-2026-10-27.md)、[工程契约](notes/engineering-plan-2026-10-27.md)为基线，当前进度看[实施记录](notes/implementation-v3-2026-10-27.md)与[最新交接](notes/development-handoff-2026-10-27.md)。WorkBuddy先成人验证；未完成的实机/模型测试不写成已通过。
 
 ## 以下为历史方案说明
 

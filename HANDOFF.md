@@ -1,6 +1,6 @@
 # 交接文档（HANDOFF）· 给 Codex 的续作指南
 
-> **当前交接已更新（2026-10-27）：请先读 [v3交接](notes/development-handoff-2026-10-27.md)、[完整方案](notes/final-plan-2026-10-27.md)与[工程附录](notes/engineering-plan-2026-10-27.md)。** 用户要求先审阅详细综合方案，确认后再开发。最新Kimi与家庭决定已纳入，仍未制作正式运行配置或实测产品。以下历史“定稿/第一件事独立赛马/立即部署”不能覆盖当前范围；文档在GitHub可读不等于实现已获授权。
+> **当前交接（2026-10-27）：已授权开发，勿重新等待方案确认。** 先读[v3最新交接](notes/development-handoff-2026-10-27.md)、[实施记录](notes/implementation-v3-2026-10-27.md)与[工程附录](notes/engineering-plan-2026-10-27.md)。家长已授权持续开发及同步GitHub。以下为历史记录，旧赛马与等待确认状态不再生效。
 
 ## 以下为历史交接记录
 
