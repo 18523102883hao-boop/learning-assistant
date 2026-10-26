@@ -1,0 +1,7 @@
+.DS_Store
+.omo/
+test/
+# 真实孩子档案不入库，只保留 example
+profiles/momo.json
+profiles/yiyi.json
+profiles/*/learning-log.jsonl

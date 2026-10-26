@@ -1,0 +1,41 @@
+{
+  "child_id": "momo",
+  "nickname": "沫沫",
+  "grade": "五年级",
+  "note": "示例档案（含虚构字段）。正式使用前由家长与孩子共同确认；不使用完整姓名与生日。",
+
+  "curriculum": {
+    "status": "unconfirmed",
+    "note": "重庆主城区学校，教材版本待家长核对实物课本封面与版权页后填写；确认前助手只做跨版本概念辅导。",
+    "语文": null,
+    "数学": null,
+    "英语": { "version": null, "series": null, "note": "若为人教版还需辨认 PEP / 精通等系列" }
+  },
+
+  "interests": {
+    "confirmed_by_child": ["猫小九相关漫画", "绘画", "手账", "设计人物", "借助 AI 创作"],
+    "note": "家长描述的活动假设，需孩子实际选择与反馈确认；兴趣会变，允许随时更换。不据此贴'视觉型'等固定标签。"
+  },
+
+  "preferred_help": {
+    "note": "试用后由实际表现填写：可接受的提示长度、节奏、图示/语音偏好。",
+    "entries": []
+  },
+
+  "in_progress_works": [],
+
+  "mastery_summary": {
+    "note": "从学习事件生成，状态只能是：待观察 / 辅助下完成 / 独立完成 / 延迟迁移成功。",
+    "entries": []
+  },
+
+  "parent_observations": [
+    {
+      "source": "parent",
+      "date": "2026-10-26",
+      "text": "家长希望她更有自信，保持好奇与独立思考。",
+      "kind": "observation",
+      "note": "家长的担忧不写成不可更改的个人标签。"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Learning Event",
+  "description": "孩子学习事件的最小记录格式。一条事件一行 JSON（jsonl）。只记录可观察事实，区分观察与推断。",
+  "type": "object",
+  "required": [
+    "child_id",
+    "session_id",
+    "event_id",
+    "timestamp",
+    "subject",
+    "attempt_summary",
+    "hint_level",
+    "outcome"
+  ],
+  "properties": {
+    "child_id": {
+      "type": "string",
+      "enum": ["momo", "yiyi"],
+      "description": "稳定的孩子标识，跨新任务/换设备不变。新建聊天不等于新 child_id。"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "本次求助/任务的会话标识。"
+    },
+    "event_id": {
+      "type": "string",
+      "description": "本次事件的唯一 ID（如 uuid 或时间戳+序号），用于去重，重试写入不重复计数。"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "事件完成时间，ISO 8601，带时区。"
+    },
+    "subject": {
+      "type": "string",
+      "enum": ["语文", "数学", "英语", "跨学科"],
+      "description": "学科。"
+    },
+    "curriculum_ref": {
+      "type": ["string", "null"],
+      "description": "教材/单元/课时映射。教材版本未确认前为 null，助手只做跨版本概念辅导。"
+    },
+    "skill_id": {
+      "type": ["string", "null"],
+      "description": "本次涉及的具体技能点，如 'multiplication.grouping'。无明确映射可空。"
+    },
+    "attempt_summary": {
+      "type": "string",
+      "description": "可观察的过程描述：孩子做了什么、卡在哪一步。不写动机/人格词。"
+    },
+    "hint_level": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "description": "0=独立完成；1=目标/条件提示；2=具体提示或图示；3=同类例题演示；4=换讲法后完成。"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": ["needs_more_help", "with_support", "independent", "transfer_delayed"],
+      "description": "needs_more_help=仍需帮助；with_support=辅助下完成；independent=独立完成；transfer_delayed=隔天/换情境的新题独立做对（迁移成功）。当天原题做对不记 transfer_delayed。"
+    },
+    "evidence_ref": {
+      "type": ["string", "null"],
+      "description": "证据位置：作品文件名、题目照片（去标识后）或对话摘录。可空但周报引用时必须可回查。"
+    },
+    "observation_or_inference": {
+      "type": ["object", "null"],
+      "description": "非事实类内容单独放这里，必须与事实字段分离。",
+      "properties": {
+        "kind": { "type": "string", "enum": ["observation", "hypothesis_to_verify"] },
+        "text": { "type": "string" }
+      }
+    },
+    "correction_of": {
+      "type": ["string", "null"],
+      "description": "若本条是对旧事件的更正，填被更正的 event_id；更正追加而非改写。"
+    }
+  }
+}
