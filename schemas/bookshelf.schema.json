@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "家庭书架书目库",
+  "description": "孩子家中已有/想读/在读的书目，供阅读伙伴推荐与跟进。一本书一条记录；每本书可属于一个孩子或共有。",
+  "type": "object",
+  "required": ["books"],
+  "properties": {
+    "books": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["book_id", "title", "owner", "status", "transition_level"],
+        "properties": {
+          "book_id": { "type": "string", "description": "唯一 ID，如 bk-0001" },
+          "title": { "type": "string" },
+          "author": { "type": "string" },
+          "category": { "type": "string", "description": "科幻/科普/历史/哲学/文学/漫画/杂志/传记 等" },
+          "owner": { "type": "string", "enum": ["momo", "yiyi", "shared"] },
+          "status": {
+            "type": "string",
+            "enum": ["unread", "wants", "reading", "finished", "paused"],
+            "description": "unread=家中有未读；wants=孩子想买（引起兴趣后）；reading=在读；finished=读完；paused=搁置"
+          },
+          "transition_level": {
+            "type": "string",
+            "enum": ["picture", "bridge", "text", "adult"],
+            "description": "图文书 / 桥梁书（图文参半）/ 纯文字儿童书 / 成人书——记录孩子阅读阶梯的当前位置"
+          },
+          "source": { "type": "string", "description": "书架实拍识别 / 家长补充 / 伙伴推荐 等" },
+          "interest_hook": { "type": "string", "description": "与已知兴趣的连接点，如：喜欢猫小九→同主题的冒险故事" },
+          "last_touch": { "type": "string", "description": "伙伴最近一次提及/讨论的日期与一句话（不含原文内容）" },
+          "notes": { "type": "string", "description": "家长补充（如豆瓣评分、适读年龄）" }
+        }
+      }
+    }
+  }
+}

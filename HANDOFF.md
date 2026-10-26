@@ -26,9 +26,10 @@
 
 - **家长启用赛马**：Kimi 与 Codex 各写一版 WorkBuddy 配置，家长评比后由 Codex 综合出最终版。规则与目录结构见 `workbuddy/README.md`。
 - **Kimi 版 v1.0**（`workbuddy/kimi/`）：按方案 v1.0 + 修订②编写，含——
-  - `PROJECT_INSTRUCTIONS.md`：平等伙伴身份、教学约定（含第 0 级情绪接收）、**语言 lint**（禁人格/天赋评价词）、冷启动剧本、注意力护栏、场景分布；
-  - 5 个 Skill：homework-help（情绪接收+四级帮助+跳级+迁移验证）、explore-task、**partner-chat（新增：伙伴闲聊，五条红线+收口护栏）**、learning-log（新增 scene_type 场景分类，闲聊只记次数）、parent-review（新增场景分布行 + **周报落 Markdown 文档**）；
+  - `PROJECT_INSTRUCTIONS.md`：平等伙伴身份、教学约定（含第 0 级情绪接收）、**语言 lint**（禁人格/天赋评价词）、冷启动剧本、注意力护栏、场景分布、**五个入口**；
+  - 6 个 Skill：homework-help（情绪接收+四级帮助+跳级+迁移验证）、explore-task、**partner-chat（新增：伙伴闲聊，五条红线+收口护栏）**、**reading-companion（新增：阅读伙伴——引读家中存书/推荐新书/图文→纯文字过渡陪读/4F 聊读后感/买书跟进闭环，书架库 `schemas/bookshelf.schema.json`）**、learning-log（新增 scene_type 场景分类，闲聊只记次数）、parent-review（新增场景分布行 + **周报落 Markdown 文档**）；
   - 已体现 §8 家长决议：口语跟读与整页对答案 v1 不做、周报落文档、使用约定待家长线下确定。
+- **v1.0 修订③（家长 19:04）**：阅读伙伴成为家长第一优先级之一（方案新增 §3C-附）。家长将上传书架实拍建书目库、陆续提供认可的书籍与课程（首批：刘擎《西方现代思想讲义》，存 `library/parent-materials/`，已 gitignore，入库的只有提炼要点）。
 - `workbuddy/codex/`（空目录，Codex 写自己的版本）；`workbuddy/final/`（空目录，Codex 综合产出）。
 
 ### 第二轮推进（2026-10-26 傍晚，Kimi Work 基于家长提供的全部 Codex 原始提示词）
@@ -78,7 +79,7 @@
 > **⚠️ 家长已启用赛马机制（2026-10-26 17:54）**：Codex 恢复后，第一件事**不是**继续 Kimi 的方案，而是按下面第 0 步写出你自己的独立版本，然后综合。
 
 **第 0 步 · Codex 写自己的版本（赛马上半场）**
-- 在 `workbuddy/codex/` 下从零写你自己的版本：结构与 `kimi/` 相同（`PROJECT_INSTRUCTIONS.md` + `skills/homework-help, explore-task, partner-chat, learning-log, parent-review` 共 5 个 Skill）。
+- 在 `workbuddy/codex/` 下从零写你自己的版本：结构与 `kimi/` 相同（`PROJECT_INSTRUCTIONS.md` + `skills/homework-help, explore-task, partner-chat, reading-companion, learning-log, parent-review` 共 6 个 Skill）。
 - **写之前不要读 `workbuddy/kimi/` 的任何文件**——赛马比的是原始判断，不是改写能力。你可以读 `notes/master-proposal-2026-10-26.md`（v1.0 方案，双方共同的输入）、`notes/` 下全部调研文档、`schemas/`、`profiles/`、`validation/`，这些是两版共享的地基。
 - 写完后在 `workbuddy/codex/DESIGN-RATIONALE.md` 里说明你的关键设计决策及理由（不限于：身份定位、帮助层级、情绪处理、伙伴模式边界、记录粒度）。
 

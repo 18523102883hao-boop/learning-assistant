@@ -22,8 +22,10 @@
 | Skill：伙伴闲聊 | `kimi/skills/partner-chat/SKILL.md` | "随便聊聊"：平等伙伴对话 + 五条红线 + 收口护栏 |
 | Skill：学习记录 | `kimi/skills/learning-log/SKILL.md` | 学习事件写入（含 scene_type 场景分类） |
 | Skill：家长周报 | `kimi/skills/parent-review/SKILL.md` | 仅家长入口；含场景分布行与周报落文档 |
+| Skill：阅读伙伴 | `kimi/skills/reading-companion/SKILL.md` | "陪我读书"：引读家中存书、推荐新书、图文→纯文字过渡陪读、4F 聊读后感、买书跟进闭环 |
 | 孩子档案 | `../profiles/*.example.json` | 固定 `child_id`，独立保存 |
 | 事件格式 | `../schemas/learning-event.schema.json` | jsonl，一条一行 |
+| 书架库格式 | `../schemas/bookshelf.schema.json` | 家中书目/想买/在读状态与阅读阶梯（transition_level） |
 
 ## 部署步骤（待执行）
 
