@@ -10,6 +10,7 @@
 4. [与 Kimi 方案的相互审视](KIMI-REVIEW.md)：保留、改写、暂不采纳及理由。
 5. [两轮复盘](REVIEWS.md)：模拟孩子视角与产品经理视角的独立审视、处理结果；不冒充真实儿童试用。
 6. [开发准备与交接](DEVELOPMENT-HANDOFF.md)：供后续 AI 接手，明确未决定事项和开工条件。
+7. **[开发文档（Kimi 版，赛马稿）](DEVELOPMENT-PLAN.md)**：把融合方案翻译成工程任务——文件级交付清单、六 SKILL 契约、schema v2 草案、阶段出口条件、验收用例集。与 HANDOFF 不一致处以 FUSION-PROPOSAL + 本文为准；Codex 将另写一份开发文档赛马评比。
 7. `research/`：五门课逐篇阅读记录、覆盖清单与产品/平台一手来源。
 
 初始评审基线：`a5380b66d2f80ba67cd3233b124cb28567e640ce`；另已纳入 `726df2b508deba3cb1d978f94455d12be666c4e9` 的书架增量。GitHub 私有仓库 `18523102883hao-boop/learning-assistant` 的旧HANDOFF已通过连接器核对；上述基线不是最终稿已经全部提交/推送的证明。旧版与 `workbuddy/kimi/` 保留为历史输入，不等同于已批准配置。
