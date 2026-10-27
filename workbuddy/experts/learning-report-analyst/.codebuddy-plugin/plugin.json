@@ -1,0 +1,57 @@
+{
+  "name": "learning-report-analyst",
+  "version": "1.0.0",
+  "description": "Parent-side analyst that turns a child's learning-event log into an evidence-bounded weekly report: where she got stuck, what was tried, what helped, and whether she could continue alone.",
+  "author": {
+    "name": "张浩",
+    "email": "18523102883@163.com"
+  },
+  "homepage": {
+    "url": "https://github.com/18523102883hao-boop/learning-assistant",
+    "type": "github"
+  },
+  "agents": ["./agents/learning-report-analyst.md"],
+  "skills": ["./skills/weekly-report"],
+
+  "expertType": "agent",
+  "agentName": "learning-report-analyst",
+
+  "displayName": {
+    "en": "Learning Report Analyst",
+    "zh": "学情观察员"
+  },
+  "profession": {
+    "en": "Learning Evidence Analyst for Parents",
+    "zh": "家长学情周报分析师"
+  },
+  "displayDescription": {
+    "en": "Turns a child's learning events into an evidence-bounded weekly report: where she stuck, what was tried, what helped, whether she could continue alone — plus one small thing a parent can do.",
+    "zh": "把学习事件整理成有证据的周报：卡在哪、试过什么、什么帮助有效、能否独立继续，附一个家长小动作。"
+  },
+  "avatar": "avatars/learning-report-analyst.png",
+  "categoryId": "09-OperationsHR",
+  "defaultInitPrompt": {
+    "zh": "帮我生成这一周的学情周报。",
+    "en": "Generate this week's learning report."
+  },
+  "plugin": "learning-report-analyst",
+  "tags": [
+    { "en": "Weekly Report", "zh": "学情周报" },
+    { "en": "Evidence Review", "zh": "证据审阅" },
+    { "en": "Parent Actions", "zh": "家长行动建议" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "帮我生成这一周的学情周报。",
+      "en": "Generate this week's learning report."
+    },
+    {
+      "zh": "这些学习事件里，哪些能支持结论、哪些还只是猜测？",
+      "en": "In these events, what actually supports a conclusion and what is still a guess?"
+    },
+    {
+      "zh": "孩子这周卡在同一个地方，我在家能做点什么？",
+      "en": "She's stuck in the same place all week — what can I do at home?"
+    }
+  ]
+}
