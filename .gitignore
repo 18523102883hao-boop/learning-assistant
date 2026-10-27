@@ -9,3 +9,8 @@ codex-prompts-archive-2026-10-26.txt
 references/
 # 家长上传的书籍/课程原文（版权内容，仅本地使用，不入库）
 library/parent-materials/
+
+# 家长专家只纳入已审周报模板
+!workbuddy/experts/learning-report-analyst/skills/weekly-report/references/
+workbuddy/experts/learning-report-analyst/skills/weekly-report/references/*
+!workbuddy/experts/learning-report-analyst/skills/weekly-report/references/weekly-report-template.md

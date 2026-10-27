@@ -1,21 +1,20 @@
 {
   "name": "learning-report-analyst",
-  "version": "1.0.0",
-  "description": "Parent-side analyst that turns a child's learning-event log into an evidence-bounded weekly report: where she got stuck, what was tried, what helped, and whether she could continue alone.",
+  "version": "1.0.1",
+  "description": "Parent-side analyst that summarizes one child’s structured minimal learning export with clear evidence limits.",
   "author": {
     "name": "张浩",
     "email": "18523102883@163.com"
   },
-  "homepage": {
-    "url": "https://github.com/18523102883hao-boop/learning-assistant",
-    "type": "github"
-  },
-  "agents": ["./agents/learning-report-analyst.md"],
-  "skills": ["./skills/weekly-report"],
-
+  "homepage": "https://github.com/18523102883hao-boop/learning-assistant",
+  "agents": [
+    "./agents/learning-report-analyst.md"
+  ],
+  "skills": [
+    "./skills/weekly-report"
+  ],
   "expertType": "agent",
   "agentName": "learning-report-analyst",
-
   "displayName": {
     "en": "Learning Report Analyst",
     "zh": "学情观察员"
@@ -36,9 +35,18 @@
   },
   "plugin": "learning-report-analyst",
   "tags": [
-    { "en": "Weekly Report", "zh": "学情周报" },
-    { "en": "Evidence Review", "zh": "证据审阅" },
-    { "en": "Parent Actions", "zh": "家长行动建议" }
+    {
+      "en": "Weekly Report",
+      "zh": "学情周报"
+    },
+    {
+      "en": "Evidence Review",
+      "zh": "证据审阅"
+    },
+    {
+      "en": "Parent Actions",
+      "zh": "家长行动建议"
+    }
   ],
   "quickPrompts": [
     {
