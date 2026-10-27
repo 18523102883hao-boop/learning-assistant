@@ -47,3 +47,5 @@ TDD：各有风险的模块先运行缺实现或回归失败，再实现修复�
 本轮成人运行时归档为 dist/v0.1.0-adult-test-a-r4 与 test-b-r4，更新 release-manifests.json 和 source-file-hashes.json。它们仍是可选自管运行时交付，不能当作原生专家包。原生专家分别在 experts/learning-partner-momo（v1.1.6）和 experts/learning-report-analyst（v1.1.1），两者均附原生集成审查与测试说明。
 
 家长最新选择保留原生长期陪伴记忆方向；本目录旧自管工具的 opt-in 合同继续有效。平台原生记忆定期提取、设置改删及历史范围不能由工具合同保证，不得将默认记忆设定当作 child_opt_in。普通聊天可由原生能力延续，但不会自动转成此运行时的学习事件。
+
+本轮实际三系统运行 [#40475503345](https://github.com/18523102883hao-boop/learning-assistant/actions/runs/40475503345) 全部成功，源提交 ab4f552aa3751df9f42ac637509a4e01c177dcba（tree 841e349ec99cf81db0ff65611852a92540757a45）；每个 runner 的日志均为53项通过且打包成功。去标识结果见 ci-results-native-expert-review.json，保留上一轮48项历史记录。

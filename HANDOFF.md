@@ -1,5 +1,7 @@
 # 当前交接入口
 
+当前 WorkBuddy 试用入口是原生专家分支：`experts/learning-partner-momo`（孩子 v1.1.6）与 `experts/learning-report-analyst`（家长 v1.1.1），各自有最新 HANDOFF.md、集成审查和 TESTING.md。本分支保留可选自管数据运行时；原生长期记忆采用用户最新决定，自管 opt-in 合同不变。配套报告修复及53项三系统结果见 validation/v3/ci-results-native-expert-review.json。
+
 家长已经批准v3并要求持续开发，同时同步GitHub供Kimi接续。**不要再等待方案确认、重启想法访谈或执行旧独立赛马规则。**
 
 **最新实现位于 `codex/learning-companion-v3`，见[PR #1](https://github.com/18523102883hao-boop/learning-assistant/pull/1)；默认main尚未合入。**
