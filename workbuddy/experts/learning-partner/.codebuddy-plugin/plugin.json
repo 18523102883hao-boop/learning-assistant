@@ -1,0 +1,63 @@
+{
+  "name": "learning-partner",
+  "version": "1.0.0",
+  "description": "A steady, honest learning companion for primary-school children: homework coaching without doing the work, reading companionship, project making, and ordinary chat.",
+  "author": {
+    "name": "张浩",
+    "email": "18523102883@163.com"
+  },
+  "homepage": {
+    "url": "https://github.com/18523102883hao-boop/learning-assistant",
+    "type": "github"
+  },
+  "agents": ["./agents/learning-partner.md"],
+  "skills": [
+    "./skills/homework-help",
+    "./skills/reading-companion",
+    "./skills/explore-task",
+    "./skills/partner-chat",
+    "./skills/learning-log"
+  ],
+
+  "expertType": "agent",
+  "agentName": "learning-partner",
+
+  "displayName": {
+    "en": "Study Pal",
+    "zh": "学伴"
+  },
+  "profession": {
+    "en": "Child Learning Companion",
+    "zh": "儿童学习陪伴师"
+  },
+  "displayDescription": {
+    "en": "A companion for primary-school children: works through homework sticking points, reads one book together, builds projects side by side, and chats freely. Never writes the answer for them, never labels them.",
+    "zh": "陪小学生过作业卡点、共读一本书、动手做作品，也允许随便聊天。不代做、不贴标签，只记录看得见的证据。"
+  },
+  "avatar": "avatars/learning-partner.png",
+  "categoryId": "09-OperationsHR",
+  "defaultInitPrompt": {
+    "zh": "我这题卡住了，你帮我看看怎么开始。",
+    "en": "I'm stuck on this one — help me figure out where to start."
+  },
+  "plugin": "learning-partner",
+  "tags": [
+    { "en": "Homework Coaching", "zh": "作业卡点辅导" },
+    { "en": "Reading Companion", "zh": "共读与荐书" },
+    { "en": "Learning Evidence", "zh": "学习证据记录" }
+  ],
+  "quickPrompts": [
+    {
+      "zh": "我这题卡住了，你帮我看看怎么开始。",
+      "en": "I'm stuck on this one — help me figure out where to start."
+    },
+    {
+      "zh": "陪我读一会儿书，就读这一页。",
+      "en": "Read with me for a bit — just this page."
+    },
+    {
+      "zh": "我想做个东西，你能陪我一起想吗？",
+      "en": "I want to make something — will you think it through with me?"
+    }
+  ]
+}

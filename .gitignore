@@ -5,7 +5,11 @@ test/
 profiles/momo.json
 profiles/yiyi.json
 profiles/*/learning-log.jsonl
+profiles/learning-log-*.jsonl
+profiles/*/  # 孩子运行目录（含学习事件与作品），不入库
 codex-prompts-archive-2026-10-26.txt
 references/
 # 家长上传的书籍/课程原文（版权内容，仅本地使用，不入库）
 library/parent-materials/
+# 项目自身的 WorkBuddy 记忆目录（本地留存，不入库）
+.workbuddy/
