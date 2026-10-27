@@ -1,0 +1,912 @@
+{
+  "version": "cloud-2026-10-27",
+  "files": [
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__00.发刊词_家庭教育最重要的是三根支柱.md",
+      "sha256": "dba1176cf0bae54a6722fdd571466ff65064cac3b102add098e1b0441eb11784",
+      "chars": 886,
+      "source_id": "course-001",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__00.欢迎来到_新父母_大学_.md",
+      "sha256": "f06d910e852361e43e20bf74b278d414d520575cfb7a55692dd1aa5f3f40a575",
+      "chars": 1293,
+      "source_id": "course-002",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__01.先理解生命_再思考教育.md",
+      "sha256": "43066356f9d2c62d500a1c9ca2ccf5c575fa753550c9ac699a16cdda4b46537e",
+      "chars": 8164,
+      "source_id": "course-003",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__02.建立良好亲子关系的前提_自我疗愈.md",
+      "sha256": "3c338abfb54253752a3b06c6d19390884674828533629d2b4f46c7f198691945",
+      "chars": 8675,
+      "source_id": "course-004",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__03.无条件的爱--停止威胁与交换.md",
+      "sha256": "fe58b4b3c118dca72c853a473a5fdd70e6625dab520c8c4ac26c6597545eba7d",
+      "chars": 9073,
+      "source_id": "course-005",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__04.无条件的爱--温柔_但是有边界.md",
+      "sha256": "069fea6fb316d24995790991b12addbf18acfe39145fc8c9bf0e565e19ec1e8a",
+      "chars": 8644,
+      "source_id": "course-006",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__05.无条件的爱--不吼不叫的沟通.md",
+      "sha256": "bb6acf17063e0afa7db5fe929b94961961a396be0bc306e9b26d60dae7c590ea",
+      "chars": 9011,
+      "source_id": "course-007",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__06.价值感--独立完整的自尊体系.md",
+      "sha256": "eaf4084ae63fe9f16dc2dfee24f70135e3227c9607c5e9344863028aa0204388",
+      "chars": 8609,
+      "source_id": "course-008",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__07.价值感--用情感引导塑造行为.md",
+      "sha256": "17e57b69b669eb7147d50910253b8cefc996d4d12ff2b84382c74a8117bce297",
+      "chars": 8419,
+      "source_id": "course-009",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__08.价值感--提高孩子的社会能力.md",
+      "sha256": "8c1399d8751e20a95bd044241f581f0bd803a2419cdbae8d5ce742a2aa884bc2",
+      "chars": 8043,
+      "source_id": "course-010",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__09.终身成长--两种完全不同的生活态度.md",
+      "sha256": "d3f218b452606d568b3f355fd9624fa68705b2cfe4ef0a00948369d01574d602",
+      "chars": 9710,
+      "source_id": "course-011",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__10.终身成长--培养成长型人格.md",
+      "sha256": "0c7e87738ef0025f67196fffe7ebce13b78aeb2ed6550c051088999e7c2a2ca4",
+      "chars": 8670,
+      "source_id": "course-012",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__11.终身成长--塑造逆商.md",
+      "sha256": "008196d826e761f5d313be09b10f10a34b98a354aad20fe04e9c4e34ab618ea8",
+      "chars": 8962,
+      "source_id": "course-013",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__12.如何应对孩子的叛逆.md",
+      "sha256": "c5f604445e0fff9fe081d1cc839ac65b078d6793f4176a91449d3006b89ef5cc",
+      "chars": 9953,
+      "source_id": "course-014",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__13.加餐课1_孩子熬夜不听劝怎么办_.md",
+      "sha256": "e53af4f6af2d1539e865823112e8e0ec4b4140f0ae34475889a091545981572c",
+      "chars": 1044,
+      "source_id": "course-015",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__14.加餐课2_如何帮助孩子度过暴力期_.md",
+      "sha256": "8818592b16c152282e3a9cf886979c21ae49d6f88e89dfc231f9bed8cdb8097a",
+      "chars": 1215,
+      "source_id": "course-016",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__15.加餐课3_孩子内向不说话怎么办_.md",
+      "sha256": "54be5add3d5cb7daa3cc0af3259752baf9fa5f6308eb5a18034895dcfd31e660",
+      "chars": 938,
+      "source_id": "course-017",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__16.加餐课4_二胎家庭如何平衡两个孩子_.md",
+      "sha256": "c169bfba76cb413d9d2246a05c515341b3bc7cf4307144d81b31e309fc8189cc",
+      "chars": 690,
+      "source_id": "course-018",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__17.加餐课5_孩子写作业拖延怎么办_.md",
+      "sha256": "c89be869c0d0e9e500952d3ca486399fcc4a58939b3ddaf193969696ebd386a9",
+      "chars": 922,
+      "source_id": "course-019",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__18.加餐课6_如何呼吁爸爸参与育儿_.md",
+      "sha256": "9d75091c0ce68adeca9efa73649dae8ea4af6baedc6766b7868f4407038371a8",
+      "chars": 929,
+      "source_id": "course-020",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "_完结_成就孩子_12堂优秀父母养成大课__19.加餐课7_什么是真正的无条件的爱_.md",
+      "sha256": "0fd005cd4813e93941abb9f588ecba494a49a763d1e7522edb526aae566356d7",
+      "chars": 1203,
+      "source_id": "course-021",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__00.发刊词_培养孩子的自主学习力.md",
+      "sha256": "1fc8b08ae407d993ecbefe701e06442762ed3317627c34056e521b0fc9cd77e4",
+      "chars": 1583,
+      "source_id": "course-022",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__01.成长型思维_打开孩子未来的可能性.md",
+      "sha256": "0dc48ab40e885b8a47ee936f32ee8c2b480e8d85fd56479fda573001c830c10b",
+      "chars": 6571,
+      "source_id": "course-023",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__02.激发内驱力_从_要我学_到_我要学_.md",
+      "sha256": "51763bfcbd8b8a7474d6bf33ce5bfdb27ba68bd5c389d9843550001d37b4aef0",
+      "chars": 4850,
+      "source_id": "course-024",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__03.迷失的目标_孩子缺乏学习主动性的底层原因.md",
+      "sha256": "5bd35eddb9d2fa2aaf13e24f7cd1d153caaf868073b5459c17a2ba660edb514b",
+      "chars": 4001,
+      "source_id": "course-025",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__04.学习价值感_优等生持续学习的热情源泉.md",
+      "sha256": "6c2b324e13a6ed6f6ef1d6bb91b0ee4396ad24f4a92d327c478111094f86d314",
+      "chars": 4711,
+      "source_id": "course-026",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__05.情绪暂停__避免成绩和关系的双输.md",
+      "sha256": "5c2d0450b41d55c6f1da90cae3adba3437bcda5d6b1ab71d334ed407e84c5678",
+      "chars": 5966,
+      "source_id": "course-027",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__06.错误目的__看见孩子不当行为背后的信念.md",
+      "sha256": "bc9aab8e27400a5854180304b42326fd173a6a2ddd8f5af5a8bf4feb73a4054c",
+      "chars": 4559,
+      "source_id": "course-028",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__07.停止唠叨__爱说教的父母会让孩子_没出息_.md",
+      "sha256": "1bb4ad0ad64115aafe882a9ccccd417f164b459a7e9e01de3c24ae33df762412",
+      "chars": 5386,
+      "source_id": "course-029",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__08.有效犯错__错误是学习的机会.md",
+      "sha256": "129bf669a8c42a81e4bf478180b0a260721385b577900d3b6830819314ce0269",
+      "chars": 6076,
+      "source_id": "course-030",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__09.孩子管不住自己怎么办_.md",
+      "sha256": "f3a7002ed52f67ec395bc3c0160e4e99e20f577efd99b2fcbd39daf5b74a8aaa",
+      "chars": 5887,
+      "source_id": "course-031",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__10.孩子不愿写作业怎么办_.md",
+      "sha256": "4a7d39c5ba7b66f0d9eeb84d153e8a0bf37f66c8760d6566b5beb46edf551363",
+      "chars": 6283,
+      "source_id": "course-032",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__11.孩子注意力分散怎么办_.md",
+      "sha256": "4f6fd887036cabb112da8f0f7f263d0d7b184d1a852c76f6afe3c1fca6fdf274",
+      "chars": 5428,
+      "source_id": "course-033",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__12.陪写作业为何越陪越差_.md",
+      "sha256": "751997d9ec8042e3e2362e782cdd65a55d8cf0087e48cbe59a701125162c2959",
+      "chars": 5373,
+      "source_id": "course-034",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__13.高效记忆力_让孩子不再学了就忘.md",
+      "sha256": "0c3d295cc31251d956adf5098d69b1679fa6e0c126a4af280c79693cf0bcfc74",
+      "chars": 4341,
+      "source_id": "course-035",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__14.问题驱动_让孩子拥有高阶学习能力.md",
+      "sha256": "b9df9142246ff4d60cbb0bb37ef0127a8961138d0cc59d25caf13691f330e5cb",
+      "chars": 4212,
+      "source_id": "course-036",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__15.掌握课堂要点_学习事半功倍.md",
+      "sha256": "6e0dff597473793497bd9727548d0ea2dad8772d9a688e88673cc51b2e011ecc",
+      "chars": 5005,
+      "source_id": "course-037",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__16.深度阅读力_夯实学科学习基础.md",
+      "sha256": "b78127984db040b47eed6d0ae36893d884b9a15a189a506efdd47538d856b6d7",
+      "chars": 4927,
+      "source_id": "course-038",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__17._逆商___遇到学习困难时怎么办_.md",
+      "sha256": "a0f4ff283e68d153fff48774a496c6c0d9f8e8be7991cca27dee1ae1f85561b3",
+      "chars": 5170,
+      "source_id": "course-039",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__18._放手___沉迷电子产品的孩子如何爱上学习.md",
+      "sha256": "76fc63f350d68ec1950e3ea6bc067e7bcd49952d12039919ff40a3769a254c7f",
+      "chars": 5012,
+      "source_id": "course-040",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__19.__低效勤奋___为什么孩子学习很认真_成绩却不好.md",
+      "sha256": "e250f5e7b855f6fc47fdfeb1b40bb1d6b857e1b75290ad125bb0d4cce992c9f5",
+      "chars": 5304,
+      "source_id": "course-041",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__20.__无条件的接纳___给孩子成长的_安全基地_.md",
+      "sha256": "192094ef66e9665ed9af5eb773aa251461ce3ca525eb82f68c592cd3bcb4d332",
+      "chars": 5174,
+      "source_id": "course-042",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__加餐课1_孩子学习不主动怎么办_.md",
+      "sha256": "65444a3bb49d0d98aaff3685eb9973b98f28d9154382b673a16a55e603ee76e3",
+      "chars": 1382,
+      "source_id": "course-043",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "培养孩子的自主学习力-MP3__欢迎来到_新父母_大学_.md",
+      "sha256": "fda724a0209fff0fdd65d7ce4eb51f46c8e5d8038871543c95719b1f9a5084eb",
+      "chars": 1636,
+      "source_id": "course-044",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__00.带孩子阅读_就是带孩子创造自己.md",
+      "sha256": "421164a4a4c2be1282a9c80cc8a250cf5749e13ac1902b885b120a5b4c41be0c",
+      "chars": 919,
+      "source_id": "course-045",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__01.改变_从阅读开始.md",
+      "sha256": "379850d40d9f95380f104664fd425d7de59d15a4d3c20eb7e683c64321d3f411",
+      "chars": 8036,
+      "source_id": "course-046",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__02.首先要解决读什么.md",
+      "sha256": "8c0c16b7efdcdfd92e75f16db6d2f3016aa13b2f8f3135fa4255576217baf5d7",
+      "chars": 12188,
+      "source_id": "course-047",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__03.从图画书开始爱上阅读.md",
+      "sha256": "b5dd86f77f8753a181cdf3b868b10275bd4e73b9aefd76e4b6b946e6271d9c0e",
+      "chars": 10222,
+      "source_id": "course-048",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__04.故事知道怎么办.md",
+      "sha256": "6400f7e1e1112295fbaed7647bba55d202e29c6afe1f1c8652d20ab696749c4e",
+      "chars": 8499,
+      "source_id": "course-049",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__05.点燃孩子的好奇心.md",
+      "sha256": "daa137d760818abb1591e3f97e0af5bb1420d549525102a6ab527fe14500b9a1",
+      "chars": 10562,
+      "source_id": "course-050",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__06.与谁同行_你就会成为谁.md",
+      "sha256": "13604e84a3292b0d2718fad5ae6ffea986f9db8a4484619beb056c83d3c47730",
+      "chars": 8477,
+      "source_id": "course-051",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__07.见自己_见天地_见众生_上_.md",
+      "sha256": "9f3a97250f42fbdb26be62be535b169e725365883fe90dc26f6c01ee796acad7",
+      "chars": 10284,
+      "source_id": "course-052",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__08.见自己_见天地_见众生_下_.md",
+      "sha256": "ede486ba2b253f6d2ee1dc4f4a53d83f00b0f1349edb322438f80707f951dc84",
+      "chars": 6526,
+      "source_id": "course-053",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__09.孩子是天生的诗人___如何让儿童走进诗歌世界_上_.md",
+      "sha256": "7b4cfa50585f02de41fa9114eb0a0a1e05bbf15a1c3bb6d7f7aac01eb8ccbdfd",
+      "chars": 8361,
+      "source_id": "course-054",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__10.孩子是天生的诗人___如何让儿童走进诗歌世界_下_.md",
+      "sha256": "e849011012bb254fa40e224b5fb97927720da8381fbfddca84f8fba40650b9cc",
+      "chars": 9285,
+      "source_id": "course-055",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__11.如何让孩子放下手机_捧起书籍_.md",
+      "sha256": "a283188743941931903de0670542b81ff1fcb2c98277e52fdcf5ef50e9b2cdaf",
+      "chars": 7169,
+      "source_id": "course-056",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__12.教育奠基_从深度阅读开始.md",
+      "sha256": "4acbea12c5e33d010b5108294ea89ab1e4abc462d5771dd19205a36695ca85cf",
+      "chars": 9235,
+      "source_id": "course-057",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__13._真正的阅读从写作开始__想让孩子爱上写作_从带他写日记开始.md",
+      "sha256": "036247f3bcf2c2fcb4c53a110322fe82cb04d6eebe41cc6939a18cfc54e00f98",
+      "chars": 10545,
+      "source_id": "course-058",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "带孩子阅读_就是带孩子创造自己-MP3__14._一个民族的精神境界取决于这个民族的阅读水平.md",
+      "sha256": "347c78536be4c4e734a2468570572f8971c77a903ac4538c9b8566343dc8e98f",
+      "chars": 11289,
+      "source_id": "course-059",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__00.为什么家长要学积极心理学_.md",
+      "sha256": "42e4e74ca157665f20feb1b199e24a5eea80a98bc5ef15b48a654737d3fb328e",
+      "chars": 2303,
+      "source_id": "course-060",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__01.积极教育的优势_上_.md",
+      "sha256": "60b93a657ce1eda6d37e38c1fda1f42aa908070c5c41e41a827f6b41961754d7",
+      "chars": 8833,
+      "source_id": "course-061",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__02.积极教育的优势_下_.md",
+      "sha256": "60eed00ba029db2e50f173c65cc85efed110cfee669e51f3d3eaca2788c6c69e",
+      "chars": 7132,
+      "source_id": "course-062",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__03.藏在大脑中的快乐密码_上_.md",
+      "sha256": "5d76d0b64fe21775323d5c4b286a958468d58678d86959d11cd908ca84b1fb51",
+      "chars": 6451,
+      "source_id": "course-063",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__04.藏在大脑中的快乐密码_下_.md",
+      "sha256": "a83980d312b89f242ed1b154cfc6e8679a237c64501ac2327c102ab60527b5c4",
+      "chars": 4634,
+      "source_id": "course-064",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__05.正确应对消极情绪_上_.md",
+      "sha256": "a7005f4b171243df670c9f128daf36dddf1e9622c851710ed0b9626c3a2df0f4",
+      "chars": 6627,
+      "source_id": "course-065",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__06.正确应对消极情绪_下_.md",
+      "sha256": "130dc06cb6efa928a8499c354ce52bb9bc4ef3924b177f0be6f91655be81728c",
+      "chars": 4527,
+      "source_id": "course-066",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__07.抗逆力_培养不轻易言败的孩子_上_.md",
+      "sha256": "08f37771c0d2721232157545328091847e3839d28bff7f8e8e1e356da9d76a17",
+      "chars": 3467,
+      "source_id": "course-067",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__08.抗逆力_培养不轻易言败的孩子_下_.md",
+      "sha256": "77760a80ce640404ad5d8e9c70e74a8e726186b5d1c6f370cf8ee61c53503785",
+      "chars": 5103,
+      "source_id": "course-068",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__09.自我效能_让孩子觉得_我能行__上_.md",
+      "sha256": "0eea4a9dd873cea8a9f6e2b6d53a7eec920abc035d5316e433b18e5f7b076349",
+      "chars": 6230,
+      "source_id": "course-069",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__10.自我效能_让孩子觉得_我能行__下_.md",
+      "sha256": "bec343219e56c559db8a8bc0d85bb60e5bc0052a5784f166488e0dca37061f05",
+      "chars": 3686,
+      "source_id": "course-070",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__11.自控力_让孩子管的住自己_上_.md",
+      "sha256": "67603e64b70c1faed1d7c7ef09d41831850051d85891c8a61a3d3ce0644194b8",
+      "chars": 4012,
+      "source_id": "course-071",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__12.自控力_让孩子管的住自己_下_.md",
+      "sha256": "1382d67916ebac8c2691aaab5ab4c72b37285cf079d612b0e4fb3853d66000d7",
+      "chars": 5779,
+      "source_id": "course-072",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__13.如何发现孩子的天赋优势__上_.md",
+      "sha256": "caa43147befad3f5fae35a89b362db1cb3572218f278213c6ac20fdcfea1aa62",
+      "chars": 5582,
+      "source_id": "course-073",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__14.如何发现孩子的天赋优势__下_.md",
+      "sha256": "8b85a642e14608b2cf0bdf3797bf748396b84afbe80ed7c0905bb7bfe017439b",
+      "chars": 5101,
+      "source_id": "course-074",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__15.善良_真正的竞争优势_上_.md",
+      "sha256": "97942564cbff6f13d7dfbb53e8d96465f92fe69cff9c5117b249e07295983cc4",
+      "chars": 4653,
+      "source_id": "course-075",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__16.善良_真正的竞争优势_下_.md",
+      "sha256": "41d9893964082899d2c859d89d97c752dbabe2bcbd5a16bf7064aa4b5f973b7e",
+      "chars": 6146,
+      "source_id": "course-076",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__17.婚姻中的沟通心理学_上_.md",
+      "sha256": "30f5253fc316dcf4798868d488c9bbc581b1d649a078153debf343278a2d763f",
+      "chars": 4020,
+      "source_id": "course-077",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__18.婚姻中的沟通心理学_下_.md",
+      "sha256": "88321c332e5ae04728cdea72e11517fc2e826a6b77fb76676f45355f162bb2a5",
+      "chars": 2494,
+      "source_id": "course-078",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__19.经营一个有爱的家_上_.md",
+      "sha256": "00ba6ffeee727bf401c39b162c9f79cad3fc0b29f120ae80f823db2868e6b16d",
+      "chars": 5663,
+      "source_id": "course-079",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__20.经营一个有爱的家_下_.md",
+      "sha256": "129b7b0fa2faffe95ff4a584a91b6277f70882fe084b5e8e4f15b67dd0cb0d9b",
+      "chars": 3418,
+      "source_id": "course-080",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__21.如果原生家庭有错_我们如何改过__上_.md",
+      "sha256": "757713cd97ba49e21e1f7141db7756bf3babf85ad861b990cbecfd086404b358",
+      "chars": 2962,
+      "source_id": "course-081",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__22.如果原生家庭有错_我们如何改过__下_.md",
+      "sha256": "5a929a820e309458e8817d4ca857c7ed84d437165ddc7c8890b3cb21be26033e",
+      "chars": 4234,
+      "source_id": "course-082",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__23.同理心_让孩子和家人更幸福_上_.md",
+      "sha256": "754f3cb5101503f133b0fcd09963dde8788b33f8bc5bdee749061ce7458ef666",
+      "chars": 3702,
+      "source_id": "course-083",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__24.同理心_让孩子和家人更幸福_下_.md",
+      "sha256": "2253bc4e8e54a47b1c72d26ec40e8e174120d881f7d9b689e96b1dab51fc9134",
+      "chars": 3080,
+      "source_id": "course-084",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__25.如何培养孩子的创造力__上_.md",
+      "sha256": "835cba9bf87447a0faa743ae6725650ae2a6ad9b51efde28eab496c61cba9fcc",
+      "chars": 3500,
+      "source_id": "course-085",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__26.如何培养孩子的创造力__下_.md",
+      "sha256": "0799c477a203e3db06ce4712ff5fa2bc439e27acad43851f44bcb2efd165c394",
+      "chars": 5421,
+      "source_id": "course-086",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__27.能专注_才能幸福_上_.md",
+      "sha256": "4aa2df2750f2801224101b12f738af376826daf5e487d7bb4c1b9da3c9db6a63",
+      "chars": 2702,
+      "source_id": "course-087",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__28.能专注_才能幸福_下_.md",
+      "sha256": "64faf6262d384befe89c45e04d6c56c48f2ef2eb6c2e9b2d43f0b303ff248633",
+      "chars": 5221,
+      "source_id": "course-088",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__29.如何让孩子获得沉浸的福流体验__上_.md",
+      "sha256": "b3c5d5d1439f266c7a05aabcc840b8caefefeb41028ca4ce95114b85a908dd49",
+      "chars": 4371,
+      "source_id": "course-089",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__30.如何让孩子获得沉浸的福流体验__下_.md",
+      "sha256": "26befe7af0ad30593130d46d19072f9ed60c73f9d251f2df79a4bfed62077b60",
+      "chars": 3028,
+      "source_id": "course-090",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3___樊登亲荐_积极心理学帮助更多家庭过阳光积极的生活.md",
+      "sha256": "9cc64be3f7e4514a87b1153580d0c7c30e6cc732a0e66fd51e2c039742e1cbeb",
+      "chars": 616,
+      "source_id": "course-091",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "给父母的积极心理学-MP3__欢迎来到_新父母_大学_.md",
+      "sha256": "9844c424c78a5727e1ea2906426c0c724d8e70cfc123466a9e5dc7d7e9405bc0",
+      "chars": 1777,
+      "source_id": "course-092",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__00.开启高情商沟通之门.md",
+      "sha256": "45382f3a5a2a33f15b53c66a30390ab1966477eafa346a62f355ab0d68f07a68",
+      "chars": 1342,
+      "source_id": "course-093",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__01.你希望成为孩子眼中的谁.md",
+      "sha256": "612f18dfa78f71677317466adf0b3eb8b12371f9618925663064d1782b7cf98f",
+      "chars": 7101,
+      "source_id": "course-094",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__02.理解孩子的人格特质.md",
+      "sha256": "18c6d89585086a7554e5b30075eaeec7ac943f579aaaff5e8079baf871f6df26",
+      "chars": 7212,
+      "source_id": "course-095",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__03.表达爱意.md",
+      "sha256": "f07ee211d3c8acdd231f91e3de19f6a3179947b8b24749406d36b122a35a79e2",
+      "chars": 5745,
+      "source_id": "course-096",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__04.亲密聊天.md",
+      "sha256": "09280ee9461768019ebad026872fc62c50c9ab89e3b0d45dd04cd4d00379c594",
+      "chars": 6526,
+      "source_id": "course-097",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__05.科学赞美.md",
+      "sha256": "0178f69c3821fa848314aca9709ea8e59ffef6971bc58a44af7e2d2844598512",
+      "chars": 7078,
+      "source_id": "course-098",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__06.高效管教.md",
+      "sha256": "8448de77dd8d40ff2ced3aa3c1401a13622c9d168f169644e168216b6a22e10e",
+      "chars": 6062,
+      "source_id": "course-099",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__07.塑造优秀人格特质.md",
+      "sha256": "12bf70c87213703ef2d5451edfbb5c9e540495ff33c5ee5fde227418a20fa8cf",
+      "chars": 10513,
+      "source_id": "course-100",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__08.与青春期孩子沟通.md",
+      "sha256": "67abe9304420284ff1b14844847f611b9e4cab48635045771b5131440d798b39",
+      "chars": 7679,
+      "source_id": "course-101",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__09.对霸凌说不.md",
+      "sha256": "2c688a03f753abf8b93faaf1a1ed30106084559c184e2bd0b209da24d5639dc7",
+      "chars": 7202,
+      "source_id": "course-102",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__10.学习不好怎么办.md",
+      "sha256": "075e2f8af42f8a60c3d087cda095f0050c4e2bce2cb3dd0e9201324f143bd8b4",
+      "chars": 4799,
+      "source_id": "course-103",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__11.预防和解决网络沉迷.md",
+      "sha256": "75248c0999b63bc20e572597ff3846d7becdef9219ea7d01b1ca07138df3d4ef",
+      "chars": 5323,
+      "source_id": "course-104",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__12.智慧面对孩子早恋.md",
+      "sha256": "b48276d0b2708d53030cce32d6934525c7b8e1dede419ed12795c77962dacd4d",
+      "chars": 4759,
+      "source_id": "course-105",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课1_用沟通呵护孩子的心理健康_上集_.md",
+      "sha256": "d21f5eccf673d367ad4a1b746b9a8f93981bd82e4a5e5441541c51058e9ff7bc",
+      "chars": 6725,
+      "source_id": "course-106",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课1_用沟通呵护孩子的心理健康_下集_.md",
+      "sha256": "1f3ba5456e842e0023b432df97df0712130cbc40d66a2a2ba42d1a10dbcbab00",
+      "chars": 4919,
+      "source_id": "course-107",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课2_12岁女儿不跟我讲心里话.md",
+      "sha256": "a212c25c4995f9ec6078ea851bf5a8bc7f5d10c3dd26456696fea6cb2e85fecf",
+      "chars": 9572,
+      "source_id": "course-108",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课3_家庭不和影响到16岁儿子.md",
+      "sha256": "fc8b7ea84d35dc8bb8f35063e25d8d6a13a3844b191e1f1e4511b86a1c5b4005",
+      "chars": 10091,
+      "source_id": "course-109",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课4_经常对孩子发脾气怎么办_.md",
+      "sha256": "b60809aeaa44e2428ea9f9e1943132e94d4dc8794006d2d5010fb5998cc536f7",
+      "chars": 13579,
+      "source_id": "course-110",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课5_家长强势易怒_孩子不愿交流.md",
+      "sha256": "c37a32cbf9ab8b8679caed25deec0ed34f2166f30ad07c398eeaccd6944f340e",
+      "chars": 12115,
+      "source_id": "course-111",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__加餐课6__二胎矛盾_10岁姐姐经常和弟弟争吵.md",
+      "sha256": "f43bf556b7f98ec9e80f6d8869674bd6971d86b356d4f05957d0b88e7c1029af",
+      "chars": 9183,
+      "source_id": "course-112",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    },
+    {
+      "basename": "高情商亲子沟通课-MP3__欢迎来到_新父母_大学_.md",
+      "sha256": "a6157b1799ff4d341904fce7f7ceb7a2647542f292f4a97aae71f3f52c974124",
+      "chars": 1652,
+      "source_id": "course-113",
+      "scope": "prior_full_read_index",
+      "use": "source_locator_not_full_text"
+    }
+  ],
+  "file_count": 113,
+  "unicode_characters": 651139,
+  "limits": "Index of all supplied transcripts, verified against prior full-read coverage; not full transcripts, not audio correction, not proof of scientific validity."
+}

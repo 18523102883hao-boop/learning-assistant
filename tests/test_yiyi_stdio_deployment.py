@@ -20,7 +20,7 @@ class YiyiStdioDeploymentTests(unittest.IsolatedAsyncioTestCase):
 
         runtime = Path(os.environ["YIYI_TEST_RUNTIME"]).resolve()
         python = runtime / ".venv/bin/python"
-        launcher = PACKAGE / "scripts/start_learning_records.py"
+        launcher = PACKAGE.parents[1] / "local-optional/yiyi/scripts/start_learning_records.py"
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             home = root / "home"

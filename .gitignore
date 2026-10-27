@@ -32,3 +32,8 @@ workbuddy/experts/learning-partner/skills/reading-companion/references/cards/*
 __pycache__/
 *.py[cod]
 learning-companion/bindings/
+
+# 云端已审共享资料（无个人动态记忆）
+!workbuddy/experts/learning-partner/skills/companion-knowledge/references/
+!workbuddy/experts/learning-partner/skills/companion-knowledge/references/*.md
+!workbuddy/experts/learning-partner/skills/companion-knowledge/references/*.json

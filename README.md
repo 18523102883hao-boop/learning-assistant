@@ -1,3 +1,5 @@
+> 当前交付是1.2.0云端优先版：先读 [HANDOFF.md](HANDOFF.md) 与 [云端同步](workbuddy/experts/learning-partner/CLOUD-SYNC.md)。本机目录或旧MCP安装不证明云上已加载。
+
 > 最新一一专家与学习记录接续见 [HANDOFF.md](HANDOFF.md) 和 [RECORDS-SETUP.md](workbuddy/experts/learning-partner/RECORDS-SETUP.md)；下文早期方案不能覆盖最新决定。
 
 # 两个孩子的学习伙伴：当前方案入口

@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1] / "workbuddy/experts/learning-partner
 
 class YiyiRecordsAdapterTests(unittest.TestCase):
     def load_launcher(self):
-        path = ROOT / "scripts/start_learning_records.py"
+        path = ROOT.parents[1] / "local-optional/yiyi/scripts/start_learning_records.py"
         self.assertTrue(path.is_file(), "缺少真实的固定身份启动器")
         spec = importlib.util.spec_from_file_location("yiyi_launcher", path)
         module = importlib.util.module_from_spec(spec)
@@ -22,8 +22,8 @@ class YiyiRecordsAdapterTests(unittest.TestCase):
         manifest = json.loads((ROOT / ".codebuddy-plugin/plugin.json").read_text())
         self.assertEqual(manifest["name"], "learning-partner-yiyi")
         self.assertEqual(manifest["defaultInitPrompt"], manifest["quickPrompts"][0])
-        self.assertEqual(manifest["dependencies"]["mcpServers"], "./.mcp.json")
-        config = json.loads((ROOT / ".mcp.json").read_text())
+        self.assertNotIn("dependencies", manifest)
+        config = json.loads((ROOT.parents[1] / "local-optional/yiyi/.mcp.json").read_text())
         self.assertEqual(set(config["mcpServers"]), {"learning-records-yiyi"})
         server = config["mcpServers"]["learning-records-yiyi"]
         self.assertEqual(server["args"], ["${CODEBUDDY_PLUGIN_ROOT}/scripts/start_learning_records.py"])
@@ -55,7 +55,7 @@ class YiyiRecordsAdapterTests(unittest.TestCase):
     def test_unconfigured_launcher_does_not_create_data_or_fake_success(self):
         self.load_launcher()
         with tempfile.TemporaryDirectory() as temporary:
-            result = subprocess.run([sys.executable, str(ROOT / "scripts/start_learning_records.py")], env={"HOME": temporary}, capture_output=True, text=True, timeout=10)
+            result = subprocess.run([sys.executable, str(ROOT.parents[1] / "local-optional/yiyi/scripts/start_learning_records.py")], env={"HOME": temporary}, capture_output=True, text=True, timeout=10)
             self.assertEqual(result.returncode, 2)
             self.assertEqual(result.stdout, "")
             self.assertIn("尚未接通", result.stderr)
