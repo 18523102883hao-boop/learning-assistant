@@ -27,3 +27,7 @@ workbuddy/experts/learning-partner/skills/reading-companion/references/*
 !workbuddy/experts/learning-partner/skills/reading-companion/references/cards/
 workbuddy/experts/learning-partner/skills/reading-companion/references/cards/*
 !workbuddy/experts/learning-partner/skills/reading-companion/references/cards/visible-page.md
+
+# Python 测试缓存不入库
+__pycache__/
+*.py[cod]

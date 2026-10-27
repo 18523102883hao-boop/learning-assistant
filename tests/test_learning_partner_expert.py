@@ -9,6 +9,7 @@ class PartnerPackageTests(unittest.TestCase):
     def test_manifest_and_referenced_assets_are_portable(self):
         manifest = json.loads((ROOT / ".codebuddy-plugin/plugin.json").read_text(encoding="utf-8"))
         self.assertIsInstance(manifest["homepage"], str)
+        self.assertEqual(manifest["defaultInitPrompt"], manifest["quickPrompts"][0])
         self.assertTrue(40 <= len(manifest["displayDescription"]["zh"]) <= 50)
         for agent in manifest["agents"]:
             self.assertTrue((ROOT / agent).is_file(), agent)
@@ -37,7 +38,9 @@ class PartnerPackageTests(unittest.TestCase):
         chat = (ROOT / "skills/partner-chat/SKILL.md").read_text(encoding="utf-8")
         # 记忆策略（2026-10-27 家长决策）：要点默认记、孩子可拒记、诚实说明记的是要点
         self.assertIn("这段别记", agent)
-        self.assertIn("不是每一句对话", agent)
+        self.assertIn("平台也可能保留原始会话", agent)
+        self.assertIn("原生记忆", log)
+        self.assertIn("不能把原生默认记忆设置改写", log)
         self.assertNotIn("普通聊天默认不保存", agent)
         self.assertIn("不是本人", agent)
         self.assertNotIn("profiles/learning-log-{child_id}.jsonl", log)
