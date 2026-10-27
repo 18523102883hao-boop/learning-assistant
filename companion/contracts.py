@@ -50,6 +50,20 @@ def choices(values, allowed, name, maximum=8):
         choice(value, allowed, name)
 
 
+def validate_learning_evidence(data):
+    """Cross-field rules shared by stored events and minimal parent exports."""
+    if data["source_kind"] == "child_reported" and (data["performance"] != "not_observed" or data["attempt_kind"] != "self_report"):
+        fail("孩子自报不等于已观察到正确作答")
+    if data["source_kind"] not in {"observed_in_session", "child_reported"}:
+        fail("学情事件只接受当次观察或明确自报；家长推测不转为学情")
+    if data["attempt_kind"] == "self_report" and data["source_kind"] != "child_reported":
+        fail("自报须保留自报来源")
+    if data["independence_evidence"] == "child_reported_unaided" and data["source_kind"] != "child_reported":
+        fail("独立自报须保留自报来源")
+    if data["independence_evidence"] == "visible_new_attempt_without_session_hint" and (data["assistance"] or data["source_kind"] != "observed_in_session"):
+        fail("已有帮助不能标为本会话无提示独立尝试")
+
+
 def validate_profile(data):
     keys(data, {"nickname", "grade"}, {"source_kind"})
     text(data["nickname"], "nickname", 20)
@@ -90,16 +104,7 @@ def validate(kind, data):
         choice(data["performance"], PERFORMANCE, "performance")
         choice(data["independence_evidence"], INDEPENDENCE, "independence_evidence")
         choices(data["verification"], VERIFICATION, "verification")
-        if data["source_kind"] == "child_reported" and (data["performance"] != "not_observed" or data["attempt_kind"] != "self_report"):
-            fail("孩子自报不等于已观察到正确作答")
-        if data["source_kind"] not in {"observed_in_session", "child_reported"}:
-            fail("学情事件只接受当次观察或明确自报；家长推测不转为学情")
-        if data["attempt_kind"] == "self_report" and data["source_kind"] != "child_reported":
-            fail("自报须保留自报来源")
-        if data["independence_evidence"] == "child_reported_unaided" and data["source_kind"] != "child_reported":
-            fail("独立自报须保留自报来源")
-        if data["independence_evidence"] == "visible_new_attempt_without_session_hint" and (data["assistance"] or data["source_kind"] != "observed_in_session"):
-            fail("已有帮助不能标为本会话无提示独立尝试")
+        validate_learning_evidence(data)
         if "supersedes" in data:
             identifier(data["supersedes"], "supersedes")
     elif kind == "memory":

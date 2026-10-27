@@ -5,10 +5,11 @@ from datetime import date, datetime, time, timedelta, timezone
 
 from . import RULE_VERSION, SCHEMA_VERSION
 from .archive import encoded, unseal
-from .contracts import ASSISTANCE, ATTEMPTS, INDEPENDENCE, PERFORMANCE, VERIFICATION, choice, choices, identifier, keys
+from .contracts import ASSISTANCE, ATTEMPTS, INDEPENDENCE, PERFORMANCE, VERIFICATION, choice, choices, identifier, keys, text, validate_learning_evidence
 from .errors import CompanionError
 
 CHINA = timezone(timedelta(hours=8))
+REPORT_FORMAT_VERSION = 2
 # Only reviewed labels can enter a parent report. Unknown IDs are not echoed.
 CONCEPT_LABELS = {"fractions-equivalence": "等值分数", "fractions-addition": "分数加法",
                   "decimal-place-value": "小数位值", "word-problem-relations": "应用题数量关系",
@@ -65,20 +66,27 @@ def parent_export(backup, start, end):
 def validate_export(export):
     keys(export, {"schema_version", "rule_version", "child_id", "source_store_id", "source_sequence", "period", "events"})
     identifier(export["child_id"])
+    text(export["source_store_id"], "source_store_id", 80)
+    text(export["rule_version"], "rule_version", 80)
     keys(export["period"], {"start", "end", "timezone"})
-    period_bounds(export["period"]["start"], export["period"]["end"])
-    if export["schema_version"] != SCHEMA_VERSION or export["period"]["timezone"] != "Asia/Shanghai" or type(export["source_sequence"]) is not int:
+    lower, upper = period_bounds(export["period"]["start"], export["period"]["end"])
+    if export["schema_version"] != SCHEMA_VERSION or export["period"]["timezone"] != "Asia/Shanghai" or type(export["source_sequence"]) is not int or export["source_sequence"] < 0:
         raise CompanionError("invalid_input", "摘要版本、时区或来源序号不符")
     if not isinstance(export["events"], list):
         raise CompanionError("invalid_input", "摘要事件必须是列表")
+    seen = set()
     for data in export["events"]:
         keys(data, {"event_id", "task_id", "concept_labels", "attempt_kind", "assistance", "performance", "independence_evidence", "source_kind", "verification", "observed_at", "write_sequence"})
         try:
-            if datetime.fromisoformat(data["observed_at"]).tzinfo is None or type(data["write_sequence"]) is not int or data["write_sequence"] < 0:
+            observed_at = datetime.fromisoformat(data["observed_at"])
+            if observed_at.tzinfo is None or not lower <= observed_at < upper or type(data["write_sequence"]) is not int or not 0 <= data["write_sequence"] <= export["source_sequence"]:
                 raise ValueError("order")
         except (TypeError, ValueError) as error:
             raise CompanionError("invalid_input", "事件时间或次序格式不符") from error
         identifier(data["event_id"])
+        if data["event_id"] in seen:
+            raise CompanionError("invalid_input", "同一事件不能重复计入摘要")
+        seen.add(data["event_id"])
         identifier(data["task_id"])
         choices(data["concept_labels"], set(CONCEPT_LABELS.values()) | {"未核实知识点"}, "concept_labels", 4)
         choice(data["attempt_kind"], ATTEMPTS, "attempt_kind")
@@ -87,14 +95,15 @@ def validate_export(export):
         choice(data["independence_evidence"], INDEPENDENCE, "independence_evidence")
         choice(data["source_kind"], {"child_reported", "observed_in_session"}, "source_kind")
         choices(data["verification"], VERIFICATION, "verification")
+        validate_learning_evidence(data)
 
 
 def render_report(export, supersedes=None):
     validate_export(export)
     if supersedes is not None:
         identifier(supersedes, "supersedes")
-    report_id = "report-" + hashlib.sha256(encoded({"export": export, "supersedes": supersedes})).hexdigest()[:20]
-    metadata = {"report_id": report_id, "supersedes": supersedes,
+    report_id = "report-" + hashlib.sha256(encoded({"export": export, "supersedes": supersedes, "report_format_version": REPORT_FORMAT_VERSION})).hexdigest()[:20]
+    metadata = {"report_id": report_id, "supersedes": supersedes, "report_format_version": REPORT_FORMAT_VERSION,
                 **{k: export[k] for k in ("schema_version", "rule_version", "child_id", "source_store_id", "source_sequence", "period")}}
     lines = [f"# 学习互动摘要 · {export['child_id']}", "", f"期间：{export['period']['start']} 至 {export['period']['end']}（北京时间）", "", LIMITATION, ""]
     if supersedes:
@@ -113,10 +122,14 @@ def render_report(export, supersedes=None):
         helps = list(dict.fromkeys(h for event in events for h in event["assistance"]))
         attempts = list(dict.fromkeys(ATTEMPT_LABELS[event["attempt_kind"]] for event in events))
         checks = "、".join(CHECK_LABELS[v] for v in last["verification"]) or "未核对"
+        verified = bool(set(last["verification"]) & {"model_checked", "adult_checked"}) and "not_checked" not in last["verification"]
+        performance_label = PERFORMANCE_LABELS[last["performance"]]
+        if last["performance"] in {"correct", "incorrect"} and not verified:
+            performance_label = "未获得有效核对，不能判断正误"
         lines.extend([f"## 任务 `{task_id}`", "",
                       "- 卡在哪里：" + "、".join(labels) + "。仅为本次求助涉及的概念。",
                       "- 试了什么：" + "；".join(attempts) + "。",
-                      "- 哪种帮助后怎样：" + ("、".join(HELP_LABELS[h] for h in helps) or "未记到具体帮助") + "；" + PERFORMANCE_LABELS[last["performance"]] + f"（{checks}）。这不是帮助效果的因果证明。",
+                      "- 哪种帮助后怎样：" + ("、".join(HELP_LABELS[h] for h in helps) or "未记到具体帮助") + "；" + performance_label + f"（{checks}）。这不是帮助效果的因果证明。",
                       "- 能否独立继续：" + INDEPENDENCE_LABELS[last["independence_evidence"]] + "。", "",
                       "依据 ID：" + "、".join(f"`{e['event_id']}`" for e in events) + "。同一任务多轮不计为多次独立失败。", ""])
     if tasks:
@@ -127,4 +140,4 @@ def render_report(export, supersedes=None):
 
 def report_is_current(backup, metadata):
     payload = backup["payload"]
-    return all(metadata.get(key) == payload.get(value) for key, value in (("child_id", "child_id"), ("source_store_id", "store_id"), ("source_sequence", "sequence")))
+    return metadata.get("report_format_version") == REPORT_FORMAT_VERSION and all(metadata.get(key) == payload.get(value) for key, value in (("child_id", "child_id"), ("source_store_id", "store_id"), ("source_sequence", "sequence")))

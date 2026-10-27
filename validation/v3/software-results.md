@@ -39,3 +39,11 @@ TDD：各有风险的模块先运行缺实现或回归失败，再实现修复�
 最新本地目录dist/v0.1.0-adult-test-a-r3与dist/v0.1.0-adult-test-b-r3，各有孩子包、父母包、成人运行源码包和release.json。release-manifests.json保留对应SHA256；source-file-hashes.json保存本轮代码/规则/材料合同哈希，避免API提交SHA与本地SHA不同造成范围混淆。二进制可重建，不入Git。
 
 技术依据：[Python文本流编码](https://docs.python.org/3.11/library/io.html#io.TextIOWrapper.reconfigure)、[SQLite连接上下文不负责关闭](https://docs.python.org/3.11/library/sqlite3.html#how-to-use-the-connection-context-manager)。
+
+## 原生专家集成后的增量修复 · 同日
+
+配套报告校验发现来源/帮助/独立性组合可能被外部输入伪造，已抽取共享语义校验；新增来源类型、日期/序号范围、重复事件检查。旧记录无有效模型或成人核对时，报告不再把 correct/incorrect 当成已核验正误；报告格式版本2使旧报告状态失效、须重生成。补5项回归后，本机全量53项通过（1.750s，无跳过）；本轮三系统CI结果以最新运行记录为准，不能沿用上轮48项的结果。
+
+本轮成人运行时归档为 dist/v0.1.0-adult-test-a-r4 与 test-b-r4，更新 release-manifests.json 和 source-file-hashes.json。它们仍是可选自管运行时交付，不能当作原生专家包。原生专家分别在 experts/learning-partner-momo（v1.1.6）和 experts/learning-report-analyst（v1.1.1），两者均附原生集成审查与测试说明。
+
+家长最新选择保留原生长期陪伴记忆方向；本目录旧自管工具的 opt-in 合同继续有效。平台原生记忆定期提取、设置改删及历史范围不能由工具合同保证，不得将默认记忆设定当作 child_opt_in。普通聊天可由原生能力延续，但不会自动转成此运行时的学习事件。
