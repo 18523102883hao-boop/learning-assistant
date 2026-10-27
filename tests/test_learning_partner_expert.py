@@ -35,7 +35,10 @@ class PartnerPackageTests(unittest.TestCase):
         log = (ROOT / "skills/learning-log/SKILL.md").read_text(encoding="utf-8")
         reading = (ROOT / "skills/reading-companion/SKILL.md").read_text(encoding="utf-8")
         chat = (ROOT / "skills/partner-chat/SKILL.md").read_text(encoding="utf-8")
-        self.assertIn("普通聊天默认不保存", agent)
+        # 记忆策略（2026-10-27 家长决策）：要点默认记、孩子可拒记、诚实说明记的是要点
+        self.assertIn("这段别记", agent)
+        self.assertIn("不是每一句对话", agent)
+        self.assertNotIn("普通聊天默认不保存", agent)
         self.assertIn("不是本人", agent)
         self.assertNotIn("profiles/learning-log-{child_id}.jsonl", log)
         self.assertNotIn("场景计数（一次对话一条）", chat)
