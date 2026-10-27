@@ -27,3 +27,8 @@ workbuddy/experts/learning-partner/skills/reading-companion/references/*
 !workbuddy/experts/learning-partner/skills/reading-companion/references/cards/
 workbuddy/experts/learning-partner/skills/reading-companion/references/cards/*
 !workbuddy/experts/learning-partner/skills/reading-companion/references/cards/visible-page.md
+
+# Python缓存与本机绑定不发布
+__pycache__/
+*.py[cod]
+learning-companion/bindings/

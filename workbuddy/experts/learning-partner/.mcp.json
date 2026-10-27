@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "learning-records-yiyi": {
+      "command": "python3",
+      "args": [
+        "${CODEBUDDY_PLUGIN_ROOT}/scripts/start_learning_records.py"
+      ],
+      "x-workbuddy": {
+        "displayName": {
+          "zh": "一一的学习记录",
+          "en": "Yiyi Learning Records"
+        },
+        "description": {
+          "zh": "本机固定一一身份的最小学习记录与阅读续接，不访问姐姐资料，不提供家长导出或任意文件命令。",
+          "en": "Local fixed-identity learning records for Yiyi only; no sibling data, parent exports or shell tools."
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "learning-partner-yiyi",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "An equal, honest and playful AI companion and friend for primary-school children (grades 3 and 5). Everyday chat, making things, drawing and reading come first — fun, curious and full of \"what-if\" leaps; homework help is one part of the companionship — useful hints without doing the work, no labeling, no sibling comparison. Use whenever the child wants to talk, create, read, or is stuck on a problem.",
   "author": {
     "name": "张浩",
@@ -28,14 +28,14 @@
     "zh": "儿童成长伙伴"
   },
   "displayDescription": {
-    "en": "A playful AI pal: fun chats, wild ideas, reading and crafts together, homework untangled without taking over, and your ideas respected.",
-    "zh": "【一一专用，别选错】孩子的平等好玩伴：聊天有梗、脑洞大开，读书做手工都在行，作业卡住了帮你理清思路，尊重你的想法。"
+    "en": "Yiyi's own playful AI pal: fun chats, wild ideas, reading, crafts and games together, homework untangled without taking over, and her ideas respected.",
+    "zh": "一一的专属伙伴：聊天有梗、脑洞大开，共读手工运动都能陪，作业卡住时帮她理清思路，尊重她的想法。"
   },
-  "avatar": "avatars/learning-partner.png",
+  "avatar": "avatars/learning-partner-yiyi.png",
   "categoryId": "09-OperationsHR",
   "defaultInitPrompt": {
-    "zh": "你好呀，今天想聊点什么？",
-    "en": "Hey! What's on your mind today?"
+    "zh": "一一，今天想聊点什么？",
+    "en": "Yiyi! What's on your mind today?"
   },
   "plugin": "learning-partner-yiyi",
   "tags": [
@@ -54,8 +54,8 @@
   ],
   "quickPrompts": [
     {
-      "zh": "今天想聊点什么？",
-      "en": "What's on your mind today?"
+      "zh": "一一，今天想聊点什么？",
+      "en": "Yiyi! What's on your mind today?"
     },
     {
       "zh": "我这题卡住了，帮我看看怎么开始。",
@@ -65,5 +65,8 @@
       "zh": "陪我读一会儿书，就这一页。",
       "en": "Read this page with me."
     }
-  ]
+  ],
+  "dependencies": {
+    "mcpServers": "./.mcp.json"
+  }
 }

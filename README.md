@@ -1,3 +1,5 @@
+> 最新一一专家与学习记录接续见 [HANDOFF.md](HANDOFF.md) 和 [RECORDS-SETUP.md](workbuddy/experts/learning-partner/RECORDS-SETUP.md)；下文早期方案不能覆盖最新决定。
+
 # 两个孩子的学习伙伴：当前方案入口
 
 > **2026-10-27 当前入口：v3完整方案，等待家长整体确认。** 先读 [完整产品与开发方案](notes/final-plan-2026-10-27.md)、[工程规格与验收](notes/engineering-plan-2026-10-27.md)和[给Kimi/下一位AI的交接](notes/development-handoff-2026-10-27.md)。已整合最新Kimi资产与家庭决定；当前只做方案，不注册、不部署、不实现产品。文档上传不等于开工授权。下文及v2为历史过程；[材料审阅](notes/materials-audit-2026-10-27.md)与[平台官方复核](notes/rebuild-v2/research/platform-refresh-2026-10-27.md)记录本轮证据边界。
