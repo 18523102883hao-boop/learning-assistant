@@ -1,3 +1,5 @@
+> **最新云端决定（2026-10-27）：** 家长明确孩子主要使用云端电脑，暂无自有云服务，先用WorkBuddy原生云能力。两孩子专家分支均更新为1.2.0云端优先配置；不再将本机stdio/SQLite作为默认依赖。第二层扩展为各自私有云项目伙伴档案，真实持久化必须云端验收。先读 notes/cloud-companion-plan-2026-10-27.md 与两分支 CLOUD-SYNC.md。下文旧本机测试结果仅适用旧范围。
+
 # 当前交接入口
 
 当前 WorkBuddy 试用入口是原生专家分支：`experts/learning-partner-momo`（孩子 v1.1.6）与 `experts/learning-report-analyst`（家长 v1.1.1），各自有最新 HANDOFF.md、集成审查和 TESTING.md。本分支保留可选自管数据运行时；原生长期记忆采用用户最新决定，自管 opt-in 合同不变。配套报告修复及53项三系统结果见 validation/v3/ci-results-native-expert-review.json。
