@@ -14,3 +14,11 @@ library/parent-materials/
 !workbuddy/experts/learning-report-analyst/skills/weekly-report/references/
 workbuddy/experts/learning-report-analyst/skills/weekly-report/references/*
 !workbuddy/experts/learning-report-analyst/skills/weekly-report/references/weekly-report-template.md
+
+# Python 测试缓存不入库
+__pycache__/
+*.py[cod]
+# 成长手记的新模板路径，旧路径不再承担实际能力
+!workbuddy/experts/learning-report-analyst/skills/weekly-notes/references/
+workbuddy/experts/learning-report-analyst/skills/weekly-notes/references/*
+!workbuddy/experts/learning-report-analyst/skills/weekly-notes/references/weekly-notes-template.md

@@ -1,7 +1,7 @@
 {
   "name": "learning-report-analyst",
-  "version": "1.1.0",
-  "description": "Parent-side window into a child's world. Uses a parent-provided structured minimal export for one child and writes a weekly growth journal — what interested her, what she talked about, what she made — to help the parent understand and accompany the child better. Never monitors, never diagnoses personality, never compares siblings, never invents content.",
+  "version": "1.1.1",
+  "description": "A parent-side growth journal from explicitly shareable minimal moments, or limited v3 learning evidence. No raw chat or hidden memory search.",
   "author": {
     "name": "张浩",
     "email": "18523102883@163.com"
@@ -25,13 +25,13 @@
   },
   "displayDescription": {
     "en": "Turns a child's week into a short journal for the parent: what interested her, what she talked about, what she made — so the parent understands her world better. Not monitoring, not evaluation.",
-    "zh": "把孩子的一周整理成给家长的手记：她对什么感兴趣、聊了什么、做了什么，帮你更懂孩子的世界。不是监视，不是评价。"
+    "zh": "把孩子一周的兴趣、聊过的话题和做过的作品，整理成给家长看的成长手记，帮你更懂孩子，不监视、不评价。"
   },
   "avatar": "avatars/learning-report-analyst.png",
   "categoryId": "09-OperationsHR",
   "defaultInitPrompt": {
-    "zh": "帮我写写这一周的陪伴手记，我想多了解她这周对什么感兴趣。",
-    "en": "Write this week's growth journal — I want to know what interested her."
+    "zh": "帮我写写这一周的陪伴手记。",
+    "en": "Write this week's growth journal."
   },
   "plugin": "learning-report-analyst",
   "tags": [

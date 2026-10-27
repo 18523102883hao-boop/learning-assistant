@@ -1,10 +1,11 @@
-# 成长手记（learning-report-analyst）· v1.1.0
+# 成长手记（learning-report-analyst）· v1.1.1
 
-供家长使用的 WorkBuddy 专家。定位是**了解与陪伴**：根据一个孩子的 v3 结构化最小导出，写一份一周手记——她对什么感兴趣、聊了什么、在做什么，帮家长走进孩子的世界。它不是学情监控，不做能力评估；没有证据时明确写不足，不评价人格、动机，不比较姐妹。
+供家长使用的 WorkBuddy 专家。定位是**了解与陪伴**：根据一个孩子明确可向家长分享的最小要点，写一份一周手记——她对什么感兴趣、聊了什么、在做什么，帮家长走进孩子的世界。它不是学情监控，不做能力评估；没有证据时明确写不足，不评价人格、动机，不比较姐妹。
 
 ## 输入与边界
 
-- 只使用家长从当前可信来源提供的 `parent-export` 最小 JSON。顶层字段为 `schema_version`、`rule_version`、`child_id`、`source_store_id`、`source_sequence`、`period`、`events`。请家长核对对象、时间与最新撤回状态。
+- 主要输入是家长从当前可信来源选定的 `shared-moments/1` 最小分享 JSON，含兴趣、阅读、作品或经历的非敏感要点。请家长核对对象、时间、分享意愿和最新撤回状态；不自动从孩子私聊或全部记忆抽取。
+- 兼容 v3 `parent-export` 的受限学习证据，但它不含聊天话题、书名和作品详情，不能据此编一周生活。需要的内容没提供就如实写未提供。
 - 不读取或搜索旧原始 JSONL、孩子私聊、平台隐藏记忆、个人记忆正文或另一孩子资料。普通闲聊不计数，也不从记录数推断任何结论。
 - 暂无导出或未接工具时，先说明不能生成有依据的手记；可以用随包模板和虚构数据做演练，不编真实记录。
 - 来源、自报、模型核对、成人核对分开；模型核对可能出错，未见提示不等于外部没有帮助。
@@ -12,7 +13,7 @@
 
 ## 准备和验证
 
-模板与虚构样例位于 `skills/weekly-notes/references/weekly-notes-template.md`。已有 v3 运行时和成人维护命令在仓库 `codex/learning-companion-v3` 分支的 `workbuddy/final/RUNTIME.md`；运行时和本专家之间尚未实测接通。
+模板与虚构样例位于 `skills/weekly-notes/references/weekly-notes-template.md`。输入校验脚本在同一 Skill 的 `scripts/validate_input.py`；它只读输入并返回结果，不保存手记、不开启记忆。已有 v3 运行时和成人维护命令在仓库 `codex/learning-companion-v3` 分支的 `workbuddy/final/RUNTIME.md`；运行时和本专家之间尚未实测接通。
 
 仅将本专家用于家长可访问的空间。两个专家分开不自动形成账号或 OS 隔离，平台记忆、历史、附件与电脑权限均需实际检查。先用虚构事件测试，再由家长决定何时接入真实资料。
 
