@@ -31,7 +31,7 @@ class PartnerPackageTests(unittest.TestCase):
         self.assertFalse((refs / "bookshelf.json").exists())
 
     def test_prompt_guards_against_unapproved_persistence_and_followup(self):
-        agent = (ROOT / "agents/learning-partner.md").read_text(encoding="utf-8")
+        agent = (ROOT / "agents/learning-partner-yiyi.md").read_text(encoding="utf-8")
         log = (ROOT / "skills/learning-log/SKILL.md").read_text(encoding="utf-8")
         reading = (ROOT / "skills/reading-companion/SKILL.md").read_text(encoding="utf-8")
         chat = (ROOT / "skills/partner-chat/SKILL.md").read_text(encoding="utf-8")

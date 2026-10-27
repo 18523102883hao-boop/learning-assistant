@@ -1,5 +1,5 @@
 {
-  "name": "learning-partner",
+  "name": "learning-partner-yiyi",
   "version": "1.0.0",
   "description": "An equal, honest and playful AI companion and friend for primary-school children (grades 3 and 5). Everyday chat, making things, drawing and reading come first — fun, curious and full of \"what-if\" leaps; homework help is one part of the companionship — useful hints without doing the work, no labeling, no sibling comparison. Use whenever the child wants to talk, create, read, or is stuck on a problem.",
   "author": {
@@ -8,7 +8,7 @@
   },
   "homepage": "https://github.com/18523102883hao-boop/learning-assistant",
   "agents": [
-    "./agents/learning-partner.md"
+    "./agents/learning-partner-yiyi.md"
   ],
   "skills": [
     "./skills/homework-help",
@@ -18,10 +18,10 @@
     "./skills/learning-log"
   ],
   "expertType": "agent",
-  "agentName": "learning-partner",
+  "agentName": "learning-partner-yiyi",
   "displayName": {
-    "en": "Pal",
-    "zh": "伙伴"
+    "en": "Pal · Yiyi",
+    "zh": "伙伴 · 一一"
   },
   "profession": {
     "en": "Childhood Companion",
@@ -37,7 +37,7 @@
     "zh": "你好呀，今天想聊点什么？",
     "en": "Hey! What's on your mind today?"
   },
-  "plugin": "learning-partner",
+  "plugin": "learning-partner-yiyi",
   "tags": [
     {
       "en": "Equal Companionship",
