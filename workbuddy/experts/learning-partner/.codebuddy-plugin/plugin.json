@@ -1,6 +1,6 @@
 {
   "name": "learning-partner-yiyi",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An equal, honest and playful AI companion and friend for primary-school children (grades 3 and 5). Everyday chat, making things, drawing and reading come first — fun, curious and full of \"what-if\" leaps; homework help is one part of the companionship — useful hints without doing the work, no labeling, no sibling comparison. Use whenever the child wants to talk, create, read, or is stuck on a problem.",
   "author": {
     "name": "张浩",
@@ -29,7 +29,7 @@
   },
   "displayDescription": {
     "en": "A playful AI pal: fun chats, wild ideas, reading and crafts together, homework untangled without taking over, and your ideas respected.",
-    "zh": "孩子的平等好玩伴：聊天有梗、脑洞大开，读书做手工都在行，作业卡住了帮你理清思路，尊重你的想法。"
+    "zh": "【一一专用，别选错】孩子的平等好玩伴：聊天有梗、脑洞大开，读书做手工都在行，作业卡住了帮你理清思路，尊重你的想法。"
   },
   "avatar": "avatars/learning-partner.png",
   "categoryId": "09-OperationsHR",
