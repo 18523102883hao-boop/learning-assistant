@@ -2,14 +2,28 @@
 .omo/
 test/
 # 真实孩子档案不入库，只保留 example
+profiles/current.json
+profiles/kids.json
 profiles/momo.json
 profiles/yiyi.json
 profiles/*/learning-log.jsonl
 profiles/learning-log-*.jsonl
-profiles/*/  # 孩子运行目录（含学习事件与作品），不入库
+# 孩子运行目录（含学习事件与作品），不入库
+profiles/*/
 codex-prompts-archive-2026-10-26.txt
 references/
 # 家长上传的书籍/课程原文（版权内容，仅本地使用，不入库）
 library/parent-materials/
 # 项目自身的 WorkBuddy 记忆目录（本地留存，不入库）
 .workbuddy/
+
+# 专家仅纳入已审参考文件，其他 references 继续忽略
+!workbuddy/experts/learning-partner/skills/learning-log/references/
+workbuddy/experts/learning-partner/skills/learning-log/references/*
+!workbuddy/experts/learning-partner/skills/learning-log/references/record-contract.md
+!workbuddy/experts/learning-partner/skills/reading-companion/references/
+workbuddy/experts/learning-partner/skills/reading-companion/references/*
+!workbuddy/experts/learning-partner/skills/reading-companion/references/catalog.v3.json
+!workbuddy/experts/learning-partner/skills/reading-companion/references/cards/
+workbuddy/experts/learning-partner/skills/reading-companion/references/cards/*
+!workbuddy/experts/learning-partner/skills/reading-companion/references/cards/visible-page.md

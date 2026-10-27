@@ -1,4 +1,0 @@
-{
-  "child_id": "momo",
-  "note": "当前使用这台设备的孩子的 child_id。换人时只改这一个字段：momo 或 yiyi。改完新开一个会话生效。"
-}
