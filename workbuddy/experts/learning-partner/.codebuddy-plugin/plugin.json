@@ -1,7 +1,7 @@
 {
   "name": "learning-partner",
-  "version": "1.0.1",
-  "description": "A steady, honest learning companion for primary-school children: homework coaching without doing the work, reading companionship, project making, and ordinary chat.",
+  "version": "1.1.0",
+  "description": "An equal, honest AI companion and friend for primary-school children (grades 3 and 5). Everyday chat, making things, drawing and reading come first; homework help is one part of the companionship — useful hints without doing the work, no labeling, no sibling comparison. Use whenever the child wants to talk, create, read, or is stuck on a problem.",
   "author": {
     "name": "张浩",
     "email": "18523102883@163.com"
@@ -20,50 +20,50 @@
   "expertType": "agent",
   "agentName": "learning-partner",
   "displayName": {
-    "en": "Study Pal",
-    "zh": "学伴"
+    "en": "Pal",
+    "zh": "伙伴"
   },
   "profession": {
-    "en": "Child Learning Companion",
-    "zh": "儿童学习陪伴师"
+    "en": "Childhood Companion",
+    "zh": "儿童成长伙伴"
   },
   "displayDescription": {
-    "en": "A companion for homework, reading, creating and conversation. Offers timely help without doing whole assignments or labeling children.",
-    "zh": "陪小学生解决作业卡点，一起读书、探索、画画和聊天；及时提供清晰思路，尊重孩子自己的独特想法和选择。"
+    "en": "An equal AI pal for kids: chats, reading, crafts and drawing together, helps untangle homework without taking over, and respects the child's own ideas.",
+    "zh": "孩子的平等好伙伴：一起聊天、读书、做手工，作业卡住了帮你理清思路，尊重你自己的想法。"
   },
   "avatar": "avatars/learning-partner.png",
   "categoryId": "09-OperationsHR",
   "defaultInitPrompt": {
-    "zh": "我这题卡住了，你帮我看看怎么开始。",
-    "en": "I'm stuck on this one — help me figure out where to start."
+    "zh": "你好呀，今天想聊点什么？",
+    "en": "Hey! What's on your mind today?"
   },
   "plugin": "learning-partner",
   "tags": [
     {
-      "en": "Homework Coaching",
-      "zh": "作业卡点辅导"
+      "en": "Equal Companionship",
+      "zh": "平等陪伴"
     },
     {
-      "en": "Reading Companion",
-      "zh": "共读与荐书"
+      "en": "Reading & Making",
+      "zh": "共读与创作"
     },
     {
-      "en": "Learning Evidence",
-      "zh": "学习证据记录"
+      "en": "Homework Support",
+      "zh": "作业互助"
     }
   ],
   "quickPrompts": [
     {
-      "zh": "我这题卡住了，你帮我看看怎么开始。",
+      "zh": "今天想聊点什么？",
+      "en": "What's on your mind today?"
+    },
+    {
+      "zh": "我这题卡住了，帮我看看怎么开始。",
       "en": "I'm stuck on this one — help me figure out where to start."
     },
     {
-      "zh": "陪我读一会儿书，就读这一页。",
-      "en": "Read with me for a bit — just this page."
-    },
-    {
-      "zh": "我想做个东西，你能陪我一起想吗？",
-      "en": "I want to make something — will you think it through with me?"
+      "zh": "陪我读一会儿书，就这一页。",
+      "en": "Read this page with me."
     }
   ]
 }
