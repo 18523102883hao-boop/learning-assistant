@@ -31,3 +31,8 @@ workbuddy/experts/learning-partner/skills/reading-companion/references/cards/*
 # Python 测试缓存不入库
 __pycache__/
 *.py[cod]
+
+# 云端已审共享资料（无个人动态记忆）
+!workbuddy/experts/learning-partner/skills/companion-knowledge/references/
+!workbuddy/experts/learning-partner/skills/companion-knowledge/references/*.md
+!workbuddy/experts/learning-partner/skills/companion-knowledge/references/*.json
