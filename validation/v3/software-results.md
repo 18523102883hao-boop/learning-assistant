@@ -1,0 +1,51 @@
+# 软件验证与审查 · 2026-10-27
+
+## 本地实际结果
+
+环境：macOS26.6.2、Python3.13.7、SQLite3.50.4；mcp1.26.0、pydantic2.12.5、pydantic-settings2.12.0。当前锁定组合真实stdio测试无初始化警告。
+
+` .venv/bin/python -m unittest discover -s tests -q ` 实际输出：
+
+```text
+Ran 48 tests in 2.070s
+OK
+```
+
+没有跳过。本组包括固定绑定、并发/幂等/版本、归因不明、学习证据、阅读独立状态、一次跟进、可选记忆清除、错误撤回、任务完成/忘记防复活、最新清单恢复、真实旧物理库迁移、北京时间去重、结构化摘要过滤/时序/更正、真实CLI新进程与MCP协议、清理/愿望单、角色包隔离、解压源码包运行与可复现哈希。
+
+TDD：各有风险的模块先运行缺实现或回归失败，再实现修复并通过；不是拿镜像实现的断言充测试。另实际完成pip editable安装与A/B两套bundle命令。JSON Schema仅描述形状，语义/权限仍由运行时与平台验证。
+
+## 独立审查
+
+1. 第一轮b16769f发现4项P2和1项P3：事件改写/完成任务恢复/忘记current/读取快照/类型错误；已修复并回归。
+2. 第二轮61d31d5确认上述修复，发现报告ID排序、旧物理表未版本化、MCP前置类型检验3项；已修复并回归。
+3. 第三轮7e16b0c通过，无新增可复现P1/P2，40项测试含stdio通过。等内容树73adbfc6cd4f9c71ea4e3ca293475958b3e31965，GitHub提交51dff4a517b58a457a8e77859a49075b3e8cf51e可访问。
+4. 配置8文件规格审查通过后再质量审查通过；minor回执措辞已精确化。
+5. 固定34125ef的末批愿望单、90天清理、分角色打包、部署与CI通过最终只读复核：46项本地与独立源码包测试均通过，无新增可复现P1/P2。
+6. 固定00c1a8b的补充复核通过：48项本地、继承cp1252的干净Git归档、从该归档构建/解压源码包均通过，无跳过，无新增可复现P1/P2。
+
+## CI与未覆盖范围
+
+已配置Ubuntu24.04/Python3.11、Windows2022/Python3.11、macOS14/Python3.13，动作引用固定官方提交，权限contents:read，不读任何模型密钥。首次PR运行40422454819在三系统均失败：打包需要的record-contract.md被旧references/忽略规则漏出提交；Windows另发现locale编码与两处测试sqlite连接未显式关闭。GitHub代码与本地树相同不能发现被忽略文件，故新增干净Git归档验证。
+
+已用继承ASCII环境真实复现UTF-8输入/错误输出失败，增加2项回归后修复：成人CLI与bundle入口显式UTF-8、调用端明确解码、测试连接显式关闭、仅放行该工具合同文件。本机48项通过。第二轮PR运行40423247956三系统全部成功：每个系统48项测试与bundle命令均通过。运行对应GitHub源提交4b8f406dc4f028440f170e8346168c9f850451e8（等内容本地00c1a8b，tree b3d567f8a2f2a3c6d4747291c0c9acbb8f51a57c）。这是实际GitHub runner的软件验证，不替代两台家庭电脑的WorkBuddy/OS验收。原始运行：https://github.com/18523102883hao-boop/learning-assistant/actions/runs/40422454819。
+
+这48项不是42组T情境：没有真实WorkBuddy推理质量、照片/语音、自动记忆/历史、设备OS隔离、手机/旧会话能力或孩子试用证据。工具接口不等于OS沙箱，代码通过不等于儿童可用。G/T状态以CAPABILITIES及真实记录为准。
+
+可机读的去标识证据见`ci-results.json`。三系统成功运行：[GitHub Actions #3](https://github.com/18523102883hao-boop/learning-assistant/actions/runs/40423247956)。macOS job121922572520、Ubuntu job121922572774、Windows job121922572866，全部success。
+
+## 可复现产物
+
+最新本地目录dist/v0.1.0-adult-test-a-r3与dist/v0.1.0-adult-test-b-r3，各有孩子包、父母包、成人运行源码包和release.json。release-manifests.json保留对应SHA256；source-file-hashes.json保存本轮代码/规则/材料合同哈希，避免API提交SHA与本地SHA不同造成范围混淆。二进制可重建，不入Git。
+
+技术依据：[Python文本流编码](https://docs.python.org/3.11/library/io.html#io.TextIOWrapper.reconfigure)、[SQLite连接上下文不负责关闭](https://docs.python.org/3.11/library/sqlite3.html#how-to-use-the-connection-context-manager)。
+
+## 原生专家集成后的增量修复 · 同日
+
+配套报告校验发现来源/帮助/独立性组合可能被外部输入伪造，已抽取共享语义校验；新增来源类型、日期/序号范围、重复事件检查。旧记录无有效模型或成人核对时，报告不再把 correct/incorrect 当成已核验正误；报告格式版本2使旧报告状态失效、须重生成。补5项回归后，本机全量53项通过（1.750s，无跳过）；本轮三系统CI结果以最新运行记录为准，不能沿用上轮48项的结果。
+
+本轮成人运行时归档为 dist/v0.1.0-adult-test-a-r4 与 test-b-r4，更新 release-manifests.json 和 source-file-hashes.json。它们仍是可选自管运行时交付，不能当作原生专家包。原生专家分别在 experts/learning-partner-momo（v1.1.6）和 experts/learning-report-analyst（v1.1.1），两者均附原生集成审查与测试说明。
+
+家长最新选择保留原生长期陪伴记忆方向；本目录旧自管工具的 opt-in 合同继续有效。平台原生记忆定期提取、设置改删及历史范围不能由工具合同保证，不得将默认记忆设定当作 child_opt_in。普通聊天可由原生能力延续，但不会自动转成此运行时的学习事件。
+
+本轮实际三系统运行 [#40475503345](https://github.com/18523102883hao-boop/learning-assistant/actions/runs/40475503345) 全部成功，源提交 ab4f552aa3751df9f42ac637509a4e01c177dcba（tree 841e349ec99cf81db0ff65611852a92540757a45）；每个 runner 的日志均为53项通过且打包成功。去标识结果见 ci-results-native-expert-review.json，保留上一轮48项历史记录。

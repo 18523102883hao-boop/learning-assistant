@@ -1,41 +1,34 @@
-# 两个孩子的学习伙伴：当前方案入口
+# 两个孩子的学习伙伴 · v3
 
-> **2026-10-27 当前入口：v3完整方案，等待家长整体确认。** 先读 [完整产品与开发方案](notes/final-plan-2026-10-27.md)、[工程规格与验收](notes/engineering-plan-2026-10-27.md)和[给Kimi/下一位AI的交接](notes/development-handoff-2026-10-27.md)。已整合最新Kimi资产与家庭决定；当前只做方案，不注册、不部署、不实现产品。文档上传不等于开工授权。下文及v2为历史过程；[材料审阅](notes/materials-audit-2026-10-27.md)与[平台官方复核](notes/rebuild-v2/research/platform-refresh-2026-10-27.md)记录本轮证据边界。
+**当前：v0.1 成人验证版已实现，尚未达到儿童直接使用的验收标准。** 家长已于2026-10-27明确授权开始开发并持续推进；不再等待方案确认。
 
-## 以下为历史方案说明
+平等、诚实的伙伴：及时帮助孩子跨过作业卡点，一起读当前页、做自己的作品、讨论想法。两人资料独立；不累计代写、不靠打卡留住孩子，也不把人格或动机变成家长报告。
 
-为姐姐沫沫（五年级）和妹妹一一（三年级）打造的 AI 学习助手项目：不直接给答案，引导孩子搞懂知识点；让家长看到有据可查的学习证据；让孩子体验学科的意义与乐趣。
+- [批准的完整方案](notes/final-plan-2026-10-27.md)与[工程契约](notes/engineering-plan-2026-10-27.md)
+- [当前开发交接，Kimi从此继续](notes/development-handoff-2026-10-27.md)
+- [安装与平台验收](workbuddy/final/DEPLOYMENT.md)、[能力账本](workbuddy/final/CAPABILITIES.md)、[本地工具](workbuddy/final/RUNTIME.md)
+- [软件验证](validation/v3/software-results.md)、[42组实际情境](validation/v3/scenarios.json)、[实机观察](validation/v3/workbuddy-observations.md)
 
-- **当前阶段**：方案 v0.2 讨论中（WorkBuddy 双账户先行路线已纳入）；定稿后进入 WorkBuddy 部署与试用，暂不开发网页版。
-- **先行路线**：腾讯 WorkBuddy，两个孩子各注册独立账号（双账户隔离）；网页版为长期备用路线，已预研。
-- **交接与下一步**：见 [HANDOFF](HANDOFF.md)；完整方案见 [notes/master-proposal-2026-10-26.md](notes/master-proposal-2026-10-26.md)。
+## 已实现
 
-## 目录结构
+常驻伙伴规则与六种能力（父母能力单独打包）；Python/SQLite固定身份资料工具；8个有限stdio MCP工具；任务/阅读/自选记忆/愿望单；幂等与版本冲突；原子更正、任务范围忘记、90天清理；带最新撤回/完成状态的恢复；结构化最小导出与Markdown家长摘要；147条去个人化书目候选；可复现的分角色交付包。
 
-| 路径 | 内容 |
-| --- | --- |
-| `notes/` | 调研与设计文档（设计理念、整体方案、产品最佳实践、平台核验、路线决策、会话日志） |
-| `workbuddy/` | 原型配置：项目常驻指令 + 4 个 Skill + 部署说明 |
-| `profiles/` | 两个孩子档案示例（含虚构字段；正式档案不入库） |
-| `schemas/` | 学习事件 JSON Schema（jsonl，一条一行） |
-| `validation/` | 原型验收清单（隔离 / 档案持久 / 教学行为 / 试用观察） |
+48项本地测试通过，包含真实MCP子进程、干净Git归档和解压包运行；最终独立复核通过。GitHub Actions已在Mac/Windows/Linux各通过48项测试和打包：[实际运行](https://github.com/18523102883hao-boop/learning-assistant/actions/runs/40423247956)。这些是软件结果，WorkBuddy实机与儿童体验尚待验证。
 
-## 设计要点（细节见 notes）
+## 开发验证
 
-1. **三个入口**：帮我过这一关（作业卡点）、我想弄明白（探索创作）、我来讲给你听（复述验证）。
-2. **帮助逐级增加**：目标提示 → 具体提示/图示 → 同类例题演示 → 孩子完成原题关键一步。连续两次没推进就换讲法；孩子可主动跳级。
-3. **不代做**：不输出可直接提交的整段推理或整篇作文；概念、词义、背景可以直接讲。
-4. **不贴标签**：只记录可观察行为，"懒惰/不认真"等人格结论永不输出；多次相同现象以"待验证假设"提出。
-5. **两个独立档案**：稳定 `child_id`，跨新任务/换设备不变；姐妹不比较、不排名。
-6. **孩子喜欢是硬指标**：愿意再来用 与 离开 AI 能独立迁移，二者同时验证；不用时长、签到、聊天次数当成效。
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-mcp.lock.txt
+.venv/bin/python -m pip install --no-deps -e .
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m companion.bundle --source . --output dist/adult-test-a --child test-a
+```
 
-## 隐私约定
+Windows将Python路径换为 `.venv\Scripts\python.exe`。核心无需网络或模型API；真实SDK测试需安装锁定依赖。不得把跳过当通过。
 
-- 仓库中不使用孩子的完整姓名、生日、学校。
-- 作业照片去标识（裁掉姓名、学校）后才进入流程。
-- 真实孩子档案不入库（`.gitignore`），仅存本地与家长控制的存储。
-- 儿童正式直接使用 WorkBuddy 前，须核实当时客户端/小程序展示的用户协议与儿童隐私条款。
+## 尚需完成
 
-## 平台边界（一句话版）
+WorkBuddy国内账号/监护核对、真实项目规则与Skill加载、拍照/语音纠错、两个OS用户和手机/旧会话权限、自动记忆/历史检索、42组真实模型与平台验收、儿童自然试用。现有成人账号完全访问不作为儿童配置，不以单元测试替代这些门槛。
 
-WorkBuddy 的 Working Memory 按 workspace 独立，但自动个人记忆未见隔离承诺；两个工作目录 ≠ 两个独立用户，逐项验收见 `validation/prototype-checklist.md`。若试用后需要固定儿童界面与身份锁定，再评估腾讯云 ADP / Dify。
+真实资料、照片、全文、报告、备份和密钥不进Git，也不放运行源码目录。原有Kimi材料与v1/v2历史保留；当前行为以v3为准。课程通读、书目接触范围和方法取舍见[材料审阅](notes/materials-audit-2026-10-27.md)。

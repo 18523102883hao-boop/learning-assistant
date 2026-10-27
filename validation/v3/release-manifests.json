@@ -1,0 +1,24 @@
+{
+  "test-a": {
+    "version": "0.1.0",
+    "rule_version": "v3.2026-10-27",
+    "delivery_level": "ADULT_VALIDATION_ONLY",
+    "sha256": {
+      "child-test-a.zip": "35e37e9ac03fe3829874ae18fa777e5526cc1e7e37e04151b73c69f4bc240a04",
+      "parent-tools.zip": "528fa5b87f36f765d8494122d3ca82c337e66463368f0e069a7822bccf818551",
+      "runtime-source.zip": "8213b3ee6eba60856141af421e68066b669bb07ae96f4be4f9139e58d9b62f14"
+    },
+    "limits": "Code/configuration packaging only; platform, OS, model and child acceptance separate."
+  },
+  "test-b": {
+    "version": "0.1.0",
+    "rule_version": "v3.2026-10-27",
+    "delivery_level": "ADULT_VALIDATION_ONLY",
+    "sha256": {
+      "child-test-b.zip": "57e4f13b19cd120f84d90fcaf3b4ee155d0ba36364e9d4f729f3e4bafe828d5c",
+      "parent-tools.zip": "528fa5b87f36f765d8494122d3ca82c337e66463368f0e069a7822bccf818551",
+      "runtime-source.zip": "8213b3ee6eba60856141af421e68066b669bb07ae96f4be4f9139e58d9b62f14"
+    },
+    "limits": "Code/configuration packaging only; platform, OS, model and child acceptance separate."
+  }
+}

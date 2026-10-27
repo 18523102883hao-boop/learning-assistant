@@ -1,0 +1,12 @@
+{
+  "schema_version": 3,
+  "version": "v3.2026-10-27",
+  "assets": [
+    {"asset_id":"catalogue-v3","path":"catalog.v3.json","source_ref":"library/bookshelf.json; 147 stable book IDs","source_scope":"catalogue_identification","accuracy_status":"needs_edition_check","release_status":"discover_only","allowed_use":["find_catalogue_candidate","invite_current_page"],"disallowed_use":["quote_full_book","claim_verified_plot","infer_child_reading_state"]},
+    {"asset_id":"visible-page","path":"cards/visible-page.md","source_ref":"notes/final-plan-2026-10-27.md#9; original project adaptation","source_scope":"design_synthesis","accuracy_status":"reviewed_as_method_not_effect_claim","release_status":"child_method_only","allowed_use":["reading","child_invited_chat"]},
+    {"asset_id":"evidence-and-choice","path":"cards/evidence-and-choice.md","source_ref":"notes/final-plan-2026-10-27.md#10; notes/materials-audit-2026-10-27.md","source_scope":"design_synthesis","accuracy_status":"reviewed_as_method_not_effect_claim","release_status":"child_method_only","allowed_use":["child_invited_discussion","creation"]},
+    {"asset_id":"make-it-work","path":"cards/make-it-work.md","source_ref":"notes/final-plan-2026-10-27.md#11; original project adaptation","source_scope":"design_synthesis","accuracy_status":"reviewed_as_method_not_effect_claim","release_status":"child_method_only","allowed_use":["creation","exploration"]}
+  ],
+  "held_back": ["unreviewed_Liuqing_cards","full_course_transcripts","full_books","old_interest_hypotheses"],
+  "limits": "Method cards are design choices, not quotations or causal evidence. Use only when helpful to the current intent."
+}

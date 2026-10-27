@@ -1,0 +1,41 @@
+{
+  "version": "cloud-2026-10-27",
+  "records": [
+    {
+      "book_ref": "bk-0017",
+      "title": "爱德华的奇妙之旅",
+      "source_url": "https://www.candlewick.com/9780763680909/the-miraculous-journey-of-edward-tulane/",
+      "source_type": "publisher",
+      "checked_on": "2026-10-27",
+      "scope": "original_work_overview_only",
+      "edition_verified": false,
+      "overview": "故事中的瓷兔子爱德华在走失后的旅程中经历不同相遇，涉及爱、失去与重新在乎。",
+      "invite": "一只原本很得意的瓷兔子走失了。想不想看看它遇到不同的人，会有什么变化？",
+      "limits": "只据出版社公开介绍概述，不编人物后续、结局、原句或中文版页码；失落话题先尊重当下意愿。"
+    },
+    {
+      "book_ref": "bk-0031",
+      "title": "神奇校车系列",
+      "source_url": "https://www.scholastic.com/newsroom/online-press-kits/magic-school-bus.html",
+      "source_type": "publisher",
+      "checked_on": "2026-10-27",
+      "scope": "series_overview_only",
+      "edition_verified": false,
+      "overview": "这是将科学主题放进冒险与实地探访情境的系列，作者与绘者为 Joanna Cole 和 Bruce Degen。",
+      "invite": "想把一个科学问题变成一趟冒险的话，可以先看看你手里这册的封面，找一个最想去的地方。",
+      "limits": "系列概述不证明家里具体哪册涵盖哪个主题；先看当前册，不编页码、角色台词和实验步骤。"
+    },
+    {
+      "book_ref": "bk-0102",
+      "title": "小王子",
+      "source_url": "https://www.lepetitprince.com/en/new-products-from-our-licensees/rediscover-the-little-prince-with-a-new-anniversary-folio-edition/",
+      "source_type": "official_work_site",
+      "checked_on": "2026-10-27",
+      "scope": "original_work_theme_only",
+      "edition_verified": false,
+      "overview": "小王子的星球旅行涉及友谊、爱和生命意义等主题。",
+      "invite": "一个人走到不同的星球，会遇见很不一样的想法。我们也可以只看你最想看的一页。",
+      "limits": "不从该页推断作品世界首版年份，不编译句、页码和家中译本；不要求孩子悟出成人寓意。"
+    }
+  ]
+}

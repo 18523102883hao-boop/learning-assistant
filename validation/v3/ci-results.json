@@ -1,0 +1,151 @@
+{
+  "verified_on": "2026-10-27 Asia/Shanghai",
+  "repository": "18523102883hao-boop/learning-assistant",
+  "run_id": 40423247956,
+  "url": "https://github.com/18523102883hao-boop/learning-assistant/actions/runs/40423247956",
+  "source_commit": "4b8f406dc4f028440f170e8346168c9f850451e8",
+  "source_tree": "b3d567f8a2f2a3c6d4747291c0c9acbb8f51a57c",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 121922572520,
+      "name": "software (macos-14, 3.13)",
+      "status": "completed",
+      "conclusion": "success",
+      "job_id": 121922572520,
+      "test_summaries": [
+        "Ran 48 tests in 1.972s"
+      ],
+      "contains_failure": false,
+      "bundle_success": true,
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-mcp.lock.txt",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --no-deps -e .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m unittest discover -s tests -v",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m companion.bundle --source . --output dist/ci-test-a --child test-a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 121922572774,
+      "name": "software (ubuntu-24.04, 3.11)",
+      "status": "completed",
+      "conclusion": "success",
+      "job_id": 121922572774,
+      "test_summaries": [
+        "Ran 48 tests in 4.071s"
+      ],
+      "contains_failure": false,
+      "bundle_success": true,
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-mcp.lock.txt",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --no-deps -e .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m unittest discover -s tests -v",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m companion.bundle --source . --output dist/ci-test-a --child test-a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 121922572866,
+      "name": "software (windows-2022, 3.11)",
+      "status": "completed",
+      "conclusion": "success",
+      "job_id": 121922572866,
+      "test_summaries": [
+        "Ran 48 tests in 13.179s"
+      ],
+      "contains_failure": false,
+      "bundle_success": true,
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-mcp.lock.txt",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --no-deps -e .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m unittest discover -s tests -v",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m companion.bundle --source . --output dist/ci-test-a --child test-a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "limits": "Software tests and packaging on hosted runners only; not evidence of WorkBuddy integration, household OS isolation, input media quality, model scenarios or child experience."
+}

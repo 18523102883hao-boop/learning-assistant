@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "family-learning-companion"
+version = "0.1.0"
+description = "Fixed-identity local state tools for a family learning companion"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp==1.26.0", "pydantic==2.12.5", "pydantic-settings==2.12.0"]
+
+[project.scripts]
+learning-companion = "companion.cli:main"
+learning-companion-mcp = "companion.mcp_server:main"
+
+[tool.setuptools.packages.find]
+include = ["companion*"]
