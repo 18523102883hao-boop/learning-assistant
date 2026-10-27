@@ -12,11 +12,11 @@ class ReportPackageTests(unittest.TestCase):
             self.assertTrue((ROOT / agent).is_file(), agent)
         for skill in manifest["skills"]:
             self.assertTrue((ROOT / skill / "SKILL.md").is_file(), skill)
-        self.assertTrue((ROOT / "skills/weekly-report/references/weekly-report-template.md").is_file())
+        self.assertTrue((ROOT / "skills/weekly-notes/references/weekly-notes-template.md").is_file())
 
     def test_report_uses_actual_minimal_export_and_excludes_raw_logs(self):
         agent = (ROOT / "agents/learning-report-analyst.md").read_text(encoding="utf-8")
-        skill = (ROOT / "skills/weekly-report/SKILL.md").read_text(encoding="utf-8")
+        skill = (ROOT / "skills/weekly-notes/SKILL.md").read_text(encoding="utf-8")
         combined = agent + skill
         for field in ("schema_version", "source_store_id", "source_sequence", "source_kind", "verification", "supersedes"):
             self.assertIn(field, combined)
