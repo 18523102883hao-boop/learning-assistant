@@ -1,0 +1,2 @@
+c6e1f5922001e2803ed3a6f50ca184aa9c923f4b0263c9fb1b1ae0193c9f881a  learning-partner-momo-cloud-1.3.0.zip
+a474c7ed13e9fda0158debc7f36e252d5604d6f8ea0c2ac3d22bd8aa0fd7f05a  learning-partner-yiyi-cloud-1.3.0.zip

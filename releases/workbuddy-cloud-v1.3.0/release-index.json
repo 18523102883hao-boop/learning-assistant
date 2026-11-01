@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "release_tag": "workbuddy-cloud-v1.3.0",
+  "version": "1.3.0",
+  "date": "2026-11-01",
+  "mode": "cloud_native",
+  "release_status": "ready_for_adult_cloud_trial",
+  "release_url": "https://github.com/18523102883hao-boop/learning-assistant/releases/tag/workbuddy-cloud-v1.3.0",
+  "packages": [
+    {
+      "child_label": "沫沫",
+      "key": "momo",
+      "package_name": "learning-partner",
+      "owner_slot": "student-a",
+      "version": "1.3.0",
+      "branch": "experts/learning-partner-momo",
+      "source_commit": "92d573e83ab8d3c996ab9d02d68b3537b3328980",
+      "source_directory": "workbuddy/experts/learning-partner",
+      "source_url": "https://github.com/18523102883hao-boop/learning-assistant/tree/92d573e83ab8d3c996ab9d02d68b3537b3328980/workbuddy/experts/learning-partner",
+      "archive_filename": "learning-partner-momo-cloud-1.3.0.zip",
+      "download_url": "https://github.com/18523102883hao-boop/learning-assistant/releases/download/workbuddy-cloud-v1.3.0/learning-partner-momo-cloud-1.3.0.zip",
+      "archive_sha256": "c6e1f5922001e2803ed3a6f50ca184aa9c923f4b0263c9fb1b1ae0193c9f881a",
+      "archive_size": 518558,
+      "previous_source_commit": "9754f247b77529bc3e2ffd4b7a092e409220611e",
+      "software_checks": {
+        "passed": 14,
+        "skipped": 0,
+        "failed": 0
+      },
+      "cloud_account_verified": false
+    },
+    {
+      "child_label": "一一",
+      "key": "yiyi",
+      "package_name": "learning-partner-yiyi",
+      "owner_slot": "student-b",
+      "version": "1.3.0",
+      "branch": "experts/learning-partner-yiyi",
+      "source_commit": "f7fe6152453dbbf9e1bf6f071289c087db7f8abd",
+      "source_directory": "workbuddy/experts/learning-partner",
+      "source_url": "https://github.com/18523102883hao-boop/learning-assistant/tree/f7fe6152453dbbf9e1bf6f071289c087db7f8abd/workbuddy/experts/learning-partner",
+      "archive_filename": "learning-partner-yiyi-cloud-1.3.0.zip",
+      "download_url": "https://github.com/18523102883hao-boop/learning-assistant/releases/download/workbuddy-cloud-v1.3.0/learning-partner-yiyi-cloud-1.3.0.zip",
+      "archive_sha256": "a474c7ed13e9fda0158debc7f36e252d5604d6f8ea0c2ac3d22bd8aa0fd7f05a",
+      "archive_size": 304580,
+      "previous_source_commit": "26242d97da8482f7c675bff321eb16f76150af48",
+      "software_checks": {
+        "passed": 18,
+        "skipped": 1,
+        "failed": 0
+      },
+      "cloud_account_verified": false
+    }
+  ],
+  "common_files_sha256": {
+    "RECORDS-SETUP.md": "8ffa0cd70eab0f1bbc1fb12e08fbd7fd3cba2b3301c51dfa460452ad0e64653a",
+    "DESIGN-SOURCES.md": "ed8869391dc505fe9755b29548325df9db6745f3cf02d5eab4eb2fdf40e36759",
+    "cloud/云端资料合辑.md": "341f2d1775f180d365796fca73752216edc9d6016d4ab845277832414042fffa",
+    "skills/explore-task/SKILL.md": "a401722123dffefe8c0dd469aa2e9bd60bb552173ba18820793b7d8fd39d328b",
+    "skills/learning-log/SKILL.md": "c82fb931e302fb9d63dc7bee733e62975af70c6c9a19d2bc28b9e5d958bce4ff",
+    "skills/reading-companion/SKILL.md": "5c4679565daf28045ad390ae73353611d3119813c6f4c8eb549586e9341504e1",
+    "skills/homework-help/SKILL.md": "a81ada387af940f3f04c6ca9e0be20cffebc8fd088fd6e10d614dc529e9c6e7b",
+    "skills/companion-knowledge/SKILL.md": "8da9734e81a8dceb2bed4a9ae4ad0945fea750d426c00bc45932af9ed146c955",
+    "skills/partner-chat/SKILL.md": "3c7c2e55fb2260576c5a94f2769bc2dd767c71fa8c3ffdf524a378c86c52dfbe",
+    "skills/companion-knowledge/references/family-library.md": "d3290d0b17fb23e22aa75ff2d0cc53919a04b095e16a421a4ceeb089eebf86cb",
+    "skills/companion-knowledge/references/course-source-index.json": "2254d21b2daa37fb171238d31c6e0c6b80eafb000315301594514765d40456c6",
+    "skills/companion-knowledge/references/companion-memory.md": "2ed2c4dfa748a59120822f9e615f980bd47fc52afe7cee61898fc4d09dae784f",
+    "skills/companion-knowledge/references/methods.json": "997195bda9526801bc5d97f73ce3cf51814f291c9105984222029998321ad067",
+    "skills/companion-knowledge/references/verified-book-guides.json": "0e5924fbd114019a43c910041e314dad53e390da1ff15bb02233332b55fc1835",
+    "skills/companion-knowledge/references/companion-methods.md": "5ad3b2e118287bee11197cc81a3cec298427a038573f0a648a5a2f84b511175f",
+    "skills/homework-help/references/subject-help.md": "73ee46d22b0537ab1bae2d91a49e189afac3bb226251bbd0420a70828b630255",
+    "skills/homework-help/references/support-cards.json": "3a519013f778045fcd17b57d5f0f4ea1cc21c34d9c557cc97874d801c9cff7f3",
+    "skills/homework-help/references/support-cards.md": "34bc7ccc6fa1b8507c1c84122f73f202c3ff6b804be9708166f80d828142cf42",
+    "skills/reading-companion/references/catalog.v3.json": "ce31d49e687ed74d2744b3b0ab49410c141c4d908dbc4ca85dbe1f61d06deb82",
+    "skills/reading-companion/references/cards/visible-page.md": "d709f806f1ca3cd0d9b5a85bcda5f6f25285df27f611aedd74b3b5b5b0a3bb82",
+    "skills/learning-log/references/record-contract.md": "37621919f98aab3585cffafef72df074a643f76303da47c1d86c1beced24269d"
+  },
+  "cloud_installation": "not_verified_in_either_account",
+  "model_dialogue_cases": {
+    "total": 50,
+    "run": 0,
+    "status": "not_run"
+  },
+  "preservation": "Upgrade rules and readonly references only; never overwrite existing child profiles, native memory, reading state or account authorizations."
+}
