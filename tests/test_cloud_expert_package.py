@@ -12,7 +12,7 @@ PACKAGE = ROOT / 'workbuddy/experts/learning-partner'
 class CloudExpertTests(unittest.TestCase):
     def test_cloud_release_has_no_local_mcp_requirement(self):
         manifest = json.loads((PACKAGE / '.codebuddy-plugin/plugin.json').read_text())
-        self.assertEqual(manifest['version'], '1.2.0')
+        self.assertEqual(manifest['version'], '1.3.0')
         self.assertNotIn('dependencies', manifest)
         self.assertFalse((PACKAGE / '.mcp.json').exists())
         self.assertIn('./skills/companion-knowledge', manifest['skills'])

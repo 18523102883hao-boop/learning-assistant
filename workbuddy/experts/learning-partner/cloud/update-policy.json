@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "target_package": "learning-partner-yiyi",
+  "target_owner_slot": "student-b",
+  "target_version": "1.3.0",
+  "previous_source_commit": "26242d97da8482f7c675bff321eb16f76150af48",
+  "mode": "cloud_native",
+  "preserve": [
+    "native_memory",
+    "existing_companion_profile",
+    "personal_reading_state",
+    "account_authorizations",
+    "other_experts"
+  ],
+  "create_profile_only_if_absent": true,
+  "reimport_initial_memory_on_upgrade": false,
+  "archive_schema_migration": "none",
+  "cloud_account_verified": false
+}
