@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "target_package": "learning-partner",
+  "owner_slot": "student-a",
+  "expected_version": "1.3.0",
+  "source_commit": null,
+  "archive_sha256": null,
+  "environment": "not_verified",
+  "stages": {
+    "github_readable": {
+      "status": "not_verified",
+      "evidence": null,
+      "required_parent_action": null
+    },
+    "artifact_verified": {
+      "status": "not_verified",
+      "evidence": null,
+      "required_parent_action": null
+    },
+    "expert_updated": {
+      "status": "not_verified",
+      "evidence": null,
+      "required_parent_action": null
+    },
+    "cloud_skills_visible": {
+      "status": "not_verified",
+      "evidence": null,
+      "required_parent_action": null
+    },
+    "library_linked": {
+      "status": "not_verified",
+      "evidence": null,
+      "required_parent_action": null
+    },
+    "new_task_verified": {
+      "status": "not_verified",
+      "evidence": null,
+      "required_parent_action": null
+    }
+  },
+  "preservation": {
+    "existing_profile": "not_verified",
+    "native_memory_unchanged": "not_verified",
+    "personal_reading_state": "not_verified"
+  },
+  "note": "Adult-only receipt; never include tokens, account identifiers, signed URLs, private chats or personal archive contents."
+}

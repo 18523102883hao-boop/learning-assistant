@@ -1,3 +1,5 @@
+> 2026-11-01：本分支制作v1.3.0云原生专家learning-partner，适用沫沫/student-a。入口workbuddy/experts/learning-partner/CLOUD-SYNC.md、CHANGELOG.md与CLOUD-RELEASE.json；新增6个原创支架、来源有效性接续、片段阅读和50组合成验收。升级保留真实档案/原生记忆，未在两账号完成实际云验收。当前发布位置和固定SHA以GitHub发行说明为准，不读main猜版本。
+
 # 最新交接：沫沫云端伙伴 v1.2.0
 
 2026-10-27。家长明确孩子主要用WorkBuddy云端电脑，且暂无自有云服务，已选择先使用平台云端能力。本决定覆盖旧默认本机安装路线，不再要求连接家中Mac的stdio/SQLite。
