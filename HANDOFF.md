@@ -1,3 +1,5 @@
+> 2026-11-01新增：Hermes开源调研在research/oss-landscape-2026-11-01，已复核重点项目、校准掌握证据与许可，并提出WorkBuddy原生融合和逐账号更新方案。先读 notes/oss-integration-review-2026-11-01.md 与 notes/workbuddy-github-update-feasibility-2026-11-01.md。本轮只评估，不代表1.3已发布；孩子专家仍为仓库1.2.0，真实云安装状态待家庭反馈。
+
 > 最新孩子部署已改云端优先，见 notes/cloud-companion-plan-2026-10-27.md。家长端仍只用可分享最小资料，不获得跨账号私聊读取；本机运行时的检查不能冒充云端加载。
 
 # WorkBuddy 原生专家 · 当前交接入口

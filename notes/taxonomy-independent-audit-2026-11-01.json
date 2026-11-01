@@ -1,0 +1,38 @@
+{
+  "review_date": "2026-11-01",
+  "upstream": "xiaoyang111222/cn-math-taxonomy",
+  "commit": "dc764bddace4b0918a50f8cb5acec289887e5f5f",
+  "counts": {
+    "topics": 2997,
+    "dependencies": 4456,
+    "questions": 12135
+  },
+  "sha256": {
+    "topics": "1c65c742043e6b84ccbb35084b0d02c774085f7ed7dca337028101b68c21d3c2",
+    "dependencies": "3995a11543c288dd4da731ad34b710ec5c77430181751b16d0a5e12a73e389ae",
+    "questions": "791a0b7c9a45f623ea0dc34ece100b0eebab4673fd595262f110470f4a26f585"
+  },
+  "math_by_grade": {
+    "3": {
+      "topics": 51,
+      "questions": 204,
+      "types": {
+        "choice": 54,
+        "numeric": 150
+      }
+    },
+    "5": {
+      "topics": 52,
+      "questions": 208,
+      "types": {
+        "choice": 46,
+        "numeric": 162
+      }
+    }
+  },
+  "missing_verify": 567,
+  "executed_upstream_code": false,
+  "question_correctness_reviewed": false,
+  "curriculum_alignment_verified": false,
+  "child_trials_run": false
+}

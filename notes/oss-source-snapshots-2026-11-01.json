@@ -1,0 +1,38 @@
+[
+  {
+    "repository": "HKUDS/DeepTutor",
+    "commit": "f7aed0744c36c5afef16a4261c31ebee1208cac2",
+    "checked_on": "2026-11-01",
+    "scope": "Selected README, license and/or source files; not full product execution"
+  },
+  {
+    "repository": "CAHLR/OATutor",
+    "commit": "e24c8456e5f75c07b6048159ea9e128b036f673d",
+    "checked_on": "2026-11-01",
+    "scope": "Selected README, license and/or source files; not full product execution"
+  },
+  {
+    "repository": "xiaoyang111222/cn-math-taxonomy",
+    "commit": "dc764bddace4b0918a50f8cb5acec289887e5f5f",
+    "checked_on": "2026-11-01",
+    "scope": "Selected README, license and/or source files; not full product execution"
+  },
+  {
+    "repository": "learning-commons-org/evaluators",
+    "commit": "f03eec9e244e53810d1da3bc065cf38e0c09db0a",
+    "checked_on": "2026-11-01",
+    "scope": "Selected README, license and/or source files; not full product execution"
+  },
+  {
+    "repository": "hezkvectory/hermes-edu-skills",
+    "commit": "b1c32d71bf70902f5dcc36cbe0a2dd9dbd728030",
+    "checked_on": "2026-11-01",
+    "scope": "Selected README, license and/or source files; not full product execution"
+  },
+  {
+    "repository": "promptfoo/promptfoo",
+    "commit": "39ff4b6e9e3df37075abb656b19314d6b3ad53e3",
+    "checked_on": "2026-11-01",
+    "scope": "Selected README, license and/or source files; not full product execution"
+  }
+]
